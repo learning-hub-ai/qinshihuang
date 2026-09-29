@@ -285,12 +285,63 @@ body[data-width="browse"] .sitefoot .sf-in{ max-width:1200px; }
   .printonly{ display:block; font-size:10pt; margin:0 0 4px; color:#000; }
 }
 
-/* ---------- 窄屏 ---------- */
-@media (max-width:560px){
+/* ---------- 窄屏（手机） ----------
+   八个标签在 860px 以下就会换行（手机上三行），而标签是「文件夹页签」样式
+   （border-bottom:none，靠导航栏底部那条蓝线连成一整条）——
+   一换行，上面几行的页签底部就空着，看起来像被切掉一半。
+
+   解法：手机上不换行，改成**横向滚动的一条**。
+   页签形状保持完整，垂直空间从 3 行降到 1 行。 */
+@media (max-width:900px){
+  /* 实测：标签在 860px 及以下就换行（900px 还是一行），所以断点取 900 */
   .sitehead .sh-t{ font-size:18px; }
-  .sitenav a,/* 当前分区的标签：材料页里它可点（回分区首页），颜色保持高亮 */
-.sitenav a.nv-here{ text-decoration:none; }
-.sitenav a.nv-here:hover{ background:var(--hdr-d); }
-.sitenav .nv-here{ font-size:12px; padding:4px 9px 3px; }
+  .sitehead .sh-m{ font-size:11px; line-height:1.5; }
+
+  /* 一行横向滚动，不换行 */
+  .sitenav .nv-in{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    padding:8px 10px 0;
+    /* iOS 上惯性滚动 + 停在整个标签上 */
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type:x proximity;
+    /* 隐藏滚动条（占高度，且这里有右侧渐变提示） */
+    scrollbar-width:none;
+  }
+  .sitenav .nv-in::-webkit-scrollbar{ display:none; }
+  .sitenav .nv-in > *{ scroll-snap-align:start; flex:0 0 auto; }
+
+  /* 右侧提示：告诉孩子这一行可以往右滑。
+     用背景色做渐变太淡（实测 243→246，几乎看不出），
+     改成一个明确的箭头 + 白色遮罩。 */
+  .sitenav{ position:relative; }
+  .sitenav::after{
+    content:"›"; position:absolute; right:0; top:8px;
+    width:26px; height:30px;
+    font-size:20px; line-height:28px; text-align:right;
+    padding-right:6px; color:#8a9099;
+    background:linear-gradient(to right, rgba(247,249,251,0) 0%, #f7f9fb 55%);
+    pointer-events:none;
+  }
+
+  .sitenav a,
+  .sitenav .nv-here{ font-size:12.5px; padding:5px 10px 4px; margin-right:4px; }
+
+  /* 第二层（本页跳转）也改成一行横滑 —— 七个章节按钮原本占两行 */
+  .sitenav .nv-sub{
+    padding:5px 10px 6px;
+    flex-wrap:nowrap; overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .sitenav .nv-sub::-webkit-scrollbar{ display:none; }
+  .sitenav .nv-sub > *{ flex:0 0 auto; }
+
   .wrap,.wrap.sheet{ padding-left:10px; padding-right:10px; }
+  .wrap.sheet > .sheetin{ padding:6mm 5mm 7mm; }
 }
+
+/* 这两条本来被错写在窄屏媒体查询里，桌面上因此失效 —— 提出来放到全局。
+   （成因：一次字符串替换把注释插进了选择器列表，
+     把 `.sitenav a,` 和后面的规则切断，见记忆里「短 class 名撞车」那节） */
+.sitenav a.nv-here{ text-decoration:none; }
