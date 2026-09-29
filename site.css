@@ -238,10 +238,20 @@ body{
   font-size:12px; color:var(--soft); text-align:center;
 }
 .sitefoot b{ color:#444; }
+/* 版权与「请购买原书」那一行 —— 屏幕和纸上都要出现 */
+.sf-cr{
+  display:block; margin-top:6px; padding-top:6px;
+  border-top:1px dotted var(--rule);
+  font-size:11px; line-height:1.6;
+}
+.sf-cr b{ color:#333; }
+.sf-cr a{ color:#1a4a7a; }
 @media print{
   .sitefoot{ border-top:1px solid #999; padding:3mm 0 0; background:#fff; }
   .sitefoot .sf-in{ max-width:none; padding:0; font-size:8.5pt; }
   .sf-print{ display:none; }        /* 打印提示本身不必印出来 */
+  .sf-cr{ font-size:7.6pt; margin-top:1.5mm; padding-top:1.5mm; }
+  .sf-cr a{ color:#000; text-decoration:none; }
 }
 
 /* ---------- 打印专用：写名字的那一行 ---------- */
