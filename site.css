@@ -143,6 +143,20 @@ body{
 /* ---------- 正文容器 ---------- */
 .wrap{ max-width:1000px; margin:0 auto; padding:20px 16px 40px; }
 
+/* ---------- 浏览页放宽（阅读指引、使用说明） ----------
+   1000px 是为 A4 学习单定的（.sheetin 限 190mm）。这两页不打印，
+   却跟着受限 —— 1920 屏上一半是空白。放到 1200px，不铺满：
+   章问题最长 37 字，一行太长反而难读。
+
+   ⚠ 横幅／导航／页脚必须一起放宽，否则左边缘和内容错位
+   （实测过：内容 216px、横幅 330px、导航 379px，三者互不对齐）。
+   用 <body data-width="browse"> 触发，只影响这两页。 */
+.wrap.browse{ max-width:1200px; }
+body[data-width="browse"] .sitehead .sh-in,
+body[data-width="browse"] .sitenav  .nv-in,
+body[data-width="browse"] .sitenav  .nv-sub,
+body[data-width="browse"] .sitefoot .sf-in{ max-width:1200px; }
+
 /* 纸质材料页（A4 打印为主）：白纸卡片。
    .wrap 已经负责「1000px 居中 + 左右 16px 内边距」，
    所以这里不动 padding/max-width，只把内容包成一张白卡 ——
