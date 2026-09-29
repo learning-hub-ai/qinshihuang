@@ -152,10 +152,17 @@ body{
    （实测过：内容 216px、横幅 330px、导航 379px，三者互不对齐）。
    用 <body data-width="browse"> 触发，只影响这两页。 */
 .wrap.browse{ max-width:1200px; }
+/* 打勾用的 A4 学习单也可以在屏幕上放宽（见下面 .sheetin 的说明）。
+   凡带 data-width="browse" 的页面，容器和框架一起放宽。 */
+body[data-width="browse"] .wrap,
 body[data-width="browse"] .sitehead .sh-in,
 body[data-width="browse"] .sitenav  .nv-in,
 body[data-width="browse"] .sitenav  .nv-sub,
 body[data-width="browse"] .sitefoot .sf-in{ max-width:1200px; }
+@media print{
+  /* 纸上不要这个放宽 */
+  body[data-width="browse"] .wrap{ max-width:none; }
+}
 
 /* 纸质材料页（A4 打印为主）：白纸卡片。
    .wrap 已经负责「1000px 居中 + 左右 16px 内边距」，
@@ -164,7 +171,11 @@ body[data-width="browse"] .sitefoot .sf-in{ max-width:1200px; }
 .wrap.sheet > .sheetin{
   background:#fff; border:1px solid var(--rule);
   padding:9mm 10mm 10mm;
-  max-width:190mm;
+  /* 屏幕上不限宽 —— 190mm ≈ 718px 只占宽屏的 45%，表格并不挤，白留太多。
+     由 .wrap 决定实际宽度（默认 1000px，data-width="browse" 的页面 1200px）。
+     打印时由 @page 的 A4 页边距决定实宽（下面 @media print 里
+     .sheetin 去边框、去内距、max-width:none），所以纸上仍然准确。 */
+  max-width:none;
 }
 /* 宽内容页（时间轴、人物关系表）：内容本来就宽，
    限制在 190mm 会把文字挤成很多行 —— 让它用满容器宽度。 */
