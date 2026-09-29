@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="《秦始皇——一统中国》（景崇兰 著）整本书阅读：六章十七节的字词表与读懂故事导读，配六周阅读进度表、人物关系表和一生时间轴。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《秦始皇——一统中国》整本书阅读</title>
+<link rel="stylesheet" href="site.css">
+<style>
+*{box-sizing:border-box;}
+
+  /* ---------- 页头 ---------- */
+  header{background:var(--hdr); color:#fff; padding:22px 16px 18px; margin-bottom:22px;}
+
+  /* ---------- 通用区块 ---------- */
+  section{background:#fff; border:1px solid var(--rule); margin-bottom:20px;}
+  h2{
+    font-size:15.5px; margin:0; padding:9px 14px;
+    background:var(--band); border-bottom:1px solid var(--rule);
+    display:flex; align-items:baseline; gap:10px;
+  }
+  h2 .no{
+    background:var(--hdr); color:#fff; font-size:11.5px; font-weight:700;
+    padding:2px 7px; border-radius:2px; flex:none;
+  }
+  h2 .sub{font-size:12px; font-weight:400; color:var(--soft);}
+  .body{padding:14px;}@media (max-width:820px){ .flowsteps{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){ .flowsteps{grid-template-columns:1fr;}}
+@media print{ .flowsteps{display:none;} .lead{display:none;}}
+  /* ---------- 章节表 ---------- */
+  table{width:100%; border-collapse:collapse;}
+  thead th{
+    background:#fafafa; font-size:12px; color:#444; text-align:left;
+    padding:7px 10px; border-bottom:1.5px solid var(--rule); font-weight:600;
+  }
+  td{padding:0; border-bottom:1px solid #ececec; vertical-align:middle;}
+  .th-ck{width:44px; text-align:center;}
+  .th-sec{width:52px;}
+  .th-pg{width:74px;}
+  .th-lnk{width:230px;}
+
+  /* 章标题行 */
+  tr.chap td{
+    padding:9px 10px 7px; background:#fff; border-top:2px solid var(--hdr);
+    border-bottom:1px solid var(--rule);
+  }
+  tr.chap .num{
+    display:inline-block; font-size:11.5px; font-weight:700; color:#fff;
+    padding:2px 7px; margin-right:8px; vertical-align:2px;
+  }
+  tr.chap.k1 .num{background:var(--c1);} tr.chap.k1 td{background:var(--c1bg);}
+  tr.chap.k2 .num{background:var(--c2);} tr.chap.k2 td{background:var(--c2bg);}
+  tr.chap.k3 .num{background:var(--c3);} tr.chap.k3 td{background:var(--c3bg);}
+  tr.chap .ct{font-size:15px; font-weight:700;}
+  tr.chap .cp{font-size:12px; color:#555; font-weight:400; margin-left:8px;}
+  tr.chap .cq{display:block; font-size:12.5px; color:#444; font-weight:400; margin-top:3px;}
+
+  /* 小节行 */
+  tr.sec td{padding:7px 10px; font-size:14px;}
+  tr.sec:hover td{background:#fcfcfd;}
+  tr.sec .sn{color:var(--soft); font-size:12.5px; text-align:center;}
+  tr.sec .st{font-weight:500;}
+  tr.sec .pg{font-size:12.5px; color:var(--soft); white-space:nowrap;}
+  .box{
+    display:inline-block; width:15px; height:15px; border:1.4px solid #999;
+    background:#fff; vertical-align:-2px;
+  }
+
+  /* 链接按钮 */
+  .lk{
+    display:inline-block; font-size:12.5px; text-decoration:none;
+    padding:3px 9px; border:1px solid var(--rule); margin-right:5px;
+    color:#1a4a7a; background:#fff; white-space:nowrap;
+  }
+  .lk:hover{background:#eaf2fb; border-color:var(--c1);}
+  .lk.g{color:#2f5c37; }
+  .lk.g:hover{background:var(--okbg); border-color:var(--ok);}
+  .lk.off{color:#aaa; background:#fafafa; border-style:dashed; cursor:default;}
+  .lk.off:hover{background:#fafafa; border-color:var(--rule);}  tr.chap{scroll-margin-top:84px;}
+
+  /* ---------- 页脚 ---------- */
+  .printonly{display:none;}@media (max-width:820px){
+    .how,.tools{grid-template-columns:1fr 1fr;}
+    .legend{grid-template-columns:1fr;}
+    .th-lnk{width:auto;}}
+@media (max-width:560px){
+    .how,.tools{grid-template-columns:1fr;}
+    .th-pg,.th-ck{display:none;}
+    tr.sec td.pg,tr.sec td.ck,thead th.th-pg,thead th.th-ck{display:none;}}
+@media print{
+    h2{background:#f0f0f0; border-bottom:1px solid #000;}
+    h2 .no{background:#000;}
+    .how,.tools{display:none;}     /* 纸上不需要链接卡片 */
+    .lk{border:none; padding:0; color:#000;}
+    .noprint{display:none;}}
+</style>
+</head>
+<body>
+
+<div class="sitehead">
+  <div class="sh-in">
+    <div class="printonly">姓名：____________　班级：__________　日期：__________</div>
+    <h1 class="sh-t"><a href="index.html">《秦始皇——一统中国》整本书阅读</a></h1>
+    <div class="sh-p">阅读指引 — 六章十七节</div>
+    <div class="sh-m">名人传系列　·　<b>景崇兰</b> 著　·　<b>简志刚</b> 绘　·　人民文学出版社　·　全书 <b>111 页</b>，共六章</div>
+  </div>
+</div>
+
+<nav class="sitenav">
+  <div class="nv-in">
+    <span class="nv-here">📖 阅读指引</span>
+    <a href="reading-plan.html">📅 阅读进度表</a>
+    <a href="vocab/index.html">📚 字词表</a>
+    <a href="maps.html">🗺 地图</a>
+    <a href="characters.html">👥 人物关系表</a>
+    <a href="fact-sheet.html">📊 秦始皇小档案</a>
+    <a href="timeline.html">🔍 一生时间轴</a>
+    <a href="how-to-use.html">📘 使用说明</a>
+  </div>
+  <div class="nv-sub">
+    <span class="nv-lbl">本页跳转：</span>
+    <a href="#c1">第一章</a>
+    <a href="#c2">第二章</a>
+    <a href="#c3">第三章</a>
+    <a href="#c4">第四章</a>
+    <a href="#c5">第五章</a>
+    <a href="#c6">第六章</a>
+    <a href="#appx">附录</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ============ 章节 ============ -->
+<section>
+  <h2 id="chaps"><span class="no">六章 · 十七节</span>每节两份材料：字词表（查）· 读懂故事（想）<span class="sub">第一次来？先看 <a href="how-to-use.html" style="color:#1a4a7a;">📘 使用说明</a></span></h2>
+  <div class="body" style="padding:0;">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col" class="th-ck">读完<br><span style="font-weight:400;font-size:10.5px;">打 ✓</span></th>
+        <th scope="col" class="th-sec">节</th>
+        <th scope="col">标题</th>
+        <th scope="col" class="th-pg">页码</th>
+        <th scope="col" class="th-lnk">材料</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- 第一章 -->
+      <tr class="chap k1" id="c1"><td colspan="5">
+        <span class="num">第一章</span><span class="ct">从养马之地到战国七雄</span><span class="cp">第 1–21 页</span>
+        <span class="cq">带着这个问题读：秦国一开始只是个「养马的地方」，它是靠什么一步步变强的？</span>
+      </td></tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§1</td>
+        <td class="st">因善于养马而步步高升</td>
+        <td class="pg">1–6</td>
+        <td>
+          <a class="lk" href="vocab/chapter1-section1.html?from=guide">字词表</a>
+          <a class="lk g" href="guide/chapter1-section1.html">读懂故事</a>
+        </td>
+      </tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§2</td>
+        <td class="st">跃居「春秋五霸」之列</td>
+        <td class="pg">7–10</td>
+        <td>
+          <a class="lk" href="vocab/chapter1-section2.html?from=guide">字词表</a>
+          <span class="lk off">读懂故事（待做）</span>
+        </td>
+      </tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§3</td>
+        <td class="st">战国时代，傲视群雄</td>
+        <td class="pg">11–21</td>
+        <td>
+          <a class="lk" href="vocab/chapter1-section3.html?from=guide">字词表</a>
+          <span class="lk off">读懂故事（待做）</span>
+        </td>
+      </tr>
+
+      <!-- 第二章 -->
+      <tr class="chap k1" id="c2"><td colspan="5">
+        <span class="num">第二章</span><span class="ct">人质的小孩成为国君</span><span class="cp">第 22–40 页</span>
+        <span class="cq">带着这个问题读：一个在赵国当人质的孩子，怎么会当上秦王？吕不韦为什么帮他？</span>
+      </td></tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§1</td><td class="st">秦王孙异人和吕不韦</td><td class="pg">22–27</td>
+        <td><a class="lk" href="vocab/chapter2-section1.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§2</td><td class="st">「赵政」归秦</td><td class="pg">28–33</td>
+        <td><a class="lk" href="vocab/chapter2-section2.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§3</td><td class="st">嬴政的家庭悲剧</td><td class="pg">34–40</td>
+        <td><a class="lk" href="vocab/chapter2-section3.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+
+      <!-- 第三章 -->
+      <tr class="chap k2" id="c3"><td colspan="5">
+        <span class="num">第三章</span><span class="ct">结束分裂，定于一尊</span><span class="cp">第 41–61 页</span>
+        <span class="cq">带着这个问题读：秦国灭六国，靠的只是打仗吗？还用了什么别的办法？</span>
+      </td></tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§1</td><td class="st">韩国的间谍，赵国的良将</td><td class="pg">41–46</td>
+        <td><a class="lk" href="vocab/chapter3-section1.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§2</td><td class="st">魏王孤注一掷，楚王骨肉相残</td><td class="pg">47–54</td>
+        <td><a class="lk" href="vocab/chapter3-section2.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§3</td><td class="st">燕荆轲刺秦，齐后胜通秦</td><td class="pg">55–61</td>
+        <td><a class="lk" href="vocab/chapter3-section3.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+
+      <!-- 第四章 -->
+      <tr class="chap k3" id="c4"><td colspan="5">
+        <span class="num">第四章</span><span class="ct">做一位像样的帝王</span><span class="cp">第 62–82 页</span>
+        <span class="cq">带着这个问题读：统一之后他做了哪些「第一次」的事？哪些对今天还有影响？</span>
+      </td></tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§1</td><td class="st">实施中央集权</td><td class="pg">62–68</td>
+        <td><a class="lk" href="vocab/chapter4-section1.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§2</td><td class="st">统一文化和经济制度</td><td class="pg">69–73</td>
+        <td><a class="lk" href="vocab/chapter4-section2.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§3</td><td class="st">大兴土木工程</td><td class="pg">74–82</td>
+        <td><a class="lk" href="vocab/chapter4-section3.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+
+      <!-- 第五章 -->
+      <tr class="chap k3" id="c5"><td colspan="5">
+        <span class="num">第五章</span><span class="ct">自信与恐惧</span><span class="cp">第 83–101 页</span>
+        <span class="cq">带着这个问题读：他自信什么？又怕什么？<b>这一章和第六章要连着读。</b></span>
+      </td></tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§1</td><td class="st">大行封禅，祈求平安</td><td class="pg">83–87</td>
+        <td><a class="lk" href="vocab/chapter5-section1.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§2</td><td class="st">刺客偷袭和长生不死</td><td class="pg">88–93</td>
+        <td><a class="lk" href="vocab/chapter5-section2.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§3</td><td class="st">焚禁书，坑方士</td><td class="pg">94–101</td>
+        <td><a class="lk" href="vocab/chapter5-section3.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+
+      <!-- 第六章 -->
+      <tr class="chap k3" id="c6"><td colspan="5">
+        <span class="num">第六章</span><span class="ct">末日的来临</span><span class="cp">第 102–108 页</span>
+        <span class="cq">带着这个问题读：他明明写好让扶苏继位的诏书，为什么最后是胡亥当了皇帝？</span>
+      </td></tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§1</td><td class="st">最后一次巡游、生病、写下诏书、去世</td><td class="pg">102–106</td>
+        <td><a class="lk" href="vocab/chapter6-section1.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">§2</td><td class="st">赵高说服李斯、改掉诏书、扶苏自尽</td><td class="pg">106–108</td>
+        <td><a class="lk" href="vocab/chapter6-section2.html?from=guide">字词表</a>
+            <span class="lk off">读懂故事（待做）</span></td>
+      </tr>
+
+      <!-- 附录 -->
+      <tr class="chap" id="appx"><td colspan="5" style="border-top:2px solid var(--soft); background:#fafafa;">
+        <span class="num" style="background:var(--soft);">附录</span><span class="ct">秦始皇小档案（年表）</span><span class="cp">第 109–111 页</span>
+        <span class="cq">按年份排的大事表。<b>正式开读前先看它</b>，以后每读到一件事都知道在时间线的哪里。</span>
+      </td></tr>
+      <tr class="sec">
+        <td class="ck tc"><span class="box"></span></td>
+        <td class="sn">—</td><td class="st">年表里的人名、地名、官职</td><td class="pg">109–111</td>
+        <td><a class="lk" href="vocab/appendix-chronology.html?from=guide">字词表</a></td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+</section>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="sf-in">
+      页码依据书前目录核对。书中有整页插图（如第 105 页是一整幅画），所以实际要读的字比页数看起来少。<br>
+      <span class="sf-print">打印任意一页：<b>Ctrl+P → A4 → 关掉「页眉和页脚」→ 勾选「打印背景图形」</b></span>
+  </div>
+</footer>
+
+</body>
+</html>

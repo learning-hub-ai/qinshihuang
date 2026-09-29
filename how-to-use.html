@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="怎么用这个整本书阅读：六步读书法 —— 先自己读，再查字词表，最后填读懂故事整理人物关系和因果。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使用说明 · 《秦始皇——一统中国》整本书阅读</title>
+<link rel="stylesheet" href="site.css">
+<style>
+*{box-sizing:border-box;}
+
+  /* ---------- 页头 ---------- */
+  header{background:var(--hdr); color:#fff; padding:22px 16px 18px; margin-bottom:22px;}
+
+  /* ---------- 通用区块 ---------- */
+  section{background:#fff; border:1px solid var(--rule); margin-bottom:20px;}
+  h2{
+    font-size:15.5px; margin:0; padding:9px 14px;
+    background:var(--band); border-bottom:1px solid var(--rule);
+    display:flex; align-items:baseline; gap:10px;
+  }
+  h2 .no{
+    background:var(--hdr); color:#fff; font-size:11.5px; font-weight:700;
+    padding:2px 7px; border-radius:2px; flex:none;
+  }
+  h2 .sub{font-size:12px; font-weight:400; color:var(--soft);}
+  .body{padding:14px;}
+  /* ---------- 使用说明：六步 ---------- */
+  .lead{margin:0 0 12px; font-size:13.5px; color:#333;}
+  .flowsteps{display:grid; grid-template-columns:repeat(3,1fr); gap:10px;}
+  .fs{border:1px solid var(--rule); border-top:3px solid var(--hdr); padding:9px 11px;}
+  .fs .tag{font-size:11px; font-weight:700; color:#fff; background:var(--hdr);
+           display:inline-block; padding:1px 6px; margin-bottom:5px;}
+  .fs .ft{font-size:14px; font-weight:600; margin-bottom:3px;}
+  .fs .ft a{color:#1a4a7a; text-decoration:none; border-bottom:1px solid #a9c2dd;}
+  .fs .ft a:hover{background:#eaf2fb;}
+  .fs .fd{font-size:12px; color:var(--soft); line-height:1.45;}
+  .fs .fd a{color:#1a4a7a; text-decoration:none; border-bottom:1px solid #a9c2dd;}
+  .fs.s0{border-top-color:var(--ok);}   .fs.s0 .tag{background:var(--ok);}
+  .fs.s1{border-top-color:var(--c1);}   .fs.s1 .tag{background:var(--c1);}
+  .fs.s2{border-top-color:#777;}        .fs.s2 .tag{background:#777;}
+  .fs.s3{border-top-color:var(--warn);} .fs.s3 .tag{background:var(--warn);}
+  .fs.s4{border-top-color:var(--c2);}   .fs.s4 .tag{background:var(--c2);}
+  .fs.s5{border-top-color:var(--c3);}   .fs.s5 .tag{background:var(--c3);}
+  .warn{margin:12px 0 0; padding:7px 11px; background:var(--warnbg);
+        border-left:4px solid var(--warn); font-size:13px;}@media (max-width:820px){ .flowsteps{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){ .flowsteps{grid-template-columns:1fr;}}
+@media print{ .flowsteps{display:none;} .lead{display:none;}}
+  /* ---------- 章节表 ---------- */
+  table{width:100%; border-collapse:collapse;}
+  thead th{
+    background:#fafafa; font-size:12px; color:#444; text-align:left;
+    padding:7px 10px; border-bottom:1.5px solid var(--rule); font-weight:600;
+  }
+  td{padding:0; border-bottom:1px solid #ececec; vertical-align:middle;}
+  /* ---------- 术语说明 ---------- */
+  .legend{display:grid; grid-template-columns:1fr 1fr; gap:10px 18px; font-size:13px;}
+  .legend .r{display:flex; gap:8px; align-items:flex-start;}
+  .legend .tag{
+    flex:none; font-size:11.5px; padding:1.5px 6px; border:1px solid var(--rule);
+    background:#fafafa; white-space:nowrap;
+  }
+  .legend .tag.s{background:var(--warnbg); border-color:var(--warn); color:#7a5c07;}
+  .legend .tag.p{background:#f4f4f4; color:#555;}@media (max-width:820px){
+    .how,.tools{grid-template-columns:1fr 1fr;}
+    .legend{grid-template-columns:1fr;}
+    .th-lnk{width:auto;}}
+@media (max-width:560px){
+    .how,.tools{grid-template-columns:1fr;}
+    .th-pg,.th-ck{display:none;}
+    tr.sec td.pg,tr.sec td.ck,thead th.th-pg,thead th.th-ck{display:none;}}
+@media print{
+    h2{background:#f0f0f0; border-bottom:1px solid #000;}
+    h2 .no{background:#000;}
+    .how,.tools{display:none;}     /* 纸上不需要链接卡片 */
+    .lk{border:none; padding:0; color:#000;}
+    .noprint{display:none;}}
+</style>
+</head>
+<body>
+
+<div class="sitehead">
+  <div class="sh-in">
+    <h1 class="sh-t"><a href="index.html">《秦始皇——一统中国》整本书阅读</a></h1>
+    <div class="sh-p">使用说明</div>
+    <div class="sh-m">名人传系列　·　<b>景崇兰</b> 著　·　<b>简志刚</b> 绘　·　人民文学出版社　·　全书 <b>111 页</b>，共六章</div>
+  </div>
+</div>
+
+<nav class="sitenav">
+  <div class="nv-in">
+    <a href="index.html">📖 阅读指引</a>
+    <a href="reading-plan.html">📅 阅读进度表</a>
+    <a href="vocab/index.html">📚 字词表</a>
+    <a href="maps.html">🗺 地图</a>
+    <a href="characters.html">👥 人物关系表</a>
+    <a href="fact-sheet.html">📊 秦始皇小档案</a>
+    <a href="timeline.html">🔍 一生时间轴</a>
+    <span class="nv-here">📘 使用说明</span>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ============ 使用说明 ============ -->
+<section>
+  <h2 id="how"><span class="no">使用说明</span>怎么用这个站<span class="sub">读一遍就够，以后直接看下面的章节表</span></h2>
+  <div class="body">
+
+    <p class="lead">
+      每一节都有两份材料：<b>字词表</b>（查字词）和<b>读懂故事</b>（理人物和因果）。
+      加上顶上导航栏的四个功能，用法是按<b>时间顺序</b>排的 ——
+    </p>
+
+    <div class="flowsteps">
+      <div class="fs s0">
+        <div class="tag">① 读之前</div>
+        <div class="ft"><a href="reading-plan.html">📅 阅读进度表</a></div>
+        <div class="fd">六周计划，今天该读哪几页。<b>第一次来先看这个。</b></div>
+      </div>
+      <div class="fs s1">
+        <div class="tag">② 每章开读前</div>
+        <div class="ft"><a href="fact-sheet.html">📊 秦始皇小档案</a></div>
+        <div class="fd">扫一眼这一章对应的年份，读起来不会迷路。</div>
+      </div>
+      <div class="fs s2">
+        <div class="tag">③ 正在读</div>
+        <div class="ft">先自己读，<b>别先看字词表</b></div>
+        <div class="fd">不认识的字先猜（看上下文、看偏旁）。名字记混了查
+          <a href="characters.html">👥 人物关系表</a>。</div>
+      </div>
+      <div class="fs s3">
+        <div class="tag">④ 一节读完</div>
+        <div class="ft">查<b>字词表</b>，会的打 ✓、不会的打 ✗</div>
+        <div class="fd">复习时<b>只看打叉的</b>。表上没有、你却不认识的，抄到最后一栏。</div>
+      </div>
+      <div class="fs s4">
+        <div class="tag">⑤ 再整理一遍</div>
+        <div class="ft">填<b>读懂故事</b></div>
+        <div class="fd">人物关系和因果。填不出来就翻回书上 —— 页码都标好了。</div>
+      </div>
+      <div class="fs s5">
+        <div class="tag">⑥ 读完之后</div>
+        <div class="ft"><a href="timeline.html">🔍 一生时间轴</a></div>
+        <div class="fd">一件一件看：每件事为什么重要、带来了什么。</div>
+      </div>
+    </div>
+
+    <p class="warn">
+      ⚠️ <b>顺序别颠倒</b>：先读书，再查字词表。反过来的话，字都认识了，故事却没进脑子。
+    </p>
+  </div>
+</section>
+
+<!-- ============ 字词表怎么看 ============ -->
+<section>
+  <h2 id="legend"><span class="no">参考</span>字词表上的记号是什么意思<span class="sub">全部 17 节＋附录通用</span></h2>
+  <div class="body">
+    <div class="legend">
+      <div class="r"><span class="tag s">★ 重点</span><span>要<b>会读也会写</b>。这一级最少，优先记。</span></div>
+      <div class="r"><span class="tag p">浅灰整行</span><span><b>只要会念，不用记</b>。数量最多，别在这里耗时间。</span></div>
+      <div class="r"><span class="tag">生字</span><span>单个字，要会读会写。</span></div>
+      <div class="r"><span class="tag">成语</span><span>四字成语。<b>写作文用得上</b>，值得记住。</span></div>
+      <div class="r"><span class="tag">词语</span><span>两个字以上，多数只要会念。</span></div>
+      <div class="r"><span class="tag">人物 · 地名 · 国名</span><span>专有名词。<b>会读就行</b>，但要知道是谁、在哪。</span></div>
+      <div class="r"><span class="tag">✓／✗ 方框</span><span><b>会的打 ✓，不会的打 ✗</b>（中文习惯）。复习时只看打叉的。</span></div>
+    </div>
+    <div style="margin:12px 0 0; border-top:1px solid var(--rule); padding-top:10px;">
+      <b style="font-size:13.5px;">📖 每一份字词表都这样用</b>
+      <ol style="margin:5px 0 0; padding-left:20px; font-size:13px; line-height:1.6;">
+        <li><b>先自己读，别先看这张表。</b>不认识的字先猜（看上下文、看偏旁），整页读完再对照。</li>
+        <li><b>会的打勾 ✓，不会的打叉 ✗。</b>复习时只看打叉的。</li>
+        <li><b>表上没有、你却不认识的，抄到最后一栏。</b>那才是真属于你的生字。</li>
+      </ol>
+    </div>
+    <p style="font-size:12.5px; color:var(--soft); margin:12px 0 0; border-top:1px solid var(--rule); padding-top:8px;">
+      <b>表上没有、你却不认识的字词</b> —— 抄到字词表最后一栏。那才是真正属于你自己的生字。
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="sf-in">
+      页码依据书前目录核对。书中有整页插图（如第 105 页是一整幅画），所以实际要读的字比页数看起来少。<br>
+      <span class="sf-print">打印任意一页：<b>Ctrl+P → A4 → 关掉「页眉和页脚」→ 勾选「打印背景图形」</b></span>
+  </div>
+</footer>
+
+</body>
+</html>

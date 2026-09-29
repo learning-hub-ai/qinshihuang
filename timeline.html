@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="秦始皇一生时间轴：一件一件看每件事为什么重要、带来了什么，分夺权期、统一期、皇帝期三段。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>秦始皇 — 一生时间轴</title>
+<link rel="stylesheet" href="site.css">
+<style>
+h2 {
+    font-size: 11.5pt;
+    margin: 5mm 0 2mm;
+    padding: 1mm 2mm;
+    background: var(--band);
+    border-left: 4px solid var(--line);
+  }
+  /* ---- 时间轴表 ---- */
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border: 1px solid #999; padding: 1.1mm 2mm; vertical-align: top; }
+  thead th { background: var(--band); font-size: 9pt; text-align: left; }
+  .big td { font-weight: bold; }  .st .yr  { font-size: 8.5pt; }  .note { font-size: 8.8pt; color: var(--soft); }
+  /* ---- 纵向时间轴 ---- */
+  .vt { position: relative; margin: 2mm 0 4mm 0; padding-left: 30mm; }
+  /* 竖脊 */
+  .vt::before {
+    content: ""; position: absolute;
+    left: 26mm; top: 0; bottom: 0;
+    width: 2.5px; background: #bbb;
+  }
+  /* 阶段标题 */
+  .stage {
+    position: relative;
+    margin: 4mm 0 2mm -30mm;
+    padding: 1.4mm 3mm;
+    border: 1.5px solid var(--line);
+    border-left-width: 5px;
+    font-size: 10.5pt; font-weight: bold;
+  }
+  .stage .yr { font-weight: normal; font-size: 9pt; color: #444; }
+  .stage .why { display: block; font-weight: normal; font-size: 8.8pt; color: #555; margin-top: 0.6mm; }
+  .s1 { background: var(--p1); border-left-color: var(--p1b); }
+  .s2 { background: var(--p2); border-left-color: var(--p2b); }
+  .s3 { background: var(--p3); border-left-color: var(--p3b); }
+
+  /* 单个事件 */
+  .ev { position: relative; margin-bottom: 2.6mm; }
+  /* 年份＋年龄（脊左侧） */
+  .ev .when {
+    position: absolute; left: -30mm; top: 0;
+    width: 22mm; text-align: right;
+    font-size: 8.5pt; line-height: 1.3;
+  }
+  .ev .when b { display: block; font-size: 9.5pt; }
+  .ev .when i { font-style: normal; color: #555; }
+  /* 脊上的圆点 */
+  .ev::before {
+    content: ""; position: absolute;
+    left: -5.1mm; top: 1.2mm;
+    width: 3mm; height: 3mm;
+    border-radius: 50%;
+    background: #fff; border: 2px solid #888;
+  }
+  .ev.d1::before { border-color: var(--p1b); }
+  .ev.d2::before { border-color: var(--p2b); }
+  .ev.d3::before { border-color: var(--p3b); }
+  /* 大事件：实心大圆点 */
+  .ev.big::before {
+    width: 4.2mm; height: 4.2mm; left: -5.7mm; top: 0.8mm; border-width: 2.5px;
+  }
+  .ev.big.d1::before { background: var(--p1b); }
+  .ev.big.d2::before { background: var(--p2b); }
+  .ev.big.d3::before { background: var(--p3b); }
+
+  .ev .what { font-size: 9.5pt; }
+  .ev.big .what { font-weight: bold; }
+  .ev .why {
+    display: block; font-size: 8.6pt; color: #555;
+    margin-top: 0.4mm; padding-left: 2mm;
+    border-left: 2px solid #ddd;
+  }
+  .ev .ch { font-size: 8pt; color: var(--soft); }</style>
+</head>
+<body>
+
+<div class="sitehead">
+  <div class="sh-in">
+    <h1 class="sh-t"><a href="index.html">《秦始皇——一统中国》整本书阅读</a></h1>
+    <div class="sh-p">一生时间轴 · 每件事为什么重要</div>
+    <div class="sh-m">名人传系列　·　<b>景崇兰</b> 著　·　<b>简志刚</b> 绘　·　人民文学出版社　·　全书 <b>111 页</b>，共六章</div>
+  </div>
+</div>
+
+<nav class="sitenav">
+  <div class="nv-in">
+    <a href="index.html">📖 阅读指引</a>
+    <a href="reading-plan.html">📅 阅读进度表</a>
+    <a href="vocab/index.html">📚 字词表</a>
+    <a href="maps.html">🗺 地图</a>
+    <a href="characters.html">👥 人物关系表</a>
+    <a href="fact-sheet.html">📊 秦始皇小档案</a>
+    <span class="nv-here">🔍 一生时间轴</span>
+    <a href="how-to-use.html">📘 使用说明</a>
+  </div>
+</nav>
+
+<main class="wrap sheet wide">
+<div class="sheetin">
+
+<div class="printbtn">
+  <button type="button" onclick="window.print()"
+          title="打印设置：A4；关掉「页眉和页脚」；务必勾选「打印背景图形」，否则底色和颜色印不出来。">🖨 打印</button>
+  <span class="pb-tip">记得勾选<b>「打印背景图形」</b></span>
+</div>
+
+<h2 class="pagetitle">一生时间轴 — 一件一件看，每件事为什么重要</h2>
+<p class="sub">《秦始皇——一统中国》· 名人传系列 · 景崇兰 著 · 人民文学出版社</p>
+
+<p class="note" style="margin:0 0 3mm;">
+  这一页是<b>时间轴的详细版</b>。「秦始皇小档案」那一页的一览表告诉你「哪一年发生了什么」，
+  这一页回答「<b>这件事为什么重要、它带来了什么</b>」。建议先看一览表，再看这一页。
+</p>
+<p class="note" style="margin:0 0 1mm;">
+  圆点大的是<b>转折点</b>。灰线里的小字是「这件事为什么重要」—— 光记住年份没用，要知道它带来了什么。
+</p>
+
+<div class="vt">
+
+  <!-- ---------- 第一段 ---------- -->
+  <div class="stage s1">
+    第一段　夺权期　<span class="yr">前 259 – 前 237 年 ｜ 1 – 23 岁 ｜ 共 29 年（到灭韩前）</span>
+    <span class="why">关键词：当人质、小孩当国王、大人说了算。这一段他几乎什么都做不了主。</span>
+  </div>
+
+  <div class="ev big d1">
+    <div class="when"><b>前 259</b><i>1 岁</i></div>
+    <div class="what">生于赵国邯郸
+      <span class="why">他是在<b>敌国</b>出生的。父亲异人在赵国当人质，母亲赵姬和他在邯郸受尽欺侮却无法反抗（第 34 页）。这段童年，是他后来多疑、不信任别人的起点。</span>
+      <span class="ch">第 2 章</span></div>
+  </div>
+
+  <div class="ev big d1">
+    <div class="when"><b>前 247</b><i>13 岁</i></div>
+    <div class="what">即位，为秦王
+      <span class="why">十三岁 —— 比你大不了几岁。他坐上王位，但国家大事由相国吕不韦和母亲赵姬掌管，他只是个名义上的国君。</span>
+      <span class="ch">第 2 章</span></div>
+  </div>
+
+  <div class="ev d1">
+    <div class="when"><b>前 246</b><i>14 岁</i></div>
+    <div class="what">郑国开始筑渠
+      <span class="why">郑国是韩国派来的<b>间谍</b>，想用修渠这种大工程把秦国的人力财力耗光。十一年后才被发现（前 235 年）。</span>
+      <span class="ch">第 2 章</span></div>
+  </div>
+
+  <div class="ev d1">
+    <div class="when"><b>前 239</b><i>21 岁</i></div>
+    <div class="what">成蟜率军攻赵，后叛变，兵败
+      <span class="why">成蟜是他的弟弟。<b>自己家里人带兵造反</b> —— 这是第二章说的「嬴政的家庭悲剧」。</span>
+      <span class="ch">第 2 章</span></div>
+  </div>
+
+  <div class="ev d1">
+    <div class="when"><b>前 238</b><i>22 岁</i></div>
+    <div class="what">嫪毐作乱，兵败被五马分尸；太后被幽禁雍城
+      <span class="why">他亲手把<b>自己的母亲</b>关了起来。第六章他临死前梦到的，正是「美丽的母亲被软禁在雍城，孤独落寞的神情」（第 104 页）—— 隔了二十八年，他还记得。</span>
+      <span class="ch">第 2 章</span></div>
+  </div>
+
+  <div class="ev big d1">
+    <div class="when"><b>前 237</b><i>23 岁</i></div>
+    <div class="what">罢免吕不韦，<b>开始亲政</b>；接太后回咸阳甘泉宫
+      <span class="why">这才是他真正掌权的开始。<b>从 13 岁登基到这一年，整整等了十年。</b></span>
+      <span class="ch">第 2 章</span></div>
+  </div>
+
+  <div class="ev d1">
+    <div class="when"><b>前 235</b><i>25 岁</i></div>
+    <div class="what">吕不韦自杀；发现郑国是间谍，下令逐客，李斯上《谏逐客书》
+      <span class="why">李斯就是这时候出场的。他上书劝秦王不要驱逐外国人才，留了下来 —— 三十五年后，就是这个李斯改掉了秦始皇的遗诏。</span>
+      <span class="ch">第 3 章</span></div>
+  </div>
+
+  <!-- ---------- 第二段 ---------- -->
+  <div class="stage s2">
+    第二段　统一期　<span class="yr">前 230 – 前 221 年 ｜ 30 – 39 岁 ｜ 共 9 年</span>
+    <span class="why">关键词：九年，六个国家。这是他一生最顺的九年 —— 平均一年半灭一个国。</span>
+  </div>
+
+  <div class="ev d2">
+    <div class="when"><b>前 230</b><i>30 岁</i></div>
+    <div class="what">灭<b>韩</b>（第 1 个）
+      <span class="ch">第 3 章</span></div>
+  </div>
+
+  <div class="ev d2">
+    <div class="when"><b>前 228</b><i>32 岁</i></div>
+    <div class="what">俘虏<b>赵</b>王（第 2 个）
+      <span class="why">赵国是他出生的地方，也是他童年受欺侮的地方。灭赵之前，赵国名将李牧被冤杀 —— 赵国是先自己毁掉了良将，才被灭的。</span>
+      <span class="ch">第 3 章</span></div>
+  </div>
+
+  <div class="ev d2">
+    <div class="when"><b>前 227</b><i>33 岁</i></div>
+    <div class="what">燕太子丹派<b>荆轲</b>行刺，失败，荆轲被杀
+      <span class="why">太子丹小时候也在赵国当人质，和嬴政是<b>儿时玩伴</b>（第 55 页）。玩伴派人来刺杀他 —— 五年后燕国被灭。</span>
+      <span class="ch">第 3 章</span></div>
+  </div>
+
+  <div class="ev d2">
+    <div class="when"><b>前 225</b><i>35 岁</i></div>
+    <div class="what">灭<b>魏</b>（第 3 个）
+      <span class="ch">第 3 章</span></div>
+  </div>
+
+  <div class="ev d2">
+    <div class="when"><b>前 223</b><i>37 岁</i></div>
+    <div class="what">灭<b>楚</b>（第 4 个）
+      <span class="why">王翦带六十万大军，却按兵不动、假装害怕，等楚军放松才突袭 —— 打仗靠的不只是人多。</span>
+      <span class="ch">第 3 章</span></div>
+  </div>
+
+  <div class="ev d2">
+    <div class="when"><b>前 222</b><i>38 岁</i></div>
+    <div class="what">灭<b>燕</b>（第 5 个）
+      <span class="ch">第 3 章</span></div>
+  </div>
+
+  <div class="ev big d2">
+    <div class="when"><b>前 221</b><i>39 岁</i></div>
+    <div class="what">灭<b>齐</b>（第 6 个）—— <b>统一天下</b>
+      <span class="why">这一年他做了一连串「中国历史上第一次」的事：创立「皇帝」称号、自称「朕」、废谥号改用次序、中央集权行郡县制、称百姓为「黔首」、销熔六国兵器铸十二金人、<b>统一文字、货币、度量衡、车轨</b>、迁十二万户富豪到咸阳。文字统一这件事，影响了之后两千多年 —— 也包括今天的你。</span>
+      <span class="ch">第 3 · 4 章</span></div>
+  </div>
+
+  <!-- ---------- 第三段 ---------- -->
+  <div class="stage s3">
+    第三段　皇帝期　<span class="yr">前 220 – 前 210 年 ｜ 40 – 50 岁 ｜ 共 11 年</span>
+    <span class="why">关键词：越有权力，越害怕。遇刺、求仙药、焚书、坑方士 —— 全挤在这短短十一年里。这就是第五章标题「自信与恐惧」的意思。</span>
+  </div>
+
+  <div class="ev d3">
+    <div class="when"><b>前 220</b><i>40 岁</i></div>
+    <div class="what">开始修建驰道
+      <span class="why">驰道＝全国的高速公路，让命令和军队能快速到达各地。第 4 章「大兴土木工程」的开始。</span>
+      <span class="ch">第 4 章</span></div>
+  </div>
+
+  <div class="ev d3">
+    <div class="when"><b>前 219</b><i>41 岁</i></div>
+    <div class="what">东巡，登泰山封禅刻石；派徐市率数千童子童女前往三神山<b>求仙</b>
+      <span class="why">同一年做两件事：一边向上天祈福、把功绩刻在石头上「流芳百世」，一边派几千个孩子出海找长生不死药。<b>他想被人记住，更想不死。</b></span>
+      <span class="ch">第 5 章</span></div>
+  </div>
+
+  <div class="ev d3">
+    <div class="when"><b>前 218</b><i>42 岁</i></div>
+    <div class="what">于博浪沙<b>遇袭</b>
+      <span class="why">一个大铁锤朝他的车轿飞过来。第一次。</span>
+      <span class="ch">第 5 章</span></div>
+  </div>
+
+  <div class="ev d3">
+    <div class="when"><b>前 216</b><i>44 岁</i></div>
+    <div class="what">在兰池<b>遇刺</b>
+      <span class="why">第二次。两年内被袭击两次 —— 从此他再也不敢让人知道自己住在哪里。</span>
+      <span class="ch">第 5 章</span></div>
+  </div>
+
+  <div class="ev d3">
+    <div class="when"><b>前 215</b><i>45 岁</i></div>
+    <div class="what">卢生献书，上有「<b>亡秦者胡</b>」之字；下令蒙恬北征匈奴
+      <span class="why">他以为「胡」指的是北方的匈奴（胡人），于是派蒙恬去打匈奴、修长城。可是最后亡秦的，是他的小儿子<b>胡</b>亥。</span>
+      <span class="ch">第 5 章</span></div>
+  </div>
+
+  <div class="ev d3">
+    <div class="when"><b>前 214</b><i>46 岁</i></div>
+    <div class="what">蒙恬再征匈奴，<b>修筑万里长城</b>
+      <span class="ch">第 4 · 5 章</span></div>
+  </div>
+
+  <div class="ev big d3">
+    <div class="when"><b>前 213</b><i>47 岁</i></div>
+    <div class="what"><b>焚书</b> — 烧毁民间除医药、占卜、种树以外的书籍
+      <span class="why">书上说：这一天正是他<b>四十七岁的生日</b>。宴会上有人说了他不想听的话，于是下令烧书。从这天起，敢说真话的人越来越少。</span>
+      <span class="ch">第 5 章</span></div>
+  </div>
+
+  <div class="ev d3">
+    <div class="when"><b>前 212</b><i>48 岁</i></div>
+    <div class="what"><b>坑杀方士</b>与部分儒生；兴建阿房宫
+      <span class="why">第六章开头紧接着这件事：「自从焚书和坑儒之后，他发现臣子们看他的眼神中多了许多恐惧」（第 102 页）。<b>他把自己变成了一个没人敢靠近的人。</b></span>
+      <span class="ch">第 5 章</span></div>
+  </div>
+
+  <div class="ev big d3">
+    <div class="when"><b>前 210</b><i>50 岁</i></div>
+    <div class="what">第五次巡游，<b>沙丘崩</b>（去世）；李斯、赵高<b>矫诏</b>立胡亥为二世，赐扶苏死
+      <span class="why">他临死前写的诏书，是让心地善良的长子<b>扶苏</b>继位。可是诏书放在赵高那里。赵高说服了李斯，两人<b>改掉诏书</b>，让胡亥当皇帝、逼扶苏自尽。秦始皇一手建立的大秦帝国，「就此埋下覆灭的种子」（第 108 页）。</span>
+      <span class="ch">第 6 章</span></div>
+  </div>
+
+</div>
+
+<p class="note" style="margin-top:5mm; border-top:1px solid #ccc; padding-top:2mm;">
+  说明：年龄按书本自己的算法推出来（<i>年龄 = 259 − 年份 + 1</i>）。
+  事件取自第 109–111 页《秦始皇小档案》，「为什么重要」里引用的页码是书中原文出处。<br>
+  年份、年龄、六国顺序、「这张表怎么用」和三个思考题，都在
+  <a href="fact-sheet.html">「秦始皇小档案」</a> 那一页。
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+  <div class="sf-in">
+      页码依据书前目录核对。书中有整页插图（如第 105 页是一整幅画），所以实际要读的字比页数看起来少。
+  </div>
+</footer>
+
+</body>
+</html>

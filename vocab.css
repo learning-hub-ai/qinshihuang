@@ -1,0 +1,82 @@
+/* ==========================================================================
+   字词表专用样式 —— vocab/ 下 18 个页面共用
+   --------------------------------------------------------------------------
+   框架（页头、导航、页脚、正文容器）在 site.css，这里只管字词表本身：
+   页码分组、类别底色、★重点行、勾选栏、打印分页。
+   新增一节时不用再抄一份 CSS，只要 <link> 这个文件。
+   ========================================================================== */
+
+.how { border:1.5px solid var(--line); padding:2.5mm 3mm; margin:0 0 4mm;
+         font-size:9pt; background:#fffdf5; }
+  .how ol { margin:1.5mm 0 0; padding-left:5mm; }
+  .how li { margin-bottom:0.8mm; }
+  .key { display:flex; gap:2mm; margin-top:2mm; font-size:8.4pt; flex-wrap:wrap; }
+  .key div { padding:0.6mm 2mm; border-left:3.5px solid; }
+  .k-zi { background:var(--zibg);  border-left-color:var(--zi); }
+  .k-st { background:var(--starbg);border-left-color:var(--star); }
+  .k-ci { background:var(--cibg);  border-left-color:var(--ci); }
+  .k-mg { background:var(--mgbg);  border-left-color:var(--mg); }
+  .k-py { background:var(--pybg);  border-left-color:var(--py); }
+
+  .pg { display:flex; align-items:baseline; gap:3mm; margin:5.5mm 0 1mm;
+        padding:1.4mm 2.5mm; background:var(--hdr); color:#fff; }
+  .pg .n { font-size:12.5pt; font-weight:bold; white-space:nowrap; }
+  .pg .q { font-size:8.8pt; font-weight:normal; color:#dce6f2; }
+
+  table { width:100%; border-collapse:collapse; margin-bottom:1mm; }
+  th,td { border:1px solid #999; padding:1.1mm 2mm; vertical-align:top; }
+  thead th { background:#f2f2f2; font-size:8.5pt; text-align:left; font-weight:bold; }
+
+  .c-ck { width:6mm;  text-align:center; padding:1.1mm 0; }
+  .c-ck i { display:inline-block; width:3mm; height:3mm; border:1px solid #777; font-style:normal; }
+  .c-pg { width:8mm;  text-align:center; font-size:9pt; color:#555; }
+  .c-t  { width:14mm; text-align:center; font-size:8.5pt; font-weight:bold; white-space:nowrap; }
+  .c-w  { width:30mm; font-size:11pt; font-weight:bold; white-space:nowrap; }
+  .c-p  { width:42mm; font-size:8.8pt; color:#333; white-space:nowrap; }
+  .c-m  { width:auto; font-size:9.2pt; }
+
+  .t-zi { background:var(--zibg);  color:#2a5a8f; }
+  .t-st { background:var(--starbg);color:#8a6508; }
+  .t-ci { background:var(--cibg);  color:#8a5410; }
+  .t-mg, .t-dd, .t-zz { background:var(--mgbg); color:#2f5c37; }
+  .t-gm { background:#eef0f7;      color:#43508c; }
+  .t-pm { background:#f7eef3;      color:#8c4368; }
+  tr.star td { background:var(--starbg); }
+  /* 只要会念：整行浅灰，一眼看出不必记 */
+  tr.ponly td { background:var(--pybg); color:#444; }
+  tr.ponly .c-w { font-weight:normal; }
+
+  .stm { color:var(--star); font-weight:bold; margin-left:1mm; font-size:9pt; }
+  .src { display:block; font-size:8.4pt; color:#444; margin-top:0.5mm;
+         padding-left:1.8mm; border-left:2px solid #ccc; }
+  .src::before { content:"书上："; color:var(--soft); }
+  .hint  { font-size:8.3pt; color:var(--soft); }
+  .arrow { font-size:8.5pt; color:#555; }
+
+  h2.sec { font-size:11.5pt; margin:5mm 0 1.5mm; padding:1.2mm 2.5mm;
+           background:#f0f0f0; border-left:4px solid var(--line); }
+  h2.sec span { font-weight:normal; font-size:9pt; color:#555; }
+  .lines div { border-bottom:1px solid #bbb; height:6.5mm; }
+  .note { font-size:8.5pt; color:var(--soft); }
+  .pg { page-break-after:avoid; }
+           border-bottom:2px solid #1f3a5f; padding:0 0 5px; margin:0 0 5mm;
+           font-size:9.5pt;}
+
+  /* ---- 全站统一页头 ---- */
+  .sitehead{ background:#1f3a5f; color:#fff; text-align:left;
+             margin:0 0 3mm; padding:3.5mm 4mm 3mm; }
+
+/* 表头下方那句「怎么用」的补充说明 */
+.note-lead{ margin:0 0 1.5mm; }
+
+/* 页尾「资料来源 / 需要注意」那一段，上面有分隔线 */
+.note-foot{ margin-top:4mm; border-top:1px solid #ccc; padding-top:2mm; }
+
+/* 标题下那一行极简记号说明（详细用法在「使用说明」页） */
+.legend1{ font-size:8.6pt; color:#444; margin:0 0 3.5mm;
+          border-left:3px solid var(--star); background:#fffdf5;
+          padding:1.4mm 2.5mm; }
+.legend1 b{ color:#000; }
+.legend1 .more{ color:var(--soft); }
+.legend1 .more a{ color:#1a4a7a; }
+.lg-pon{ background:var(--pybg); padding:0 1mm; }

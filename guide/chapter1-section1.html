@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="读懂故事 · 第一章第一节「因善于养马而步步高升」 —— 用故事线和人物关系图带你读懂这一节的因果，留空自己填，配套字词表使用。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>读懂故事 · 第一章第一节「因善于养马而步步高升」</title>
+<link rel="stylesheet" href="../site.css">
+<style>
+h2 { font-size:11pt; margin:5mm 0 2mm; padding:1.2mm 2.5mm;
+       background:var(--hdr); color:#fff; page-break-after:avoid; }
+  h2 .n { font-size:9pt; opacity:.85; margin-right:2mm; }
+  h2 .who { float:right; font-size:8.2pt; font-weight:normal; opacity:.9; }
+
+  /* ---- 读前提示 ---- */
+  .ask { border:1.5px solid var(--hdr); padding:2.5mm 3mm; margin:0 0 4mm; background:#f7f9fc; }
+  .ask .q { font-size:11pt; font-weight:bold; }
+  .ask .t { font-size:8.8pt; color:#444; margin-top:1mm; }
+
+  /* ---- 背景知识 ---- */
+  .bg { background:var(--bg1); border-left:4px solid var(--bg1b);
+        padding:2mm 3mm; margin:0 0 2mm; font-size:9.3pt; }
+  .bg b { color:#1a4a7a; }
+
+  /* ---- 故事线 ---- */
+  .flow { display:flex; align-items:stretch; gap:0; margin:2mm 0 1mm; }
+  .step { flex:1; border:1.2px solid var(--line); padding:1.8mm 1.5mm 1.2mm;
+          text-align:center; font-size:9pt; position:relative; }
+  .step.given { background:var(--bg3); }
+  .step.todo  { background:var(--fill); border:1.5px dashed var(--fillb); }
+  .step .pg { display:block; font-size:7.6pt; color:var(--soft); margin-top:1mm; }
+  .step .no { position:absolute; top:.6mm; left:1mm; font-size:7pt; color:var(--soft); }
+  .arrow { align-self:center; padding:0 1mm; font-size:11pt; color:#666; }
+  .writeline { height:7.5mm; }
+
+  /* ---- 词库 ---- */
+  .bank { border:1.2px dashed var(--fillb); background:var(--fill);
+          padding:2mm 3mm; font-size:9pt; margin:1.5mm 0 0; }
+  .bank .h { font-size:8.5pt; color:#7a5c07; font-weight:bold; }
+  .bank .w { display:inline-block; margin:1mm 3mm 0 0; }
+  .bank .w i { font-style:normal; font-weight:bold; color:#7a5c07;
+               margin-right:1mm; }
+
+  /* ---- 人物关系（二维图） ---- */
+  .rel { margin:2mm 0 0; }
+  .grp { border:1px solid #d8d8d8; padding:2mm 2.5mm 2.5mm; margin-bottom:2.5mm; }
+  .grp .cap { font-size:8.8pt; font-weight:bold; color:var(--hdr); margin-bottom:1.5mm; }
+  .grp .cap span { font-weight:normal; color:var(--soft); }
+
+  .row { display:flex; align-items:center; flex-wrap:nowrap; }
+  .row.ind1 { padding-left:14mm; }
+  .row.ind2 { padding-left:28mm; }
+
+  .box { border:1.2px solid var(--bg2b); background:var(--bg2);
+         padding:1.4mm 2.4mm; font-size:9.5pt; font-weight:bold; white-space:nowrap; }
+  .box.small { font-weight:normal; font-size:8.8pt; background:#fff; border-style:dashed; }
+  /* 重复出现的同一个人 */
+  .box.again { background:#fdeaea; border-color:#b35a5a; }
+
+  /* 横向连接：箭头 + 上方横线 */
+  .link { display:flex; flex-direction:column; align-items:center;
+          min-width:26mm; padding:0 1mm; }
+  .link .blank { border-bottom:1.3px solid var(--fillb); width:24mm; height:5.5mm;
+                 background:var(--fill); position:relative; }
+  .link .ar { font-size:9pt; color:#555; line-height:1; margin-top:.3mm; }
+  /* 每条横线的编号 */
+  .bn { position:absolute; left:.6mm; top:.2mm; font-size:7pt; color:#a08030;
+        font-weight:bold; }
+  /* 横线旁边的提问 */
+  .qz { font-size:8.2pt; color:var(--soft); margin-left:2.5mm; align-self:center;
+        max-width:42mm; line-height:1.25; }
+  /* 已填好的示范 */
+  .done { border-bottom:1.3px solid #5d9463; background:#eef7ef;
+          font-size:8.2pt; color:#2f5c37; text-align:center; padding-top:1mm;
+          width:30mm !important; }
+  .link:has(.done) { min-width:32mm; }
+
+  /* 竖向连接 */
+  .down { display:flex; align-items:center; margin:.6mm 0 .6mm 0; }
+  .down .bar { width:0; border-left:1.5px solid #888; height:6mm; margin-left:9mm; }
+  .down .blank { border-bottom:1.3px solid var(--fillb); width:24mm; height:5.5mm;
+                 background:var(--fill); margin-left:2mm; position:relative; }
+  .down .t { font-size:8.4pt; color:var(--soft); margin-left:2mm; }
+
+  .backto { font-size:8.6pt; color:#9a3a3a; margin:1mm 0 0 9mm; }
+  .relnote { font-size:8.6pt; color:var(--soft); margin:0 0 2mm; }
+  .bridge { font-size:8.8pt; color:var(--hdr); margin:0 0 2mm; padding-left:2mm;
+            border-left:3px solid var(--hdr); }
+
+  /* ---- 两个问题 ---- */
+  ol.qs { margin:2mm 0 0; padding-left:6mm; }
+  ol.qs li { margin-bottom:1.5mm; font-size:9.8pt; }
+
+  .note { font-size:8.6pt; color:var(--soft); }
+  .foot { font-size:8.4pt; color:var(--soft); margin-top:5mm;
+          border-top:1px solid #ccc; padding-top:2mm; }
+           border-bottom:2px solid #1f3a5f; padding:0 0 5px; margin:0 0 5mm;
+           font-size:9.5pt;}
+</style>
+</head>
+<body>
+
+<div class="sitehead">
+  <div class="sh-in">
+    <div class="printonly">姓名：____________　班级：__________　日期：__________</div>
+    <h1 class="sh-t"><a href="../index.html">《秦始皇——一统中国》整本书阅读</a></h1>
+    <div class="sh-p">读懂故事 · 第 1 章第 1 节</div>
+    <div class="sh-m">名人传系列　·　<b>景崇兰</b> 著　·　<b>简志刚</b> 绘　·　人民文学出版社　·　全书 <b>111 页</b>，共六章</div>
+  </div>
+</div>
+
+<nav class="sitenav">
+  <div class="nv-in">
+    <a class="nv-here" href="../index.html">📖 阅读指引</a>
+    <a href="../reading-plan.html">📅 阅读进度表</a>
+    <a href="../vocab/index.html">📚 字词表</a>
+    <a href="../maps.html">🗺 地图</a>
+    <a href="../characters.html">👥 人物关系表</a>
+    <a href="../fact-sheet.html">📊 秦始皇小档案</a>
+    <a href="../timeline.html">🔍 一生时间轴</a>
+    <a href="../how-to-use.html">📘 使用说明</a>
+  </div>
+</nav>
+
+<main class="wrap sheet">
+<div class="sheetin">
+
+<h2 class="pagetitle">读懂故事 · 第一章第一节</h2>
+<p class="sub">因善于养马而步步高升（第 1–6 页）　·　《秦始皇——一统中国》景崇兰 著</p>
+
+<!-- ============ 读前 ============ -->
+<div class="ask">
+  <div class="q">📖 带着这个问题读：秦国一开始只是个「替天子养马的地方」，它靠什么一步步爬上来的？</div>
+  <div class="t">
+    读的时候留意一个词 —— <b>「册封」</b>。这一节里它出现了好几次。
+    看完你就会发现：秦国每往上走一步，都要周天子点头。
+  </div>
+</div>
+
+<!-- ============ 一、背景 ============ -->
+<h2><span class="n">一</span>先知道这三件事<span class="who">这部分我告诉你</span></h2>
+
+<div class="bg">
+  <b>① 什么是「分封」？</b>（第 3 页脚注有解释）
+  周天子只直接管王城，周围的土地分给兄弟和功臣去管，这些人叫<b>诸侯</b>。
+  诸侯要定时进贡、打仗时要跟着天子出征。—— 所以「被册封为诸侯」是一种<b>身份认证</b>，不是给地那么简单。
+</div>
+
+<div class="bg">
+  <b>② 秦国的位置和别人不一样。</b>
+  中原各国种田，秦国<b>放牧</b>；秦国在最西边，外面就是<b>犬戎</b>（凶猛的塞外民族）。
+  所以中原大国看不起它，书上用了四个字：<b>「非我族类」</b>（第 3 页）。
+</div>
+
+<div class="bg">
+  <b>③ 这一节还没有秦始皇。</b>
+  嬴政要到第二章才出生。第一章讲的是他<b>之前五百多年</b>的秦国 ——
+  也就是第 1 页贾谊说的「<b>续六世之余烈</b>」里，那些打好底子的祖先。
+</div>
+
+<!-- ============ 二、故事线 ============ -->
+<h2><span class="n">二</span>故事线：六步<span class="who">头尾我填了，中间四格你填</span></h2>
+
+<div class="flow">
+  <div class="step given"><span class="no">1</span>非子替天子养马<br>受封秦州，自称「秦嬴」<span class="pg">第 2 页</span></div>
+  <div class="arrow">▶</div>
+  <div class="step todo"><span class="no">2</span><div class="writeline"></div><span class="pg">第 3 页</span></div>
+  <div class="arrow">▶</div>
+  <div class="step todo"><span class="no">3</span><div class="writeline"></div><span class="pg">第 3–4 页</span></div>
+  <div class="arrow">▶</div>
+  <div class="step todo"><span class="no">4</span><div class="writeline"></div><span class="pg">第 4 页</span></div>
+  <div class="arrow">▶</div>
+  <div class="step todo"><span class="no">5</span><div class="writeline"></div><span class="pg">第 5 页</span></div>
+  <div class="arrow">▶</div>
+  <div class="step given"><span class="no">6</span>秦文公逼退犬戎<br>拿到岐山以西的土地<span class="pg">第 5 页</span></div>
+</div>
+
+<div class="bank">
+  <div class="h">🔖 想不起来再看这里（<b>顺序是打乱的</b> — 编号只是方便你指认，不是填空的顺序）</div>
+  <span class="w"><i>①</i>周平王册封秦襄公为诸侯</span>
+  <span class="w"><i>②</i>周幽王烽火戏诸侯，骗诸侯来救</span>
+  <span class="w"><i>③</i>秦襄公拥立太子宜臼、护送到雒邑即位</span>
+  <span class="w"><i>④</i>犬戎真的来了，没人来救，周幽王被杀</span>
+</div>
+
+<!-- ============ 三、人物关系 ============ -->
+<h2><span class="n">三</span>人物关系：横线上的字你写<span class="who">人名我给，关系你看出来</span></h2>
+
+<p class="relnote">
+  <b>怎么填</b>：每条横线<b>旁边都有一个问题</b> —— 照着问题回答就行，两三个字够了。
+  横线上的小数字（1、2、3…）只是编号，方便你跟别人说「第 5 条我填了什么」。<br>
+  <b>第 1 张图的第一条我已经填好当例子</b>（绿色那条）。想不起来就看最下面的词库，或翻回书上那一页。<br>
+  <span style="color:#9a3a3a;"><b>红框</b>＝这个人在同一张图里出现了第二次，不是印错了。</span>
+</p>
+
+<div class="rel">
+
+  <div class="grp">
+    <div class="cap">一、国号的由来 <span>—— 「嬴」和「秦」是两个不同的来源，最后合成一个称号</span></div>
+    <div class="row">
+      <div class="box">舜</div>
+      <div class="link"><div class="blank done"><span class="bn" style="color:#5d9463;">例</span>赐姓「嬴」给他</div><div class="ar">▶</div></div>
+      <div class="box">伯翳</div>
+      <div class="qz"><b>← 这条我填好了当例子</b><br>舜为什么赐姓给他？</div>
+    </div>
+    <div class="row" style="margin-top:2mm;">
+      <div class="box">周孝王</div>
+      <div class="link"><div class="blank"><span class="bn">1</span></div><div class="ar">▶</div></div>
+      <div class="box">非子</div>
+      <div class="qz">周孝王给了非子什么？</div>
+    </div>
+    <div class="row" style="margin-top:2mm;">
+      <div class="box">非子</div>
+      <div class="link"><div class="blank"><span class="bn">2</span></div><div class="ar">▶</div></div>
+      <div class="box small">自称「秦嬴」＝ 秦国国号的由来</div>
+      <div class="qz">他为什么这样自称？</div>
+    </div>
+    <p class="backto" style="color:var(--soft);">
+      👀 一个从<b>血统</b>来，一个从<b>封地</b>来 —— 和你读《孔子》学过的「姓」与「氏」是同一个道理。
+    </p>
+  </div>
+
+  <div class="grp">
+    <div class="cap">二、周幽王把自己害死了 <span>—— 这张图里有一个人出现了两次</span></div>
+    <div class="row">
+      <div class="box">周幽王</div>
+      <div class="link"><div class="blank"><span class="bn">3</span></div><div class="ar">▶</div></div>
+      <div class="box">褒姒</div>
+      <div class="qz">周幽王对褒姒是什么感情？<br><span style="color:#aaa;">（她从来不笑）</span></div>
+    </div>
+    <div class="down">
+      <div class="bar"></div><div class="blank"><span class="bn">4</span></div>
+      <div class="t">↓ 他对诸侯做了什么？</div>
+    </div>
+    <div class="row">
+      <div class="box">各国诸侯</div>
+      <div class="box small" style="margin-left:3mm;">白跑一趟，发现只是玩笑</div>
+    </div>
+    <div class="down">
+      <div class="bar"></div><div class="blank"><span class="bn">5</span></div>
+      <div class="t">↓ 诸侯从此怎么看他？</div>
+    </div>
+    <div class="row">
+      <div class="box small" style="background:#f4f4f4;border-style:solid;">
+        后来犬戎真的来攻，烽火再点 —— 没有人来救
+      </div>
+    </div>
+    <div class="down">
+      <div class="bar"></div><div class="blank"><span class="bn">6</span></div>
+      <div class="t">↓ 结果呢？</div>
+    </div>
+    <div class="row">
+      <div class="box again">周幽王（第二次出现）</div>
+      <div class="box small" style="margin-left:3mm;">被犬戎杀死于骊山之下</div>
+    </div>
+    <p class="backto">
+      ⟲ 他<b>先失去了诸侯的信任，后来失去了性命</b> —— 而且是同一件事造成的。
+    </p>
+  </div>
+
+  <p class="bridge">
+    <b>第二张图和第三张图是连着的</b>：周幽王被犬戎杀死 → 他的儿子周平王上位 →
+    周平王<b>忘不了父亲是怎么死的</b>，所以一定要打犬戎（第 5 页）。
+  </p>
+
+  <div class="grp">
+    <div class="cap">三、秦国拿到土地，靠的是一笔交易 <span>—— 不是天子赏赐</span></div>
+    <div class="row">
+      <div class="box">秦庄公</div>
+      <div class="link"><div class="blank"><span class="bn">7</span></div><div class="ar">▶</div></div>
+      <div class="box">秦襄公</div>
+      <div class="qz">庄公临死前对儿子说了什么？<br><span style="color:#aaa;">（他和犬戎作战重伤而死）</span></div>
+    </div>
+    <div class="down">
+      <div class="bar"></div><div class="blank"><span class="bn">8</span></div>
+      <div class="t">↓ 秦襄公为周平王做了什么？（第 4 页）</div>
+    </div>
+    <div class="row">
+      <div class="box">周平王</div>
+      <div class="link"><div class="blank"><span class="bn">9</span></div><div class="ar">▶</div></div>
+      <div class="box again">秦襄公（第二次出现）</div>
+      <div class="qz">平王怎么报答他？<br><span style="color:#aaa;">（秦国第一次和中原诸国平起平坐）</span></div>
+    </div>
+    <div class="down">
+      <div class="bar"></div><div class="blank"><span class="bn">10</span></div>
+      <div class="t">↓ 周平王要秦国出兵打犬戎，许诺了什么？（第 5 页）</div>
+    </div>
+    <div class="row">
+      <div class="box">秦文公</div>
+      <div class="link"><div class="blank"><span class="bn">11</span></div><div class="ar">▶</div></div>
+      <div class="box small" style="background:#f4f4f4;border-style:solid;">
+        秦襄公打到岐山也重伤死了 —— 文公把犬戎逼退塞外，<br>
+        周平王遵守约定 → 岐山以西的土地全归秦国
+      </div>
+    </div>
+    <p class="backto" style="color:var(--soft);">
+      👀 所以这块地是<b>秦国用两代国君的命换来的</b>，父子先后战死。
+      想一想：这和「天子赏赐」有什么不一样？
+    </p>
+  </div>
+
+</div>
+
+<div class="bank">
+  <div class="h">🔖 卡住了再看这里（<b>顺序是打乱的</b>。横线上的小数字 1–11 是编号，和下面的圆圈号<b>没有对应关系</b>）</div>
+  <span class="w"><i>①</i>不再相信他</span>
+  <span class="w"><i>②</i>册封他为诸侯</span>
+  <span class="w"><i>③</i>宠爱她，想逗她笑</span>
+  <span class="w"><i>④</i>赐秦州给他，让他替天子养马</span>
+  <span class="w"><i>⑤</i>被犬戎杀死</span>
+  <span class="w"><i>⑥</i>许诺夺回的土地归秦国所有</span>
+  <span class="w"><i>⑦</i>姓嬴又住秦州，所以自称</span>
+  <span class="w"><i>⑧</i>点烽火骗他们来救</span>
+  <span class="w"><i>⑨</i>接替战死的父亲，继续打犬戎</span>
+  <span class="w"><i>⑩</i>临死前交代祖先的期望</span>
+  <span class="w"><i>⑪</i>拥立他、护送他到雒邑即位</span>
+</div>
+
+<p class="note" style="margin-top:1mm;">
+  ⚠️ 第三条线有个容易看错的地方：<b>秦庄公和秦襄公，父子两个人都是跟犬戎打仗重伤而死的</b>
+  （第 4 页、第 5 页）。别把他们搞混。
+</p>
+
+<!-- ============ 四、两个问题 ============ -->
+<h2><span class="n">四</span>两个问题<span class="who">第 2 题没有标准答案</span></h2>
+
+<ol class="qs">
+  <li><b>书上说了什么 ——</b>
+      秦襄公做了什么事，换来了「册封为诸侯」？这件事为什么对秦国那么重要？
+      <span class="hint">（提示：想想背景①里说的，「诸侯」这个身份意味着什么）</span>
+      <div class="lines"><div></div><div></div></div></li>
+
+  <li><b>换成你呢 ——</b>
+      秦庄公临死前对儿子说：「你要记得祖先们最大的期望，就是<b>秦国能获得天下人的承认和尊重</b>。」（第 4 页）<br>
+      被人看不起的时候，你会想办法让别人看得起你吗？还是根本不在乎别人怎么看？
+      <div class="lines"><div></div><div></div><div></div></div></li>
+</ol>
+
+<p class="foot">
+  <b>这一页怎么用</b>：先自己读第 1–6 页，再回来填。填不出来就翻回那一页 —— 页码都标好了。<br>
+  <b>填完可以做的事</b>：把第二格到第五格连起来，讲给爸爸妈妈听一遍。讲得顺，这一节就读懂了。
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+  <div class="sf-in">
+      页码依据书前目录核对。书中有整页插图（如第 105 页是一整幅画），所以实际要读的字比页数看起来少。<br>
+      <span class="sf-print">打印任意一页：<b>Ctrl+P → A4 → 关掉「页眉和页脚」→ 勾选「打印背景图形」</b></span>
+  </div>
+</footer>
+
+</body>
+</html>

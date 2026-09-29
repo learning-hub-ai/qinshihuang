@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="《秦始皇——一统中国》配套地图：战国七雄形势图（约前 260 年）、秦国出身示意图、灭六国顺序图，配「看图找什么」导读，帮四年级读者看懂地理位置对故事的影响。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>地图 · 《秦始皇——一统中国》整本书阅读</title>
+<link rel="stylesheet" href="site.css">
+<style>
+  /* ---- 只在这一页用 ---- */
+  .mapbox{ border:1px solid var(--rule); background:#fff; margin:0 0 5mm; }
+  .mapbox > figure{ margin:0; padding:3mm; }
+  .mapbox img{ display:block; width:100%; height:auto; border:1px solid #ccc; }
+  .mapbox figcaption{ font-size:8.6pt; color:var(--soft); margin-top:2mm; line-height:1.5; }
+  .mapbox figcaption a{ color:#1a4a7a; }
+
+  /* 「看图找什么」 */
+  .look{ background:#fffdf5; border-left:4px solid var(--star); padding:2.5mm 3mm; margin:0 0 3mm; }
+  .look .lt{ font-size:10.5pt; font-weight:bold; margin-bottom:1.5mm; }
+  .look ol{ margin:0; padding-left:6mm; font-size:9.6pt; line-height:1.65; }
+  .look li{ margin-bottom:1.2mm; }
+  .look b{ color:#000; }
+  .look .pg{ color:var(--soft); font-size:8.6pt; }
+
+  /* 我画的示意图：秦国的位置 */
+  .sk{ display:flex; align-items:stretch; gap:0; margin:2mm 0 1mm; font-size:9.5pt; }
+  .sk > div{ padding:3mm 2mm; text-align:center; border:1.2px solid var(--line); }
+  .sk .rong{ flex:0 0 22%; background:#efe6e6; }
+  .sk .qin{  flex:0 0 22%; background:#f7d9d4; font-weight:bold; }
+  .sk .mtn{  flex:0 0 8%;  background:#d8d2c4; writing-mode:vertical-rl;
+             letter-spacing:2px; font-size:8.6pt; padding:2mm 0; }
+  .sk .mid{  flex:1;       background:#e8eef5; }
+  .sk .t{ display:block; font-size:8.4pt; color:#555; font-weight:normal; margin-top:1mm; }
+  .skcap{ font-size:8.6pt; color:var(--soft); margin:0 0 4mm; }
+  .skcap b{ color:#000; }
+
+  /* 灭六国顺序 */
+  .six6{ display:flex; gap:2mm; flex-wrap:wrap; margin:2mm 0 1mm; }
+  .six6 .s{ flex:1; min-width:16mm; border:1.5px solid var(--line); text-align:center;
+            padding:2mm .5mm; background:#fff; }
+  .six6 .s .o{ font-size:8pt; color:var(--soft); }
+  .six6 .s .n{ font-size:16pt; font-weight:bold; line-height:1.15; }
+  .six6 .s .y{ font-size:8.4pt; }
+  .six6 .s .d{ font-size:7.6pt; color:#777; }
+
+  .more{ border:1px dashed var(--rule); background:#fafafa; padding:2.5mm 3mm;
+         font-size:9pt; margin:0 0 3mm; }
+  .more a{ color:#1a4a7a; }
+  .more .h{ font-weight:bold; margin-bottom:1mm; }
+
+  @media print{
+    .mapbox{ border:none; page-break-inside:avoid; }
+    .mapbox img{ max-height:150mm; width:auto; margin:0 auto; }
+    .more{ display:none; }        /* 纸上点不了外链 */
+  }
+</style>
+</head>
+<body data-chapter="">
+
+<div class="sitehead">
+  <div class="sh-in">
+    <div class="printonly">姓名：____________　班级：__________　日期：__________</div>
+    <h1 class="sh-t"><a href="index.html">《秦始皇——一统中国》整本书阅读</a></h1>
+    <div class="sh-p">地图 · 国家在哪里，为什么重要</div>
+    <div class="sh-m">名人传系列　·　<b>景崇兰</b> 著　·　<b>简志刚</b> 绘　·　人民文学出版社　·　全书 <b>111 页</b>，共六章</div>
+  </div>
+</div>
+
+<nav class="sitenav">
+  <div class="nv-in">
+    <a href="index.html">📖 阅读指引</a>
+    <a href="reading-plan.html">📅 阅读进度表</a>
+    <a href="vocab/index.html">📚 字词表</a>
+    <span class="nv-here">🗺 地图</span>
+    <a href="characters.html">👥 人物关系表</a>
+    <a href="fact-sheet.html">📊 秦始皇小档案</a>
+    <a href="timeline.html">🔍 一生时间轴</a>
+    <a href="how-to-use.html">📘 使用说明</a>
+  </div>
+  <div class="nv-sub">
+    <span class="nv-lbl">本页跳转：</span>
+    <a href="#origin">秦国的位置（第一章）</a>
+    <a href="#grow">秦国是怎么变大的</a>
+    <a href="#seven">战国七雄形势图（第三章）</a>
+    <a href="#order">灭六国的顺序</a>
+  </div>
+</nav>
+
+<main class="wrap sheet wide">
+<div class="sheetin">
+
+<div class="printbtn">
+  <button type="button" onclick="window.print()"
+          title="打印设置：A4；关掉「页眉和页脚」；务必勾选「打印背景图形」。">🖨 打印</button>
+  <span class="pb-tip">记得勾选<b>「打印背景图形」</b></span>
+</div>
+
+<h2 class="pagetitle">地图 · 国家在哪里，为什么重要</h2>
+<p class="sub">这本书里，<b>地理位置几乎决定了每一步</b> —— 秦国为什么被看不起、为什么没人管得住它、为什么先打韩国最后打齐国。</p>
+
+<!-- ============ 一、秦国的位置 ============ -->
+<h2 id="origin">一、秦国在哪里 —— 读第一章用</h2>
+<p class="note note-lead">
+  第一章讲的是<b>嬴政出生之前五百多年</b>的秦国。那时候还没有「战国七雄」，
+  要弄懂的只有一件事：<b>秦国夹在哪两样东西之间。</b>
+</p>
+
+<div class="sk">
+  <div class="rong">犬戎<span class="t">凶猛的塞外民族<br>常来打秦国</span></div>
+  <div class="qin">秦<span class="t">最西边<br>放牧为生</span></div>
+  <div class="mtn">崤山</div>
+  <div class="mid">周王室　·　中原诸国（齐 晋 宋 楚…）<span class="t">种田为生、文化富庶　—— 看不起秦国，说它「非我族类」</span></div>
+</div>
+<p class="skcap">
+  ⚠ 这是<b>关系示意图，不是真实地图</b>：方向（秦在西、中原在东）是对的，形状和距离不是。
+</p>
+
+<div class="look">
+  <div class="lt">💡 这张图解释了第一章最关键的一件事</div>
+  <ol>
+    <li><b>坏处：</b>秦国离得远、又放牧，中原大国看不起它 ——
+        书上原话是「一点文明都没有，简直就是『非我族类』」<span class="pg">（第 3 页）</span></li>
+    <li><b>好处：</b>东边的<b>崤山</b>是一道天然屏障，「不仅阻隔中原诸国的进犯，同时也为秦国带来一层神秘的色彩」<span class="pg">（第 21 页）</span></li>
+    <li><b>最关键：</b>因为被瞧不起，「没能真正地了解秦国，<b>这就给了秦国自由发展的空间</b>」<span class="pg">（第 21 页）</span></li>
+  </ol>
+  <p class="note" style="margin:2mm 0 0;">
+    想一想：<b>被人看不起</b>，居然反而成了秦国的好处 —— 这怎么可能？
+  </p>
+</div>
+
+<div class="more" id="grow">
+  <div class="h">🔎 想看真实地图？这两张正好对应第一章第三节</div>
+  第一章第三节（第 11–21 页）讲的是<b>商鞅变法 → 张仪连横 → 范雎远交近攻</b>，
+  横跨一百多年。这两张图是那段时间的前后两个时点：
+  <ul style="margin:1.5mm 0 0; padding-left:6mm;">
+    <li><a href="https://zh.wikipedia.org/wiki/File:%E6%88%98%E5%9B%BD%E5%BD%A2%E5%8A%BF%E5%9B%BE%EF%BC%88%E5%89%8D350%E5%B9%B4%EF%BC%89%EF%BC%88%E7%B9%81%EF%BC%89.png">战国形势图（前 350 年）</a>
+        —— <b>商鞅变法前后</b>（书第 12 页）。看这时候秦国还不算大。</li>
+    <li><a href="https://zh.wikipedia.org/wiki/File:%E6%88%98%E5%9B%BD%EF%BC%88%E5%89%8D280%E5%B9%B4%EF%BC%89%EF%BC%88%E7%B9%81%EF%BC%89.png">战国形势图（前 280 年）</a>
+        —— <b>秦昭襄王、范雎的时候</b>（书第 17 页）。和前 350 年对比，秦国明显变大了
+        —— 这就是变法和连横的结果。</li>
+    <li><a href="https://zh.wikipedia.org/zh-cn/%E6%88%98%E5%9B%BD%E4%B8%83%E9%9B%84">维基百科「战国七雄」</a>
+        —— 想查某一个国家的详细情况</li>
+  </ul>
+  <p class="note" style="margin:2mm 0 0;">
+    ⚠ 这两张是<b>繁体字</b>，而且标了很多小国（宋、鲁、卫、中山、越、巴、蜀…）和上百个城邑，
+    比本页第二张难得多。看不懂没关系，只要<b>比一比秦国哪张更大</b>就够了。
+  </p>
+</div>
+
+<!-- ============ 二、战国七雄 ============ -->
+<h2 id="seven">二、战国七雄形势图 —— 读第三章用</h2>
+<p class="note note-lead">
+  这张图画的是<b>约公元前 260 年</b>，也就是嬴政出生前一年左右 ——
+  正好是第三章「灭六国」开打之前的样子。
+</p>
+
+<div class="look">
+  <div class="lt">💡 看图先找这五样东西</div>
+  <ol>
+    <li>找到<b>秦</b>（左边粉红那块）。它在<b>最西边</b>，而且面积最大 —— 书上说「地处偏远，占地却相当辽阔」<span class="pg">（第 21 页）</span></li>
+    <li>找到秦国的都城<b>咸阳</b>，和旁边的<b>渭水</b> —— 非子替天子养马的秦州就在这一带<span class="pg">（第 2 页）</span></li>
+    <li>找到<b>邯郸</b>（赵国境内）—— <b>嬴政就出生在这里</b>，他和母亲在这座城里受尽欺侮<span class="pg">（第 34 页）</span></li>
+    <li>找到<b>韩</b>（中间那块紫色的小国）。它最小、又紧挨着秦国 —— 所以是<b>第一个</b>被灭的</li>
+    <li>找到<b>齐</b>（右边黄色）。它在<b>最东边</b>，隔着好几个国家 —— 所以是<b>最后一个</b>被灭的</li>
+  </ol>
+</div>
+
+<div class="mapbox">
+  <figure>
+    <img src="assets/maps/warring-states-260bc.jpg"
+         alt="战国七雄形势图，约公元前 260 年。秦在最西，齐在最东，韩在中间最小。图上标出咸阳、邯郸、大梁、临淄、寿春等都城。">
+    <figcaption>
+      战国七雄形势图，约公元前 260 年。<br>
+      地图作者 <b>Philg88</b>，授权 <a href="https://creativecommons.org/licenses/by/3.0/deed.zh">CC BY 3.0</a>，
+      取自 <a href="https://commons.wikimedia.org/wiki/File:ZH-%E6%88%98%E5%9B%BD%E4%B8%83%E9%9B%84%E5%9C%B0%E5%9B%BE.jpg">Wikimedia Commons</a>。
+      本页只缩小了尺寸，没有改动内容。<br>
+      ⚠ 原图标题印成「顷公元前260年」，应是「<b>约</b>公元前 260 年」 —— 原作者的笔误，我们没有改图。
+    </figcaption>
+  </figure>
+</div>
+
+<!-- ============ 三、灭六国顺序 ============ -->
+<h2 id="order">三、灭六国的顺序 —— 为什么是这个次序</h2>
+<p class="note note-lead">
+  对着上面那张图看这一行，就会发现顺序<b>不是随便来的</b>。
+</p>
+
+<div class="six6">
+  <div class="s"><div class="o">第 1 个</div><div class="n">韩</div><div class="y">前 230</div><div class="d">最小·紧挨秦</div></div>
+  <div class="s"><div class="o">第 2 个</div><div class="n">赵</div><div class="y">前 228</div><div class="d">挨着秦</div></div>
+  <div class="s"><div class="o">第 3 个</div><div class="n">魏</div><div class="y">前 225</div><div class="d">挨着秦</div></div>
+  <div class="s"><div class="o">第 4 个</div><div class="n">楚</div><div class="y">前 223</div><div class="d">南方最大</div></div>
+  <div class="s"><div class="o">第 5 个</div><div class="n">燕</div><div class="y">前 222</div><div class="d">北方最远</div></div>
+  <div class="s"><div class="o">第 6 个</div><div class="n">齐</div><div class="y">前 221</div><div class="d">东方最远</div></div>
+</div>
+
+<div class="look">
+  <div class="lt">💡 三个能从图上看出来的规律</div>
+  <ol>
+    <li><b>由近及远。</b>前三个（韩赵魏）都紧挨着秦国，最后两个（燕齐）离得最远。
+        这就是范雎向秦昭襄王献的<b>「远交近攻」</b><span class="pg">（第 17 页）</span> ——
+        先打挨着自己的，远的先交朋友，别让他们联手。</li>
+    <li><b>韩赵魏合称「三晋」</b>，都是从晋国分出来的<span class="pg">（第 11 页）</span>。
+        看图就明白为什么它们挤在一起。</li>
+    <li><b>齐国最后被灭，靠的不是打。</b>第三章第三节标题是「燕荆轲刺秦，<b>齐后胜通秦</b>」 ——
+        齐国的相国后胜暗中帮秦国，齐国就这样没了。</li>
+  </ol>
+  <p class="note" style="margin:2mm 0 0;">
+    记顺序的口诀：<b>韩赵魏楚燕齐</b>。前三个是三晋，然后南边的楚，最后最远的燕和齐。
+  </p>
+</div>
+
+<p class="note note-foot">
+  <b>关于这一页</b>：第二张是现成的历史地图（署名见图下），
+  第一、三两张是<b>示意图</b> —— 只画书里反复提到的几件事，方向对、形状和距离不对，
+  不能当真实地图看。<br>
+  <b>为什么值得看地图</b>：这本书里好几件事只有看了位置才想得通 ——
+  秦国为什么被看不起、为什么能自由发展、灭六国为什么是这个顺序、
+  为什么「远交近攻」比「合纵连横」更管用。
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+  <div class="sf-in">
+      页码依据书前目录核对。书中有整页插图（如第 105 页是一整幅画），所以实际要读的字比页数看起来少。
+  </div>
+</footer>
+
+</body>
+</html>

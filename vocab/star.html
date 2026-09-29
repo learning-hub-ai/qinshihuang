@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="《秦始皇——一统中国》全书 293 个★重点字词汇总，只列字、拼音、页码，遮住拼音即可自测，可打印。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>字词表 · ★重点 293 个 · 《秦始皇——一统中国》整本书阅读</title>
+<link rel="stylesheet" href="../site.css">
+<link rel="stylesheet" href="../vocab.css">
+<style>
+  .lg-star{ background:#fffdf2; color:#000; padding:0 1mm; }
+  .lg-pon{ background:#f4f4f4; color:#000; padding:0 1mm; }
+  /* ---- 只在这一页用 ---- */
+  .vtoc{ width:100%; border-collapse:collapse; margin:0 0 2mm; }
+  .vtoc th,.vtoc td{ border:1px solid #ccc; padding:1.6mm 2.5mm; font-size:10pt; }
+  .vtoc thead th{ background:var(--band); font-size:9pt; text-align:left; }
+  .vtoc tr.chrow td{ background:var(--c1bg); font-weight:bold; font-size:10.5pt;
+                     border-left:4px solid var(--c1); }
+  .vtoc .v-sec{ width:16mm; text-align:center; font-weight:normal; color:var(--soft); }
+  .vtoc .v-t{ width:auto; }
+  .vtoc .v-n{ width:16mm; text-align:center; color:#555; }
+  .vtoc .v-a{ width:20mm; text-align:center; white-space:nowrap; }
+  .vtoc a{ color:#1a4a7a; text-decoration:none; border-bottom:1px solid #a9c2dd; }
+  .vtoc a:hover{ background:var(--c1bg); }
+
+  /* ★ 汇总 */
+  .starsec{ margin:0 0 3mm; page-break-inside:avoid; }
+  .starsec .sh{ font-size:10pt; font-weight:bold; background:var(--starbg);
+                border-left:4px solid var(--star); padding:1.2mm 2.5mm; }
+  .starsec .sh span{ font-weight:normal; color:#555; }
+  .starsec .sh a{ float:right; font-size:8.6pt; font-weight:normal;
+                  color:#1a4a7a; text-decoration:none; }
+  .starwrap{ display:flex; flex-wrap:wrap; gap:1.5mm 2mm; padding:2mm 1mm 0; }
+  .sw{ border:1px solid #e0d090; background:#fffdf5; padding:1mm 2.5mm;
+       text-align:center; min-width:17mm; }
+  .sw b{ display:block; font-size:12pt; line-height:1.25; white-space:nowrap; }
+  .sw i{ display:block; font-style:normal; font-size:8pt; color:#555;
+         white-space:nowrap; letter-spacing:-.2px; }
+  .sw u{ display:block; text-decoration:none; font-size:7pt; color:#aaa; }
+  .sw u::before{ content:"第 "; }
+  .sw u::after{ content:" 页"; }
+
+  /* 全部打印 */
+  .vt{ width:100%; border-collapse:collapse; margin:0 0 4mm; page-break-inside:auto; }
+  @media print{
+    .vt{ page-break-before:always; }      /* 每一节从新的一页开始 */
+    .vt caption{ background:#000; }
+    .vt thead{ display:table-header-group; }   /* 跨页时表头重复 */
+  }
+  .vt caption{ caption-side:top; text-align:left; font-weight:bold; font-size:10.5pt;
+               background:var(--hdr); color:#fff; padding:1.2mm 2.5mm; }
+  .vt caption span{ font-weight:normal; opacity:.85; font-size:9pt; }
+  .vt th,.vt td{ border:1px solid #bbb; padding:0.9mm 2mm; font-size:9.5pt; }
+  .vt thead th{ background:var(--band); font-size:8.5pt; text-align:left; }
+  .vt .a-ck{ width:9mm; text-align:center; }
+  .vt .a-ck i{ display:inline-block; width:3mm; height:3mm; border:1px solid #777; }
+  .vt .a-t{ width:16mm; font-size:8.5pt; color:#555; }
+  .vt .a-w{ width:26mm; font-weight:bold; }
+  .vt .a-p{ width:30mm; font-size:9pt; color:#444; }
+  .vt .a-pg{ width:10mm; text-align:center; font-size:8.5pt; color:#888; }
+  .vt tr.r-star td{ background:var(--starbg); }
+  .vt tr.r-pon td{ background:var(--pybg); color:#555; }
+
+  /* 三个区块：各自一个带框的 section，一眼看出哪块是哪块 */
+  .vblock{ border:1.5px solid var(--rule); margin:0 0 6mm; background:#fff; }
+  .vblock > .bh{ background:var(--hdr); color:#fff; padding:2mm 3mm; }
+  .vblock > .bh h2{ font-size:12.5pt; margin:0; background:none; border:none;
+                    padding:0; color:#fff; }
+  .vblock > .bh .d{ font-size:8.8pt; opacity:.9; margin-top:1mm; }
+  .vblock > .bh .d b{ color:#fff; }
+  .vblock > .bb{ padding:3mm; }
+  @media print{
+    .vblock{ border:none; margin-bottom:4mm; }
+    .vblock > .bh{ background:#000; }
+    .pb{ page-break-before:always; }
+  }
+
+  /* 章级标题：把 18 个小节分成六章＋附录 */
+  .chaphead{ display:flex; align-items:baseline; gap:3mm; flex-wrap:wrap;
+             background:var(--hdr); color:#fff; padding:2mm 3mm;
+             margin:5mm 0 2.5mm; page-break-after:avoid; }
+  .chaphead:first-of-type{ margin-top:1mm; }
+  .chaphead .cn{ font-size:12pt; font-weight:bold; }
+  .chaphead .ct{ font-size:11pt; }
+  .chaphead .cp{ font-size:8.8pt; opacity:.8; }
+  .chaphead .cc{ margin-left:auto; font-size:9pt; background:rgba(255,255,255,.18);
+                 padding:.4mm 2mm; white-space:nowrap; }
+  /* 六章各用自己的色，和时间轴／首页一致 */
+  .ch-一,.ch-二{ background:var(--p1b); }
+  .ch-三{ background:var(--p2b); }
+  .ch-四,.ch-五,.ch-六{ background:var(--p3b); }
+  .ch-x{ background:var(--soft); }
+  @media print{ .chaphead{ background:#000 !important; } }
+</style>
+</head>
+<body>
+
+<div class="sitehead">
+  <div class="sh-in">
+    <div class="printonly">姓名：____________　班级：__________　日期：__________</div>
+    <h1 class="sh-t"><a href="../index.html">《秦始皇——一统中国》整本书阅读</a></h1>
+    <div class="sh-p">字词表 · ★重点 293 个</div>
+    <div class="sh-m">名人传系列　·　<b>景崇兰</b> 著　·　<b>简志刚</b> 绘　·　人民文学出版社　·　全书 <b>111 页</b>，共六章</div>
+  </div>
+</div>
+
+<nav class="sitenav">
+  <div class="nv-in">
+    <a href="../index.html">📖 阅读指引</a>
+    <a href="../reading-plan.html">📅 阅读进度表</a>
+    <span class="nv-here">📚 字词表</span>
+    <a href="../maps.html">🗺 地图</a>
+    <a href="../characters.html">👥 人物关系表</a>
+    <a href="../fact-sheet.html">📊 秦始皇小档案</a>
+    <a href="../timeline.html">🔍 一生时间轴</a>
+    <a href="../how-to-use.html">📘 使用说明</a>
+  </div>
+  <div class="nv-sub">
+    <span class="nv-lbl">字词表三种用法：</span>
+    <a href="index.html">按章节查</a>
+    <span class="nv-cur">重点词语</span>
+    <a href="all.html">打印全书</a>
+  </div>
+</nav>
+
+<main class="wrap sheet wide">
+<div class="sheetin">
+
+<div class="printbtn">
+  <button type="button" onclick="window.print()"
+          title="打印设置：A4；关掉「页眉和页脚」；务必勾选「打印背景图形」。">🖨 打印</button>
+  <span class="pb-tip">记得勾选<b>「打印背景图形」</b></span>
+</div>
+
+<h2 class="pagetitle">字词表 · ★重点 293 个</h2>
+<p class="sub">考前自测用。只有字、拼音、页码 —— 遮住拼音念一遍。</p>
+
+<section class="vblock" id="star">
+  <div class="bh">
+    <h2>重点词语 —— 293 个要会读也会写的</h2>
+    <div class="d">只有<b>字、拼音、页码</b>，故意不写意思 —— 遮住拼音念一遍，念不出来就翻回那一页。想知道意思，点每节右边的「查这一节」。</div>
+  </div>
+  <div class="bb">
+  <div class="chaphead ch-一"><span class="cn">第一章</span><span class="ct">从养马之地到战国七雄</span><span class="cp">第 1–21 页</span><span class="cc">★ 58 个</span></div>
+  <div class="starsec"><div class="sh"><span>因善于养马而步步高升</span><a href="chapter1-section1.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>群雄割据★</b><i>qún xióng gē jù</i><u>1</u></span>
+<span class="sw"><b>兼并★</b><i>jiān bìng</i><u>1</u></span>
+<span class="sw"><b>开疆辟土★</b><i>kāi jiāng pì tǔ</i><u>1</u></span>
+<span class="sw"><b>艰辛★</b><i>jiān xīn</i><u>2</u></span>
+<span class="sw"><b>驾驭★</b><i>jià yù</i><u>2</u></span>
+<span class="sw"><b>僻居西陲★</b><i>pì jū xī chuí</i><u>2</u></span>
+<span class="sw"><b>自暴自弃★</b><i>zì bào zì qì</i><u>3</u></span>
+<span class="sw"><b>快马加鞭★</b><i>kuài mǎ jiā biān</i><u>3</u></span>
+<span class="sw"><b>拥兵自重★</b><i>yōng bīng zì zhòng</i><u>3</u></span>
+<span class="sw"><b>非我族类★</b><i>fēi wǒ zú lèi</i><u>3</u></span>
+<span class="sw"><b>恶有恶报★</b><i>è yǒu è bào</i><u>4</u></span>
+<span class="sw"><b>毅然决然★</b><i>yì rán jué rán</i><u>4</u></span>
+<span class="sw"><b>国仇家恨★</b><i>guó chóu jiā hèn</i><u>4</u></span>
+<span class="sw"><b>战战兢兢★</b><i>zhàn zhàn jīng jīng</i><u>5</u></span>
+<span class="sw"><b>前功尽弃★</b><i>qián gōng jìn qì</i><u>5</u></span>
+<span class="sw"><b>惹人非议★</b><i>rě rén fēi yì</i><u>5</u></span>
+</div></div>
+  <div class="starsec"><div class="sh"><span>跃居「春秋五霸」之列</span><a href="chapter1-section2.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>人才济济★</b><i>rén cái jǐ jǐ</i><u>7</u></span>
+<span class="sw"><b>一较高低★</b><i>yī jiào gāo dī</i><u>7</u></span>
+<span class="sw"><b>池鱼之殃★</b><i>chí yú zhī yāng</i><u>7</u></span>
+<span class="sw"><b>大智若愚★</b><i>dà zhì ruò yú</i><u>8</u></span>
+<span class="sw"><b>求贤若渴★</b><i>qiú xián ruò kě</i><u>8</u></span>
+<span class="sw"><b>不可多得★</b><i>bù kě duō dé</i><u>8</u></span>
+<span class="sw"><b>秦晋之好★</b><i>Qín Jìn zhī hǎo</i><u>8</u></span>
+<span class="sw"><b>死伤惨重★</b><i>sǐ shāng cǎn zhòng</i><u>10</u></span>
+<span class="sw"><b>疲惫不堪★</b><i>pí bèi bù kān</i><u>10</u></span>
+<span class="sw"><b>爱民如子★</b><i>ài mín rú zǐ</i><u>10</u></span>
+<span class="sw"><b>怀才不遇★</b><i>huái cái bù yù</i><u>10</u></span>
+<span class="sw"><b>绳之以法★</b><i>shéng zhī yǐ fǎ</i><u>10</u></span>
+</div></div>
+  <div class="starsec"><div class="sh"><span>战国时代，傲视群雄</span><a href="chapter1-section3.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>阴谋★</b><i>yīn móu</i><u>11</u></span>
+<span class="sw"><b>凌驾★</b><i>líng jià</i><u>11</u></span>
+<span class="sw"><b>怀才不遇★</b><i>huái cái bù yù</i><u>12</u></span>
+<span class="sw"><b>气象一新★</b><i>qì xiàng yī xīn</i><u>12</u></span>
+<span class="sw"><b>刻薄寡恩★</b><i>kè bó guǎ ēn</i><u>12</u></span>
+<span class="sw"><b>众目睽睽★</b><i>zhòng mù kuí kuí</i><u>14</u></span>
+<span class="sw"><b>傲视群雄★</b><i>ào shì qún xióng</i><u>14</u></span>
+<span class="sw"><b>合纵★</b><i>hé zòng</i><u>14</u></span>
+<span class="sw"><b>连横★</b><i>lián héng</i><u>14</u></span>
+<span class="sw"><b>不费吹灰之力★</b><i>bù fèi chuī huī zhī lì</i><u>15</u></span>
+<span class="sw"><b>各个击破★</b><i>gè gè jī pò</i><u>15</u></span>
+<span class="sw"><b>竭尽忠心★</b><i>jié jìn zhōng xīn</i><u>15</u></span>
+<span class="sw"><b>利欲熏心★</b><i>lì yù xūn xīn</i><u>16</u></span>
+<span class="sw"><b>谎称★</b><i>huǎng chēng</i><u>16</u></span>
+<span class="sw"><b>乘人之危★</b><i>chéng rén zhī wēi</i><u>17</u></span>
+<span class="sw"><b>接二连三★</b><i>jiē èr lián sān</i><u>17</u></span>
+<span class="sw"><b>背信忘义★</b><i>bèi xìn wàng yì</i><u>17</u></span>
+<span class="sw"><b>风云诡谲★</b><i>fēng yún guǐ jué</i><u>17</u></span>
+<span class="sw"><b>改名换姓★</b><i>gǎi míng huàn xìng</i><u>17</u></span>
+<span class="sw"><b>远交近攻★</b><i>yuǎn jiāo jìn gōng</i><u>18</u></span>
+<span class="sw"><b>疲于奔命★</b><i>pí yú bēn mìng</i><u>18</u></span>
+<span class="sw"><b>明察善恶★</b><i>míng chá shàn è</i><u>18</u></span>
+<span class="sw"><b>冠冕堂皇★</b><i>guān miǎn táng huáng</i><u>19</u></span>
+<span class="sw"><b>师出无名★</b><i>shī chū wú míng</i><u>19</u></span>
+<span class="sw"><b>名存实亡★</b><i>míng cún shí wáng</i><u>19</u></span>
+<span class="sw"><b>人才辈出★</b><i>rén cái bèi chū</i><u>19</u></span>
+<span class="sw"><b>移风易俗★</b><i>yí fēng yì sú</i><u>19</u></span>
+<span class="sw"><b>知人善任★</b><i>zhī rén shàn rèn</i><u>19</u></span>
+<span class="sw"><b>不屑一顾★</b><i>bù xiè yī gù</i><u>21</u></span>
+<span class="sw"><b>天时地利人和★</b><i>tiān shí dì lì rén hé</i><u>21</u></span>
+</div></div>
+  <div class="chaphead ch-二"><span class="cn">第二章</span><span class="ct">人质的小孩成为国君</span><span class="cp">第 22–40 页</span><span class="cc">★ 57 个</span></div>
+  <div class="starsec"><div class="sh"><span>秦王孙异人和吕不韦</span><a href="chapter2-section1.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>天时地利人和★</b><i>tiān shí dì lì rén hé</i><u>22</u></span>
+<span class="sw"><b>泱泱大国★</b><i>yāng yāng dà guó</i><u>22</u></span>
+<span class="sw"><b>虎视眈眈★</b><i>hǔ shì dān dān</i><u>22</u></span>
+<span class="sw"><b>何许人★</b><i>hé xǔ rén</i><u>22</u></span>
+<span class="sw"><b>闷闷不乐★</b><i>mèn mèn bù lè</i><u>23</u></span>
+<span class="sw"><b>客死异乡★</b><i>kè sǐ yì xiāng</i><u>23</u></span>
+<span class="sw"><b>唯利是图★</b><i>wéi lì shì tú</i><u>24</u></span>
+<span class="sw"><b>慷慨激昂★</b><i>kāng kǎi jī áng</i><u>24</u></span>
+<span class="sw"><b>孤家寡人★</b><i>gū jiā guǎ rén</i><u>24</u></span>
+<span class="sw"><b>一见倾心★</b><i>yī jiàn qīng xīn</i><u>26</u></span>
+<span class="sw"><b>深仇大恨★</b><i>shēn chóu dà hèn</i><u>26</u></span>
+<span class="sw"><b>生灵涂炭★</b><i>shēng líng tú tàn</i><u>26</u></span>
+<span class="sw"><b>可有可无★</b><i>kě yǒu kě wú</i><u>27</u></span>
+<span class="sw"><b>忧心忡忡★</b><i>yōu xīn chōng chōng</i><u>27</u></span>
+<span class="sw"><b>朝不保夕★</b><i>zhāo bù bǎo xī</i><u>27</u></span>
+<span class="sw"><b>梦寐以求★</b><i>mèng mèi yǐ qiú</i><u>27</u></span>
+<span class="sw"><b>苦心经营★</b><i>kǔ xīn jīng yíng</i><u>27</u></span>
+<span class="sw"><b>一举两得★</b><i>yī jǔ liǎng dé</i><u>27</u></span>
+</div></div>
+  <div class="starsec"><div class="sh"><span>「赵政」归秦</span><a href="chapter2-section2.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>有钱能使鬼推磨★</b><i>yǒu qián néng shǐ guǐ tuī mò</i><u>28</u></span>
+<span class="sw"><b>如簧之舌★</b><i>rú huáng zhī shé</i><u>28</u></span>
+<span class="sw"><b>不可一世★</b><i>bù kě yī shì</i><u>28</u></span>
+<span class="sw"><b>重责大任★</b><i>zhòng zé dà rèn</i><u>28</u></span>
+<span class="sw"><b>惶恐不安★</b><i>huáng kǒng bù ān</i><u>28</u></span>
+<span class="sw"><b>长命百岁★</b><i>cháng mìng bǎi suì</i><u>29</u></span>
+<span class="sw"><b>如获至宝★</b><i>rú huò zhì bǎo</i><u>29</u></span>
+<span class="sw"><b>可遇而不可求★</b><i>kě yù ér bù kě qiú</i><u>29</u></span>
+<span class="sw"><b>开门见山★</b><i>kāi mén jiàn shān</i><u>29</u></span>
+<span class="sw"><b>莫逆之交★</b><i>mò nì zhī jiāo</i><u>29</u></span>
+<span class="sw"><b>如日中天★</b><i>rú rì zhōng tiān</i><u>29</u></span>
+<span class="sw"><b>奇珍异宝★</b><i>qí zhēn yì bǎo</i><u>30</u></span>
+<span class="sw"><b>年老色衰★</b><i>nián lǎo sè shuāi</i><u>30</u></span>
+<span class="sw"><b>直截了当★</b><i>zhí jié liǎo dàng</i><u>30</u></span>
+<span class="sw"><b>正中下怀★</b><i>zhèng zhòng xià huái</i><u>30</u></span>
+<span class="sw"><b>流言四起★</b><i>liú yán sì qǐ</i><u>32</u></span>
+<span class="sw"><b>从长计议★</b><i>cóng cháng jì yì</i><u>32</u></span>
+<span class="sw"><b>若有所思★</b><i>ruò yǒu suǒ sī</i><u>32</u></span>
+<span class="sw"><b>念念不忘★</b><i>niàn niàn bù wàng</i><u>32</u></span>
+<span class="sw"><b>怒不可遏★</b><i>nù bù kě è</i><u>32</u></span>
+<span class="sw"><b>无济于事★</b><i>wú jì yú shì</i><u>33</u></span>
+<span class="sw"><b>师出有名★</b><i>shī chū yǒu míng</i><u>33</u></span>
+<span class="sw"><b>自取灭亡★</b><i>zì qǔ miè wáng</i><u>33</u></span>
+<span class="sw"><b>生灵涂炭★</b><i>shēng líng tú tàn</i><u>33</u></span>
+</div></div>
+  <div class="starsec"><div class="sh"><span>嬴政的家庭悲剧</span><a href="chapter2-section3.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>痛哭流涕★</b><i>tòng kū liú tì</i><u>34</u></span>
+<span class="sw"><b>一人之下，万人之上★</b><i>yī rén zhī xià, wàn rén zhī shàng</i><u>34</u></span>
+<span class="sw"><b>孤儿寡母★</b><i>gū ér guǎ mǔ</i><u>34</u></span>
+<span class="sw"><b>自相矛盾★</b><i>zì xiāng máo dùn</i><u>36</u></span>
+<span class="sw"><b>好大喜功★</b><i>hào dà xǐ gōng</i><u>36</u></span>
+<span class="sw"><b>以民为重★</b><i>yǐ mín wéi zhòng</i><u>36</u></span>
+<span class="sw"><b>有勇无谋★</b><i>yǒu yǒng wú móu</i><u>38</u></span>
+<span class="sw"><b>势如破竹★</b><i>shì rú pò zhú</i><u>38</u></span>
+<span class="sw"><b>坚壁清野★</b><i>jiān bì qīng yě</i><u>38</u></span>
+<span class="sw"><b>弹尽粮绝★</b><i>dàn jìn liáng jué</i><u>38</u></span>
+<span class="sw"><b>心急如焚★</b><i>xīn jí rú fén</i><u>38</u></span>
+<span class="sw"><b>骨肉相残★</b><i>gǔ ròu xiāng cán</i><u>39</u></span>
+<span class="sw"><b>五马分尸★</b><i>wǔ mǎ fēn shī</i><u>39</u></span>
+<span class="sw"><b>骨肉干戈★</b><i>gǔ ròu gān gē</i><u>40</u></span>
+<span class="sw"><b>大权旁落★</b><i>dà quán páng luò</i><u>40</u></span>
+</div></div>
+  <div class="chaphead ch-三"><span class="cn">第三章</span><span class="ct">结束分裂，定于一尊</span><span class="cp">第 41–61 页</span><span class="cc">★ 59 个</span></div>
+  <div class="starsec"><div class="sh"><span>韩国的间谍，赵国的良将</span><a href="chapter3-section1.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>民不聊生★</b><i>mín bù liáo shēng</i><u>41</u></span>
+<span class="sw"><b>定于一尊★</b><i>dìng yú yī zūn</i><u>41</u></span>
+<span class="sw"><b>东窗事发★</b><i>dōng chuāng shì fā</i><u>42</u></span>
+<span class="sw"><b>半途而废★</b><i>bàn tú ér fèi</i><u>42</u></span>
+<span class="sw"><b>将计就计★</b><i>jiāng jì jiù jì</i><u>42</u></span>
+<span class="sw"><b>不疑有他★</b><i>bù yí yǒu tā</i><u>42</u></span>
+<span class="sw"><b>所言有理★</b><i>suǒ yán yǒu lǐ</i><u>42</u></span>
+<span class="sw"><b>轩然大波★</b><i>xuān rán dà bō</i><u>43</u></span>
+<span class="sw"><b>立论精当★</b><i>lì lùn jīng dàng</i><u>43</u></span>
+<span class="sw"><b>游说★</b><i>yóu shuì</i><u>43</u></span>
+<span class="sw"><b>上书陈情★</b><i>shàng shū chén qíng</i><u>43</u></span>
+<span class="sw"><b>骁勇善战★</b><i>xiāo yǒng shàn zhàn</i><u>45</u></span>
+<span class="sw"><b>忠心耿耿★</b><i>zhōng xīn gěng gěng</i><u>45</u></span>
+<span class="sw"><b>胜券在握★</b><i>shèng quàn zài wò</i><u>45</u></span>
+<span class="sw"><b>心头大患★</b><i>xīn tóu dà huàn</i><u>45</u></span>
+<span class="sw"><b>求才若渴★</b><i>qiú cái ruò kě</i><u>46</u></span>
+<span class="sw"><b>雄才大略★</b><i>xióng cái dà lüè</i><u>46</u></span>
+<span class="sw"><b>斩草除根★</b><i>zhǎn cǎo chú gēn</i><u>46</u></span>
+<span class="sw"><b>怂恿★</b><i>sǒng yǒng</i><u>46</u></span>
+<span class="sw"><b>视死如归★</b><i>shì sǐ rú guī</i><u>47</u></span>
+<span class="sw"><b>临阵脱逃★</b><i>lín zhèn tuō táo</i><u>47</u></span>
+</div></div>
+  <div class="starsec"><div class="sh"><span>魏王孤注一掷，楚王骨肉相残</span><a href="chapter3-section2.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>孤注一掷★</b><i>gū zhù yī zhì</i><u>47</u></span>
+<span class="sw"><b>积弱不振★</b><i>jī ruò bù zhèn</i><u>47</u></span>
+<span class="sw"><b>奋力一搏★</b><i>fèn lì yī bó</i><u>48</u></span>
+<span class="sw"><b>困兽之斗★</b><i>kùn shòu zhī dòu</i><u>48</u></span>
+<span class="sw"><b>怒从中来★</b><i>nù cóng zhōng lái</i><u>48</u></span>
+<span class="sw"><b>坐立难安★</b><i>zuò lì nán ān</i><u>49</u></span>
+<span class="sw"><b>心焦如焚★</b><i>xīn jiāo rú fén</i><u>49</u></span>
+<span class="sw"><b>手足无措★</b><i>shǒu zú wú cuò</i><u>49</u></span>
+<span class="sw"><b>一发不可收拾★</b><i>yī fā bù kě shōu shi</i><u>49</u></span>
+<span class="sw"><b>引颈企盼★</b><i>yǐn jǐng qǐ pàn</i><u>49</u></span>
+<span class="sw"><b>不费一兵一卒★</b><i>bù fèi yī bīng yī zú</i><u>51</u></span>
+<span class="sw"><b>野心勃勃★</b><i>yě xīn bó bó</i><u>51</u></span>
+<span class="sw"><b>难逃一劫★</b><i>nán táo yī jié</i><u>51</u></span>
+<span class="sw"><b>宽宏大量★</b><i>kuān hóng dà liàng</i><u>52</u></span>
+<span class="sw"><b>挥之不去★</b><i>huī zhī bù qù</i><u>52</u></span>
+<span class="sw"><b>裙带关系★</b><i>qún dài guān xi</i><u>52</u></span>
+<span class="sw"><b>戎马倥偬★</b><i>róng mǎ kǒng zǒng</i><u>53</u></span>
+<span class="sw"><b>甘之如饴★</b><i>gān zhī rú yí</i><u>53</u></span>
+<span class="sw"><b>告老还乡★</b><i>gào lǎo huán xiāng</i><u>53</u></span>
+<span class="sw"><b>按兵不动★</b><i>àn bīng bù dòng</i><u>55</u></span>
+<span class="sw"><b>趁其不备★</b><i>chèn qí bù bèi</i><u>55</u></span>
+<span class="sw"><b>二话不说★</b><i>èr huà bù shuō</i><u>55</u></span>
+</div></div>
+  <div class="starsec"><div class="sh"><span>燕荆轲刺秦，齐后胜通秦</span><a href="chapter3-section3.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>深谋远虑★</b><i>shēn móu yuǎn lǜ</i><u>55</u></span>
+<span class="sw"><b>坐以待毙★</b><i>zuò yǐ dài bì</i><u>55</u></span>
+<span class="sw"><b>不仁不义★</b><i>bù rén bù yì</i><u>56</u></span>
+<span class="sw"><b>觊觎★</b><i>jì yú</i><u>56</u></span>
+<span class="sw"><b>深明大义★</b><i>shēn míng dà yì</i><u>56</u></span>
+<span class="sw"><b>深仇大恨★</b><i>shēn chóu dà hèn</i><u>57</u></span>
+<span class="sw"><b>冷不防★</b><i>lěng bù fáng</i><u>57</u></span>
+<span class="sw"><b>急中生智★</b><i>jí zhōng shēng zhì</i><u>58</u></span>
+<span class="sw"><b>仰天大笑★</b><i>yǎng tiān dà xiào</i><u>58</u></span>
+<span class="sw"><b>明哲保身★</b><i>míng zhé bǎo shēn</i><u>60</u></span>
+<span class="sw"><b>休养生息★</b><i>xiū yǎng shēng xī</i><u>60</u></span>
+<span class="sw"><b>拼死一搏★</b><i>pīn sǐ yī bó</i><u>60</u></span>
+<span class="sw"><b>颜面尽失★</b><i>yán miàn jìn shī</i><u>60</u></span>
+<span class="sw"><b>势如破竹★</b><i>shì rú pò zhú</i><u>60</u></span>
+<span class="sw"><b>难逃一劫★</b><i>nán táo yī jié</i><u>60</u></span>
+<span class="sw"><b>群雄割据★</b><i>qún xióng gē jù</i><u>61</u></span>
+</div></div>
+  <div class="chaphead ch-四"><span class="cn">第四章</span><span class="ct">做一位像样的帝王</span><span class="cp">第 62–82 页</span><span class="cc">★ 43 个</span></div>
+  <div class="starsec"><div class="sh"><span>实施中央集权</span><a href="chapter4-section1.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>始料未及★</b><i>shǐ liào wèi jí</i><u>62</u></span>
+<span class="sw"><b>闻秦丧胆★</b><i>wén qín sàng dǎn</i><u>62</u></span>
+<span class="sw"><b>颠沛流离★</b><i>diān pèi liú lí</i><u>62</u></span>
+<span class="sw"><b>自知之明★</b><i>zì zhī zhī míng</i><u>63</u></span>
+<span class="sw"><b>严以律己★</b><i>yán yǐ lǜ jǐ</i><u>63</u></span>
+<span class="sw"><b>改头换面★</b><i>gǎi tóu huàn miàn</i><u>63</u></span>
+<span class="sw"><b>身死国灭★</b><i>shēn sǐ guó miè</i><u>63</u></span>
+<span class="sw"><b>交头接耳★</b><i>jiāo tóu jiē ěr</i><u>64</u></span>
+<span class="sw"><b>说一不二★</b><i>shuō yī bù èr</i><u>65</u></span>
+<span class="sw"><b>众所皆知★</b><i>zhòng suǒ jiē zhī</i><u>67</u></span>
+<span class="sw"><b>龙心大悦★</b><i>lóng xīn dà yuè</i><u>68</u></span>
+<span class="sw"><b>开创先河★</b><i>kāi chuàng xiān hé</i><u>68</u></span>
+</div></div>
+  <div class="starsec"><div class="sh"><span>统一文化和经济制度</span><a href="chapter4-section2.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>雷厉风行★</b><i>léi lì fēng xíng</i><u>69</u></span>
+<span class="sw"><b>日复一日★</b><i>rì fù yī rì</i><u>69</u></span>
+<span class="sw"><b>水火不容★</b><i>shuǐ huǒ bù róng</i><u>70</u></span>
+<span class="sw"><b>互看不顺眼★</b><i>hù kàn bù shùn yǎn</i><u>70</u></span>
+<span class="sw"><b>操之过急★</b><i>cāo zhī guò jí</i><u>71</u></span>
+<span class="sw"><b>言之有理★</b><i>yán zhī yǒu lǐ</i><u>71</u></span>
+<span class="sw"><b>公平无误★</b><i>gōng píng wú wù</i><u>72</u></span>
+</div></div>
+  <div class="starsec"><div class="sh"><span>大兴土木工程</span><a href="chapter4-section3.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>大兴土木★</b><i>dà xīng tǔ mù</i><u>74</u></span>
+<span class="sw"><b>不负众望★</b><i>bù fù zhòng wàng</i><u>74</u></span>
+<span class="sw"><b>愁眉不展★</b><i>chóu méi bù zhǎn</i><u>75</u></span>
+<span class="sw"><b>失魂落魄★</b><i>shī hún luò pò</i><u>75</u></span>
+<span class="sw"><b>魂不守舍★</b><i>hún bù shǒu shè</i><u>75</u></span>
+<span class="sw"><b>毕恭毕敬★</b><i>bì gōng bì jìng</i><u>75</u></span>
+<span class="sw"><b>若有所思★</b><i>ruò yǒu suǒ sī</i><u>75</u></span>
+<span class="sw"><b>不谋而合★</b><i>bù móu ér hé</i><u>77</u></span>
+<span class="sw"><b>谈何容易★</b><i>tán hé róng yì</i><u>77</u></span>
+<span class="sw"><b>喜形于色★</b><i>xǐ xíng yú sè</i><u>77</u></span>
+<span class="sw"><b>言之有理★</b><i>yán zhī yǒu lǐ</i><u>77</u></span>
+<span class="sw"><b>心腹大患★</b><i>xīn fù dà huàn</i><u>78</u></span>
+<span class="sw"><b>闻之色变★</b><i>wén zhī sè biàn</i><u>78</u></span>
+<span class="sw"><b>不可小觑★</b><i>bù kě xiǎo qù</i><u>78</u></span>
+<span class="sw"><b>直截了当★</b><i>zhí jié liǎo dàng</i><u>78</u></span>
+<span class="sw"><b>雷霆万钧★</b><i>léi tíng wàn jūn</i><u>79</u></span>
+<span class="sw"><b>金碧辉煌★</b><i>jīn bì huī huáng</i><u>79</u></span>
+<span class="sw"><b>好不得意★</b><i>hǎo bù dé yì</i><u>79</u></span>
+<span class="sw"><b>势如破竹★</b><i>shì rú pò zhú</i><u>79</u></span>
+<span class="sw"><b>毫不畏惧★</b><i>háo bù wèi jù</i><u>79</u></span>
+<span class="sw"><b>劳民伤财★</b><i>láo mín shāng cái</i><u>82</u></span>
+<span class="sw"><b>焚烧殆尽★</b><i>fén shāo dài jìn</i><u>82</u></span>
+<span class="sw"><b>好不风光★</b><i>hǎo bù fēng guāng</i><u>82</u></span>
+<span class="sw"><b>川原秀丽★</b><i>chuān yuán xiù lì</i><u>82</u></span>
+</div></div>
+  <div class="chaphead ch-五"><span class="cn">第五章</span><span class="ct">自信与恐惧</span><span class="cp">第 83–101 页</span><span class="cc">★ 52 个</span></div>
+  <div class="starsec"><div class="sh"><span>大行封禅，祈求平安</span><a href="chapter5-section1.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>量身打造★</b><i>liàng shēn dǎ zào</i><u>83</u></span>
+<span class="sw"><b>生老病死★</b><i>shēng lǎo bìng sǐ</i><u>83</u></span>
+<span class="sw"><b>永垂不朽★</b><i>yǒng chuí bù xiǔ</i><u>83</u></span>
+<span class="sw"><b>食不下咽★</b><i>shí bù xià yàn</i><u>84</u></span>
+<span class="sw"><b>夜不成眠★</b><i>yè bù chéng mián</i><u>84</u></span>
+<span class="sw"><b>无济于事★</b><i>wú jì yú shì</i><u>84</u></span>
+<span class="sw"><b>至高无上★</b><i>zhì gāo wú shàng</i><u>84</u></span>
+<span class="sw"><b>良辰吉日★</b><i>liáng chén jí rì</i><u>85</u></span>
+<span class="sw"><b>青葱翠绿★</b><i>qīng cōng cuì lǜ</i><u>85</u></span>
+<span class="sw"><b>气喘吁吁★</b><i>qì chuǎn xū xū</i><u>85</u></span>
+<span class="sw"><b>不愿落于人后★</b><i>bù yuàn luò yú rén hòu</i><u>85</u></span>
+<span class="sw"><b>浩浩荡荡★</b><i>hào hào dàng dàng</i><u>85</u></span>
+<span class="sw"><b>诚心归顺★</b><i>chéng xīn guī shùn</i><u>87</u></span>
+<span class="sw"><b>努力不懈★</b><i>nǔ lì bù xiè</i><u>87</u></span>
+<span class="sw"><b>豁然开朗★</b><i>huò rán kāi lǎng</i><u>88</u></span>
+<span class="sw"><b>冥冥之中★</b><i>míng míng zhī zhōng</i><u>88</u></span>
+<span class="sw"><b>流芳百世★</b><i>liú fāng bǎi shì</i><u>88</u></span>
+<span class="sw"><b>心心念念★</b><i>xīn xīn niàn niàn</i><u>88</u></span>
+</div></div>
+  <div class="starsec"><div class="sh"><span>刺客偷袭和长生不死</span><a href="chapter5-section2.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>心旷神怡★</b><i>xīn kuàng shén yí</i><u>88</u></span>
+<span class="sw"><b>好不威严★</b><i>hǎo bù wēi yán</i><u>88</u></span>
+<span class="sw"><b>杂乱无章★</b><i>zá luàn wú zhāng</i><u>90</u></span>
+<span class="sw"><b>中气十足★</b><i>zhōng qì shí zú</i><u>90</u></span>
+<span class="sw"><b>有惊无险★</b><i>yǒu jīng wú xiǎn</i><u>90</u></span>
+<span class="sw"><b>怒不可遏★</b><i>nù bù kě è</i><u>91</u></span>
+<span class="sw"><b>一心一意★</b><i>yī xīn yī yì</i><u>91</u></span>
+<span class="sw"><b>不知好歹★</b><i>bù zhī hǎo dǎi</i><u>91</u></span>
+<span class="sw"><b>可恶至极★</b><i>kě wù zhì jí</i><u>91</u></span>
+<span class="sw"><b>毫无所获★</b><i>háo wú suǒ huò</i><u>91</u></span>
+<span class="sw"><b>波光粼粼★</b><i>bō guāng lín lín</i><u>91</u></span>
+<span class="sw"><b>来无影去无踪★</b><i>lái wú yǐng qù wú zōng</i><u>92</u></span>
+<span class="sw"><b>防不胜防★</b><i>fáng bù shèng fáng</i><u>92</u></span>
+<span class="sw"><b>洪福齐天★</b><i>hóng fú qí tiān</i><u>92</u></span>
+<span class="sw"><b>接二连三★</b><i>jiē èr lián sān</i><u>92</u></span>
+<span class="sw"><b>长生不死★</b><i>cháng shēng bù sǐ</i><u>93</u></span>
+<span class="sw"><b>毛遂自荐★</b><i>máo suì zì jiàn</i><u>93</u></span>
+<span class="sw"><b>天纵英明★</b><i>tiān zòng yīng míng</i><u>93</u></span>
+<span class="sw"><b>深信不疑★</b><i>shēn xìn bù yí</i><u>94</u></span>
+<span class="sw"><b>一席话★</b><i>yī xí huà</i><u>94</u></span>
+</div></div>
+  <div class="starsec"><div class="sh"><span>焚禁书，坑方士</span><a href="chapter5-section3.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>喜气洋洋★</b><i>xǐ qì yáng yáng</i><u>94</u></span>
+<span class="sw"><b>和乐融融★</b><i>hé lè róng róng</i><u>94</u></span>
+<span class="sw"><b>标新立异★</b><i>biāo xīn lì yì</i><u>96</u></span>
+<span class="sw"><b>安居乐业★</b><i>ān jū lè yè</i><u>97</u></span>
+<span class="sw"><b>以古非今★</b><i>yǐ gǔ fēi jīn</i><u>97</u></span>
+<span class="sw"><b>窃窃私语★</b><i>qiè qiè sī yǔ</i><u>98</u></span>
+<span class="sw"><b>刚愎自用★</b><i>gāng bì zì yòng</i><u>98</u></span>
+<span class="sw"><b>不可一世★</b><i>bù kě yī shì</i><u>98</u></span>
+<span class="sw"><b>尽忠劝谏★</b><i>jìn zhōng quàn jiàn</i><u>98</u></span>
+<span class="sw"><b>义正辞严★</b><i>yì zhèng cí yán</i><u>99</u></span>
+<span class="sw"><b>荒诞无稽★</b><i>huāng dàn wú jī</i><u>99</u></span>
+<span class="sw"><b>杀鸡儆猴★</b><i>shā jī jǐng hóu</i><u>99</u></span>
+<span class="sw"><b>怒不可遏★</b><i>nù bù kě è</i><u>99</u></span>
+<span class="sw"><b>三更半夜★</b><i>sān gēng bàn yè</i><u>99</u></span>
+</div></div>
+  <div class="chaphead ch-六"><span class="cn">第六章</span><span class="ct">末日的来临</span><span class="cp">第 102–108 页</span><span class="cc">★ 22 个</span></div>
+  <div class="starsec"><div class="sh"><span>最后一次巡游</span><a href="chapter6-section1.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>精神恍惚★</b><i>jīng shén huǎng hū</i><u>102</u></span>
+<span class="sw"><b>心神不宁★</b><i>xīn shén bù níng</i><u>102</u></span>
+<span class="sw"><b>日复一日★</b><i>rì fù yī rì</i><u>102</u></span>
+<span class="sw"><b>久而久之★</b><i>jiǔ ér jiǔ zhī</i><u>102</u></span>
+<span class="sw"><b>恶性循环★</b><i>è xìng xún huán</i><u>102</u></span>
+<span class="sw"><b>打起精神★</b><i>dǎ qǐ jīng shén</i><u>102</u></span>
+<span class="sw"><b>波涛汹涌★</b><i>bō tāo xiōng yǒng</i><u>103</u></span>
+<span class="sw"><b>头昏脑涨★</b><i>tóu hūn nǎo zhàng</i><u>103</u></span>
+<span class="sw"><b>趁此机会★</b><i>chèn cǐ jī huì</i><u>103</u></span>
+<span class="sw"><b>天不从人愿★</b><i>tiān bù cóng rén yuàn</i><u>104</u></span>
+<span class="sw"><b>手足无措★</b><i>shǒu zú wú cuò</i><u>104</u></span>
+<span class="sw"><b>当务之急★</b><i>dāng wù zhī jí</i><u>104</u></span>
+<span class="sw"><b>梦呓连连★</b><i>mèng yì lián lián</i><u>104</u></span>
+<span class="sw"><b>孤独落寞★</b><i>gū dú luò mò</i><u>104</u></span>
+</div></div>
+  <div class="starsec"><div class="sh"><span>篡改诏书</span><a href="chapter6-section2.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>不二人选★</b><i>bù èr rén xuǎn</i><u>106</u></span>
+<span class="sw"><b>窃窃私语★</b><i>qiè qiè sī yǔ</i><u>107</u></span>
+<span class="sw"><b>宽宏大量★</b><i>kuān hóng dà liàng</i><u>107</u></span>
+<span class="sw"><b>斤斤计较★</b><i>jīn jīn jì jiào</i><u>107</u></span>
+<span class="sw"><b>不为所动★</b><i>bù wéi suǒ dòng</i><u>107</u></span>
+<span class="sw"><b>告老还乡★</b><i>gào lǎo huán xiāng</i><u>107</u></span>
+<span class="sw"><b>轻言放弃★</b><i>qīng yán fàng qì</i><u>108</u></span>
+<span class="sw"><b>备受羞辱★</b><i>bèi shòu xiū rǔ</i><u>108</u></span>
+</div></div>
+  <div class="chaphead ch-x"><span class="cn">附录</span><span class="ct">秦始皇小档案年表</span><span class="cc">★ 2 个</span></div>
+  <div class="starsec"><div class="sh"><span>秦始皇小档案年表</span><a href="appendix-chronology.html?from=vocab">查这一节 →</a></div><div class="starwrap">
+<span class="sw"><b>五马分尸★</b><i>wǔ mǎ fēn shī</i><u>109</u></span>
+<span class="sw"><b>群雄割据★</b><i>qún xióng gē jù</i><u>110</u></span>
+</div></div>
+
+  </div>
+</section>
+
+<p class="note note-foot">
+  <b>词条来源</b>：逐页取自《秦始皇——一统中国》正文，按四年级读者的需要分级。
+  「只要会念」那一级数量最多（727 个），本来就不必记，打印时可以跳过。<br>
+  <b>这一页是汇总</b>，意思、组词、例句都在各节的字词表里 —— 上面目录点进去就是。
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+  <div class="sf-in">
+      页码依据书前目录核对。书中有整页插图（如第 105 页是一整幅画），所以实际要读的字比页数看起来少。
+  </div>
+</footer>
+
+</body>
+</html>
