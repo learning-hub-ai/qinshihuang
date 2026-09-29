@@ -1,9 +1,13 @@
-# 有版权的扫描页 —— 绝不能进仓库
+# ⚠⚠ 含原书例句的完整版 —— 绝不能进仓库、绝不能上传
+# 116 处原句 + spec 的 110 个 quote 字段都在这里。
+# 用点号开头是刻意的：wrangler pages deploy 和 python3 -m http.server
+# 默认都不发布点号目录 —— .gitignore 只管 git，管不了这两个。
+.private/
+
+# 有版权的扫描页
 source/book/
 
-# spec 是字词表的源头，含手工核对的判断，但也含原书例句的痕迹。
-# 完整版（含 quote 字段）在 ~/smilings/qinshihuang-full-private/spec-full/
-# 这里整个 source/ 都不跟踪 —— 生成物 vocab/*.html 已经足够公开使用
+# spec 是字词表源头，公开版已去掉 quote 字段；完整版在 .private/spec-full/
 source/
 
 # 手工版本控制的残留，已被 git 取代
