@@ -11,3 +11,6 @@ _*.py
 # 系统文件
 .DS_Store
 Thumbs.db
+
+# 本地备忘，不发布
+*.local.md
