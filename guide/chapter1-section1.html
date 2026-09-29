@@ -38,10 +38,14 @@
   /* 释义：用 grid，避免 float 造成的列重叠和拼音换行 */
   dl.mean{ margin:0; font-size:9.2pt;
            display:grid; grid-template-columns:34mm 1fr; gap:1.4mm 3mm; }
-  dl.mean dt{ color:#1a4a7a; font-weight:bold; line-height:1.4; }
-  dl.mean dd{ margin:0; line-height:1.55; }
-  dl.mean .py{ display:block; font-size:8pt; color:var(--soft);
-               font-weight:normal; letter-spacing:.2px; }
+  /* 拼音排在词语**上面**（像课本上的注音）。用 flex column-reverse，
+     这样 HTML 里仍是「词语 + 拼音」的自然顺序，屏幕阅读器读起来也对。 */
+  dl.mean dt{ color:#1a4a7a; font-weight:bold; line-height:1.35;
+              display:flex; flex-direction:column-reverse; align-items:flex-start; }
+  /* 释义对齐到「词语」那一行，而不是整格顶端（上面还有一行拼音） */
+  dl.mean dd{ margin:0; line-height:1.55; align-self:end; }
+  dl.mean .py{ font-size:8pt; color:var(--soft);
+               font-weight:normal; letter-spacing:.2px; line-height:1.3; }
 
   /* 【找句子】 */
   .quote{ border-left:4px solid var(--hdr); background:#f7f9fc;
