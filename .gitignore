@@ -1,13 +1,9 @@
-# ⚠⚠ 含原书例句的完整版 —— 绝不能进仓库、绝不能上传
-# 116 处原句 + spec 的 110 个 quote 字段都在这里。
-# 用点号开头是刻意的：wrangler pages deploy 和 python3 -m http.server
-# 默认都不发布点号目录 —— .gitignore 只管 git，管不了这两个。
-.private/
-
-# 有版权的扫描页
-source/book/
-
-# spec 是字词表源头，公开版已去掉 quote 字段；完整版在 .private/spec-full/
+# ⚠ source/ 整个不进仓库 —— 不可再生的输入 + 有版权的原文
+#   book/               有版权的扫描页
+#   spec/               字词表源数据
+#   spec-with-quotes/   含原书例句的存档
+#   vocab-with-quotes/  含原书例句的 HTML
+# 详见 source/README.md
 source/
 
 # 手工版本控制的残留，已被 git 取代
@@ -16,7 +12,8 @@ backup/
 # 导出的 PDF：可再生、没有页面链接它、比整站还大
 *.pdf
 
-# 私密记忆库软链接, 这个目录里不会出现，但每个仓库都写，防止在错的目录 git add -A
+# 私密记忆库软链接（孩子画像、母亲病历）——
+# 这个目录里不会出现，但每个仓库都写，防止在错的目录 git add -A
 memory
 
 __pycache__/
