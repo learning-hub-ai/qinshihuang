@@ -4,6 +4,9 @@ source/
 # 备份目录 —— 只在本地保留
 backup/
 
+# PDF 产出 —— 由 make_*_pdf.sh 生成，32M，不进仓库（脚本本身要进）
+print/
+
 # 临时脚本（但构建脚本和框架要进仓库）
 _*.py
 !_build.py
