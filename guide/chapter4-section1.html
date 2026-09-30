@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="读懂故事 · 第四章第一节「实施中央集权」 —— 讲透称号这件事：名分定了，话才有分量。嬴政为什么否决大臣提的「泰皇」、为什么废掉谥号，配四个成语填空、三句原文选一句、三个没有标准答案的问题。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>读懂故事 · 第四章第一节「实施中央集权」</title>
+<link rel="stylesheet" href="../site.css">
+<style>
+  h2{ font-size:11pt; margin:6mm 0 2.5mm; padding:1.2mm 2.5mm;
+      background:var(--hdr); color:#fff; page-break-after:avoid; }
+  h2 .w{ float:right; font-size:8.2pt; font-weight:normal; opacity:.9; }
+
+  .ask{ border:1.5px solid var(--hdr); background:#f7f9fc;
+        padding:2.5mm 3mm; margin:0 0 4mm; }
+  .ask .q{ font-size:11.5pt; font-weight:bold; }
+  .ask .t{ font-size:8.8pt; color:#444; margin-top:1mm; }
+
+  .prose{ font-size:10.2pt; line-height:1.95; text-indent:2em;
+          margin:0 0 2.5mm; text-align:justify; }
+  .prose.ni{ text-indent:0; }
+  .prose b{ color:#1a4a7a; }
+  blockquote.said{ margin:0 0 2.5mm 6mm; padding:1.5mm 0 1.5mm 3mm;
+                   border-left:2.5px solid var(--hdr); font-size:10pt;
+                   line-height:1.85; text-align:justify; }
+  blockquote.said b{ color:#1a4a7a; }
+  blockquote.said .who{ font-weight:bold; color:#1a4a7a; }
+  .fromnote{ font-size:8.6pt; color:var(--soft); background:#fafafa;
+             border-left:3px solid #ccc; padding:1.5mm 2.5mm; margin:0 0 3mm; }
+  .keyidea{ background:#fffdf5; border:1.2px solid var(--star);
+            padding:2mm 3mm; margin:3mm 0 0; font-size:9.8pt; }
+  .keyidea .h{ font-weight:bold; margin-bottom:1mm; }
+
+  /* 称号是怎么定下来的：三步，一步一个决定。
+     左列放「谁提的／结果」，右列放内容 —— 页码单独一列，不挤进正文。 */
+  .steps{ margin:2.5mm 0 1mm; border:1.3px solid var(--line); }
+  .steps .row{ display:flex; border-bottom:1px solid var(--line); }
+  .steps .row:last-child{ border-bottom:none; }
+  .steps .who{ flex:0 0 30mm; background:#eef2f7; padding:1.8mm 2.5mm;
+               font-size:9.2pt; line-height:1.5; border-right:1px solid var(--line); }
+  .steps .row.yes .who{ background:#fdf0ec; }
+  .steps .who b{ display:block; color:#1a4a7a; font-size:9.6pt; }
+  .steps .who .bk{ display:block; font-size:8.2pt; color:var(--soft); margin-top:.8mm; }
+  .steps .what{ flex:1; padding:1.8mm 2.5mm; font-size:9.2pt; line-height:1.65; }
+  .steps .what b{ color:#1a4a7a; }
+
+  .words{ font-size:10.2pt; color:#1a4a7a; font-weight:bold;
+          margin:0 0 2.5mm; letter-spacing:.5px; }
+  ol.fills{ margin:0 0 3mm; padding-left:6mm; }
+  ol.fills li{ font-size:9.8pt; line-height:2.05; margin-bottom:1.5mm; }
+  .bl{ display:inline-block; min-width:26mm; border-bottom:1.2px solid #999;
+       margin:0 1mm; }
+  dl.mean{ margin:0; font-size:9.2pt;
+           display:grid; grid-template-columns:34mm 1fr; gap:1.4mm 3mm; }
+  /* 拼音排在词语上面（像课本注音）。column-reverse 让 HTML 仍是
+     「词语 + 拼音」的自然顺序，屏幕阅读器读起来才对。 */
+  dl.mean dt{ color:#1a4a7a; font-weight:bold; line-height:1.35;
+              display:flex; flex-direction:column-reverse; align-items:flex-start; }
+  dl.mean dd{ margin:0; line-height:1.55; align-self:end; }
+  dl.mean .py{ font-size:8pt; color:var(--soft);
+               font-weight:normal; letter-spacing:.2px; line-height:1.3; }
+
+  /* 找句子：三选一 */
+  ul.pick{ list-style:none; margin:2mm 0 2.5mm; padding:0; }
+  ul.pick li{ font-size:9.8pt; line-height:1.75; margin-bottom:2.2mm;
+              padding:0 0 0 6.5mm; text-indent:-6.5mm; }
+  ul.pick .o{ display:inline-block; width:4mm; height:4mm; border:1.3px solid #777;
+              border-radius:50%; margin-right:2mm; vertical-align:-.5mm; }
+  ul.pick .pg{ font-size:8.4pt; color:var(--soft); white-space:nowrap; }
+
+  ol.think{ margin:0; padding-left:6mm; }
+  ol.think li{ font-size:10.2pt; margin-bottom:1mm; }
+  .lines{ margin:1mm 0 4mm; }
+  .lines div{ border-bottom:1px solid #ccc; height:8mm; }
+
+  .foot{ font-size:8.4pt; color:var(--soft); margin-top:6mm;
+         border-top:1px solid #ccc; padding-top:2mm; line-height:1.6; }
+
+  @media print{
+    h2{ background:var(--hdr) !important; color:#fff !important; }
+    .lines div{ height:9mm; }
+    .steps{ page-break-inside:avoid; }
+  }
+</style>
+</head>
+<body data-pagename="读懂故事 · 第 4 章第 1 节" data-tab="guide" data-chapter="c4">
+
+<!-- #frame:head -->
+<div class="sitehead">
+  <div class="sh-in">
+    <div class="printonly">姓名：____________　班级：__________　日期：__________</div>
+    <h1 class="sh-t"><a href="../index.html">《秦始皇——一统中国》整本书阅读</a></h1>
+    <div class="sh-p">读懂故事 · 第 4 章第 1 节</div>
+    <div class="sh-m">名人传系列　·　<b>景崇兰</b> 著　·　<b>简志刚</b> 绘　·　人民文学出版社　·　全书 <b>111 页</b>，共六章</div>
+  </div>
+</div>
+<!-- /frame:head -->
+
+<nav class="sitenav">
+<!-- #frame:nav -->
+<div class="nv-in">
+    <a class="nv-here" href="../index.html">📖 阅读指引</a>
+    <a href="../reading-plan.html">📅 阅读进度表</a>
+    <a href="../vocab/index.html">📚 字词表</a>
+    <a href="../maps.html">🗺 地图</a>
+    <a href="../characters.html">👥 人物关系表</a>
+    <a href="../fact-sheet.html">📊 秦始皇小档案</a>
+    <a href="../timeline.html">🔍 一生时间轴</a>
+    <a href="../how-to-use.html">📘 使用说明</a>
+  </div>
+<!-- /frame:nav -->
+  <div class="nv-sub">
+    <a class="nv-up" href="../index.html#c4">⬆ 回第四章</a>
+    <span class="nv-lbl">配套：</span>
+    <a href="../vocab/chapter4-section1.html?from=guide">本节字词表（135 条）</a>
+    <a href="chapter3-section3.html">← 上一节：燕荆轲刺秦，齐后胜通秦</a>
+  </div>
+</nav>
+<main class="wrap sheet">
+<div class="sheetin">
+<div class="printbtn">
+  <button type="button" onclick="window.print()"
+          title="打印设置：A4；关掉「页眉和页脚」；勾选「打印背景图形」。">🖨 打印</button>
+  <span class="pb-tip">记得勾选<b>「打印背景图形」</b></span>
+</div>
+
+<h2 class="pagetitle" style="background:none;color:inherit;padding:0;font-size:13pt;">
+  第四章第一节　实施中央集权</h2>
+<p class="sub" style="text-align:center;">第 62–68 页　·　读之前先看【讲背景】，读完再做后面三样</p>
+
+<div class="ask">
+  <div class="q">📖 带着这个问题读：天下已经是他的了，他为什么急着先改自己的称号？</div>
+  <div class="t">读的时候留意一个词：<b>分量</b>。</div>
+</div>
+
+<h2>【讲背景】称号 —— 名分定了，话才有分量<span class="w">这一段不用动笔，读完再看书</span></h2>
+
+<p class="prose">仗打完了。这一节一开头，书上说「仅仅花了<b>九年</b>的时间，嬴政就统一了天下」。
+  你可能以为接下来是庆功、是封赏。都不是 —— 他做的第一件事，是<b>改自己怎么称呼自己</b>。
+  听起来像小事，甚至有点小气。他为什么要先办这个？</p>
+
+<p class="prose">先想一个你身边的情形。班上要出一份通知，同一句话「明天带跳绳」，
+  贴在墙上没有名字，和班长在班会上宣布，效果不一样。
+  不是话变了，是<b>说话的人的身份</b>变了。嬴政自己把这个道理说了出来 ——
+  他引了一句古人的话：</p>
+
+<blockquote class="said">
+  <span class="who">嬴政</span>：古人曾经说过：「<b>不能确定身份的话，说的话是没有分量的</b>。」
+  所以首先必须改变寡人的称号。
+  <span class="pg">（第 64 页）</span>
+</blockquote>
+
+<p class="prose">这里有个麻烦，书上讲得很清楚：他<b>已经不是秦王了</b>。
+  「毕竟，他已不单单是秦王了，他是天下人唯一的王」（第 63 页）。
+  可是「王」这个字，六国的君主都在用 —— 齐王、楚王、燕王，
+  刚刚被他灭掉的那些人，称号和他一样。
+  一个字用了几百年，谁都能用，那它就不能说明他跟别人不一样了。</p>
+
+<p class="prose">于是接下来三页，就是一个称号怎么被造出来的全过程。
+  值得注意的是：他<b>否决了</b>大臣的提议，而且两次都是同一个理由。</p>
+
+<div class="steps">
+  <div class="row">
+    <div class="who"><b>大臣提的</b>王绾、李斯<span class="bk">第 64 页 · 被否决</span></div>
+    <div class="what">上古有天皇、地皇、泰皇，泰皇「是人世间最尊贵的称呼」，
+      所以请大王把称号改成<b>泰皇</b>，自称<b>朕</b>，命令叫「制」和「诏」。</div>
+  </div>
+  <div class="row">
+    <div class="who"><b>他否决</b>理由不是不够尊贵<span class="bk">第 64–65 页</span></div>
+    <div class="what">是<b>太旧</b>：「如果将称呼改为泰皇，岂不是又和<b>古人的观念相同</b>了吗？」
+      他说他最不愿意做的，就是「依循古人的看法而<b>不求进步</b>」。</div>
+  </div>
+  <div class="row yes">
+    <div class="who"><b>他自己定</b>这个词从这天起有<span class="bk">第 65 页</span></div>
+    <div class="what">「朕认为<b>去掉『泰』字，保留『皇』字</b>，就叫『<b>皇帝</b>』好了，
+      你们觉得如何啊？」——「皇」是大臣给的，「帝」是他自己加的。</div>
+  </div>
+</div>
+
+<p class="prose">「你们觉得如何啊」这句是客气话。书上紧接着写：大臣们知道他
+  「个性独断，<b>说一不二</b>，是个相当固执的人」，所以「大家当然<b>不必也不敢</b>反对」（第 65 页）。
+  问了，但不是真在问。</p>
+
+<p class="prose">还有一件事他一起改了，这件比称号更要紧：他<b>废掉了谥号</b>。
+  谥号是君主死了以后，后人给他取的名号。前面三章你见过一大串 ——
+  秦孝文王、秦庄襄王、赵孝成王、楚考烈王，<b>全是谥号</b>，
+  全是他们死后别人给的。他给的理由是：</p>
+
+<blockquote class="said">
+  <span class="who">嬴政</span>：到了后来却开始追加谥号，这种做法岂不是<b>允许儿子去评论父亲</b>吗？
+  真是<b>既失礼又不孝</b>，朕绝不能接受这种事！所以朕决定，从今之后，<b>废除谥法</b>，而以次序代替。
+  例如，朕是始皇帝，朕的儿子就是二世，孙子是三世、四世，直到千千万万世。
+  <span class="pg">（第 65 页）</span>
+</blockquote>
+
+<p class="prose">这段话听着是在讲孝顺。但书上第 65 页的脚注②多说了一句，
+  把另一面点出来了：谥号「是对君主一生品行和政绩的形容，所以具有<b>警惕君主</b>的功能」。
+  换句话说，谥号是<b>唯一一个能给皇帝打分的制度</b> ——
+  哪怕要等他死后，史书上总得写一句他到底是好君主还是坏君主。
+  而他废掉它之后，秦朝的皇帝就只有编号：始皇帝、二世、三世。
+  书上没有说他心里怎么想，只摆出了这两样 ——
+  <b>他给的理由</b>，和<b>脚注说的那个功能</b>。</p>
+
+<div class="fromnote">
+  📌 这些不是我编的：第 64 页的脚注①讲了「<b>朕</b>」，第 65 页的脚注②讲了「<b>谥号</b>」，
+  各只有三四行。上面这几段是把那几行展开说清楚 ——
+  脚注①里有一句你大概会觉得意外：「朕」这个字在古时候就是「<b>我</b>」的意思，
+  <b>所有人都可以用，没有阶级的分别</b>。是秦始皇之后，它才变成皇帝专用的。
+</div>
+
+<div class="keyidea">
+  <div class="h">💡 记住这一条，后面三章都用得上</div>
+  这一节里，他做的每件事都在<b>把「不一样」立起来</b>：称号要独一份，命令改叫「制」和「诏」，
+  自称改成只有他能用的「朕」，连死后被评价的可能都一起取消。<br>
+  可是第 65 页那句「直到千千万万世」，你读的时候要记住 ——
+  后面第六章你会读到，秦朝只到<b>二世</b>就完了。
+  一个人可以定下所有的名分，却定不了名分能维持多久。
+</div>
+
+<h2>【学词语】填成语<span class="w">先想，想不出来再看下面的解释</span></h2>
+
+<p class="words">开创先河　·　说一不二　·　始料未及　·　自知之明</p>
+
+<ol class="fills">
+  <li>九年就打完了天下，这样巨大的转变，「所有人都<span class="bl"></span>」。</li>
+  <li>书上说六国仗着悠久的历史和光荣的传统，缺乏用人的智慧，更没有<span class="bl"></span>。</li>
+  <li>大臣们知道嬴政个性独断、<span class="bl"></span>，所以不必也不敢反对。</li>
+  <li>秦朝只有十五年，但他定下的这套官制<span class="bl"></span>，后面用了两千年。</li>
+</ol>
+
+<dl class="mean">
+  <dt>开创先河<span class="py">kāi chuàng xiān hé</span></dt>
+  <dd>第一个做出来，后面的人跟着做。</dd>
+  <dt>说一不二<span class="py">shuō yī bù èr</span></dt>
+  <dd>说了就是那样，绝不改口。</dd>
+  <dt>始料未及<span class="py">shǐ liào wèi jí</span></dt>
+  <dd>一开始完全没料到会这样。</dd>
+  <dt>自知之明<span class="py">zì zhī zhī míng</span></dt>
+  <dd>知道自己有几分本事，清楚自己的短处。</dd>
+</dl>
+
+<h2>【找句子】哪一句是在说「分封会给自己制造敌人」<span class="w">三句都是书上的原话</span></h2>
+
+<p class="prose ni">远方的燕、齐、楚打下来了，派谁去管？王绾、李斯、秦始皇各说了一段。
+  <b>哪一句是在说「分封会给自己制造敌人」？</b>在 ○ 里打勾。</p>
+
+<ul class="pick">
+  <li><span class="o"></span>「六国诸侯灭亡不久，燕国、齐国和楚国这些远方的地区如今正处于无人治理的状态，实在令人感到不放心。微臣请求您能分封秦朝的宗室子弟前往治理，以免除叛乱的危机。」<span class="pg">（第 67 页）</span></li>
+  <li><span class="o"></span>「当初周朝的天子文王和武王就是因为分封了太多的子弟，结果造成兄弟之间彼此仇恨，甚至互相攻击，因此导致了一连串的战争，最后连天子都阻止不了。」<span class="pg">（第 67 页）</span></li>
+  <li><span class="o"></span>「朕好不容易平定了天下，如果又要分封，岂不是自己给自己树立敌人了吗？依朕看来，众卿还是放弃分封的念头，维持郡县制度吧。」<span class="pg">（第 68 页）</span></li>
+</ul>
+
+<h2>【说感想】三个问题，没有标准答案<span class="w">写一两句就行</span></h2>
+
+<ol class="think">
+  <li>天下刚打完，他没有先去庆功或者封赏，而是先改自己的称号。你觉得这件事有那么要紧吗？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<ol class="think" start="2">
+  <li>他废谥号说是为了孝顺。可脚注说，谥号是死后别人给君主的评价。你觉得他是在讲孝顺，还是不想被评价？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<ol class="think" start="3">
+  <li>有没有一个称呼，别人这样叫你、你听着很不舒服？或者反过来，有一个称呼让你觉得自己更像样了？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<p class="foot">
+  <b>这一页怎么用</b>：先读【讲背景】（不用动笔），再读书上第 62–68 页，
+  读完回来做后面三样。<br>
+  <b>【说感想】可以不写</b>：说给爸爸妈妈听也算 —— 讲出来往往比写下来更清楚。<br>
+  <b>第 66 页是整页插图</b>：皇帝站在高台上张开双臂，下面一排低着头的大臣 ——
+  画的就是「朕是始皇帝…直到千千万万世」（第 65 页）那一刻，所以这一节的字比七页看起来少。
+  <b>从第 67 页起，书上不再叫「嬴政」，改叫「秦始皇」</b>，
+  李斯也从「大王」改口叫「陛下」 —— 称号变了，称呼的规矩一起变了。
+  见<a href="../vocab/chapter4-section1.html?from=guide">本节字词表</a>。
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+<!-- #frame:foot -->
+<div class="sf-in">
+      页码依据书前目录核对。书中有整页插图（如第 105 页是一整幅画），所以实际要读的字比页数看起来少。<br>
+      <span class="sf-print">打印任意一页：<b>Ctrl+P → A4 → 关掉「页眉和页脚」→ 勾选「打印背景图形」</b></span>
+      <span class="sf-cr">本站是<b>阅读辅助材料</b>，不能代替原书 —— 请购买《秦始皇——一统中国》（景崇兰 著，人民文学出版社）。<br>书中文字版权归作者及出版社所有；本站少量引用并标注页码，供学习讨论之用。本站自编内容版权归本站作者所有 —— 欢迎打印使用和转发网址，请勿转载到其他网站或 App，详见<a href="../how-to-use.html#copyright">使用说明</a>。</span>
+  </div>
+<!-- /frame:foot -->
+</footer>
+
+<script src="../site.js"></script>
+</body>
+</html>
