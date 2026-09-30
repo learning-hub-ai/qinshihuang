@@ -46,13 +46,6 @@
         border-left:4px solid var(--warn); font-size:13px;}@media (max-width:820px){ .flowsteps{grid-template-columns:1fr 1fr;}}
 @media (max-width:560px){ .flowsteps{grid-template-columns:1fr;}}
 @media print{ .flowsteps{display:none;} .lead{display:none;}}
-  /* ---------- 章节表 ---------- */
-  table{width:100%; border-collapse:collapse;}
-  thead th{
-    background:#fafafa; font-size:12px; color:#444; text-align:left;
-    padding:7px 10px; border-bottom:1.5px solid var(--rule); font-weight:600;
-  }
-  td{padding:0; border-bottom:1px solid #ececec; vertical-align:middle;}
   /* ---------- 术语说明 ---------- */
   .legend{display:grid; grid-template-columns:1fr 1fr; gap:10px 18px; font-size:13px;}
   .legend .r{display:flex; gap:8px; align-items:flex-start;}
@@ -62,19 +55,15 @@
   }
   .legend .tag.s{background:var(--warnbg); border-color:var(--warn); color:#7a5c07;}
   .legend .tag.p{background:#f4f4f4; color:#555;}@media (max-width:820px){
-    .how,.tools{grid-template-columns:1fr 1fr;}
     .legend{grid-template-columns:1fr;}
     .th-lnk{width:auto;}}
 @media (max-width:560px){
-    .how,.tools{grid-template-columns:1fr;}
     .th-pg,.th-ck{display:none;}
     tr.sec td.pg,tr.sec td.ck,thead th.th-pg,thead th.th-ck{display:none;}}
 @media print{
     h2{background:#f0f0f0; border-bottom:1px solid #000;}
-    h2 .no{background:#000;}
-    .how,.tools{display:none;}     /* 纸上不需要链接卡片 */
-    .lk{border:none; padding:0; color:#000;}
-    .noprint{display:none;}}
+    h2 .no{background:#000;}     /* 纸上不需要链接卡片 */
+    .lk{border:none; padding:0; color:#000;}}
 </style>
 </head>
 <body data-pagename="使用说明" data-tab="howto">

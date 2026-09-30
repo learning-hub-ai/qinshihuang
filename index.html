@@ -30,7 +30,7 @@
   /* ---------- 章节表 ---------- */
   table{width:100%; border-collapse:collapse;}
   thead th{
-    background:#fafafa; font-size:12px; color:#444; text-align:left;
+    background:var(--band); font-size:12px; color:#444; text-align:left;
     padding:7px 10px; border-bottom:1.5px solid var(--rule); font-weight:600;
   }
   td{padding:0; border-bottom:1px solid #ececec; vertical-align:middle;}
@@ -80,19 +80,15 @@
 
   /* ---------- 页脚 ---------- */
   .printonly{display:none;}@media (max-width:820px){
-    .how,.tools{grid-template-columns:1fr 1fr;}
     .legend{grid-template-columns:1fr;}
     .th-lnk{width:auto;}}
 @media (max-width:560px){
-    .how,.tools{grid-template-columns:1fr;}
     .th-pg,.th-ck{display:none;}
     tr.sec td.pg,tr.sec td.ck,thead th.th-pg,thead th.th-ck{display:none;}}
 @media print{
     h2{background:#f0f0f0; border-bottom:1px solid #000;}
     h2 .no{background:#000;}
-    .how,.tools{display:none;}     /* 纸上不需要链接卡片 */
-    .lk{border:none; padding:0; color:#000;}
-    .noprint{display:none;}}
+    .lk{border:none; padding:0; color:#000;}}
 </style>
 </head>
 <body data-pagename="阅读指引 — 六章十七节" data-tab="guide">
@@ -183,7 +179,7 @@
         <td class="pg">11–21</td>
         <td>
           <a class="lk" href="vocab/chapter1-section3.html?from=guide">字词表</a>
-          <span class="lk off">读懂故事（待做）</span>
+          <a class="lk g" href="guide/chapter1-section3.html">读懂故事</a>
         </td>
       </tr>
 
@@ -196,19 +192,19 @@
         <td class="ck tc"><span class="box"></span></td>
         <td class="sn">§1</td><td class="st">秦王孙异人和吕不韦</td><td class="pg">22–27</td>
         <td><a class="lk" href="vocab/chapter2-section1.html?from=guide">字词表</a>
-            <span class="lk off">读懂故事（待做）</span></td>
+            <a class="lk g" href="guide/chapter2-section1.html">读懂故事</a></td>
       </tr>
       <tr class="sec">
         <td class="ck tc"><span class="box"></span></td>
         <td class="sn">§2</td><td class="st">「赵政」归秦</td><td class="pg">28–33</td>
         <td><a class="lk" href="vocab/chapter2-section2.html?from=guide">字词表</a>
-            <span class="lk off">读懂故事（待做）</span></td>
+            <a class="lk g" href="guide/chapter2-section2.html">读懂故事</a></td>
       </tr>
       <tr class="sec">
         <td class="ck tc"><span class="box"></span></td>
         <td class="sn">§3</td><td class="st">嬴政的家庭悲剧</td><td class="pg">34–40</td>
         <td><a class="lk" href="vocab/chapter2-section3.html?from=guide">字词表</a>
-            <span class="lk off">读懂故事（待做）</span></td>
+            <a class="lk g" href="guide/chapter2-section3.html">读懂故事</a></td>
       </tr>
 
       <!-- 第三章 -->
@@ -220,19 +216,19 @@
         <td class="ck tc"><span class="box"></span></td>
         <td class="sn">§1</td><td class="st">韩国的间谍，赵国的良将</td><td class="pg">41–46</td>
         <td><a class="lk" href="vocab/chapter3-section1.html?from=guide">字词表</a>
-            <span class="lk off">读懂故事（待做）</span></td>
+            <a class="lk g" href="guide/chapter3-section1.html">读懂故事</a></td>
       </tr>
       <tr class="sec">
         <td class="ck tc"><span class="box"></span></td>
         <td class="sn">§2</td><td class="st">魏王孤注一掷，楚王骨肉相残</td><td class="pg">47–54</td>
         <td><a class="lk" href="vocab/chapter3-section2.html?from=guide">字词表</a>
-            <span class="lk off">读懂故事（待做）</span></td>
+            <a class="lk g" href="guide/chapter3-section2.html">读懂故事</a></td>
       </tr>
       <tr class="sec">
         <td class="ck tc"><span class="box"></span></td>
         <td class="sn">§3</td><td class="st">燕荆轲刺秦，齐后胜通秦</td><td class="pg">55–61</td>
         <td><a class="lk" href="vocab/chapter3-section3.html?from=guide">字词表</a>
-            <span class="lk off">读懂故事（待做）</span></td>
+            <a class="lk g" href="guide/chapter3-section3.html">读懂故事</a></td>
       </tr>
 
       <!-- 第四章 -->
