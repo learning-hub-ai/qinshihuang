@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="读懂故事 · 第二章第一节「秦王孙异人和吕不韦」 —— 讲透「人质」这件事：为什么要拿儿子做抵押，为什么书上说那只是和平的假象，配四个成语填空、三句原文选一句、三个没有标准答案的问题。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>读懂故事 · 第二章第一节「秦王孙异人和吕不韦」</title>
+<link rel="stylesheet" href="../site.css">
+<style>
+  h2{ font-size:11pt; margin:6mm 0 2.5mm; padding:1.2mm 2.5mm;
+      background:var(--hdr); color:#fff; page-break-after:avoid; }
+  h2 .w{ float:right; font-size:8.2pt; font-weight:normal; opacity:.9; }
+
+  .ask{ border:1.5px solid var(--hdr); background:#f7f9fc;
+        padding:2.5mm 3mm; margin:0 0 4mm; }
+  .ask .q{ font-size:11.5pt; font-weight:bold; }
+  .ask .t{ font-size:8.8pt; color:#444; margin-top:1mm; }
+
+  .prose{ font-size:10.2pt; line-height:1.95; text-indent:2em;
+          margin:0 0 2.5mm; text-align:justify; }
+  .prose.ni{ text-indent:0; }
+  .prose b{ color:#1a4a7a; }
+  .fromnote{ font-size:8.6pt; color:var(--soft); background:#fafafa;
+             border-left:3px solid #ccc; padding:1.5mm 2.5mm; margin:0 0 3mm; }
+  .keyidea{ background:#fffdf5; border:1.2px solid var(--star);
+            padding:2mm 3mm; margin:3mm 0 0; font-size:9.8pt; }
+  .keyidea .h{ font-weight:bold; margin-bottom:1mm; }
+
+  /* 说的话 vs 做的事 */
+  .pair{ display:flex; gap:3mm; margin:2.5mm 0 1mm; }
+  .pair > div{ flex:1; border:1.3px solid var(--line); padding:2mm 2.5mm; }
+  .pair .old{ background:#eef2f7; }
+  .pair .new{ background:#fdf0ec; }
+  .pair .t{ font-size:11pt; font-weight:bold; margin-bottom:1mm; }
+  .pair .d{ font-size:9.2pt; line-height:1.6; }
+  .pair .bk{ display:block; font-size:8.4pt; color:var(--soft); margin-top:1.5mm; }
+
+  .words{ font-size:10.2pt; color:#1a4a7a; font-weight:bold;
+          margin:0 0 2.5mm; letter-spacing:.5px; }
+  ol.fills{ margin:0 0 3mm; padding-left:6mm; }
+  ol.fills li{ font-size:9.8pt; line-height:2.05; margin-bottom:1.5mm; }
+  .bl{ display:inline-block; min-width:26mm; border-bottom:1.2px solid #999;
+       margin:0 1mm; }
+  dl.mean{ margin:0; font-size:9.2pt;
+           display:grid; grid-template-columns:34mm 1fr; gap:1.4mm 3mm; }
+  /* 拼音排在词语上面（像课本注音）。column-reverse 让 HTML 仍是
+     「词语 + 拼音」的自然顺序，屏幕阅读器读起来才对。 */
+  dl.mean dt{ color:#1a4a7a; font-weight:bold; line-height:1.35;
+              display:flex; flex-direction:column-reverse; align-items:flex-start; }
+  dl.mean dd{ margin:0; line-height:1.55; align-self:end; }
+  dl.mean .py{ font-size:8pt; color:var(--soft);
+               font-weight:normal; letter-spacing:.2px; line-height:1.3; }
+
+  /* 找句子：三选一 */
+  ul.pick{ list-style:none; margin:2mm 0 2.5mm; padding:0; }
+  ul.pick li{ font-size:9.8pt; line-height:1.75; margin-bottom:2.2mm;
+              padding:0 0 0 6.5mm; text-indent:-6.5mm; }
+  ul.pick .o{ display:inline-block; width:4mm; height:4mm; border:1.3px solid #777;
+              border-radius:50%; margin-right:2mm; vertical-align:-.5mm; }
+  ul.pick .pg{ font-size:8.4pt; color:var(--soft); white-space:nowrap; }
+
+  ol.think{ margin:0; padding-left:6mm; }
+  ol.think li{ font-size:10.2pt; margin-bottom:1mm; }
+  .lines{ margin:1mm 0 4mm; }
+  .lines div{ border-bottom:1px solid #ccc; height:8mm; }
+
+  .foot{ font-size:8.4pt; color:var(--soft); margin-top:6mm;
+         border-top:1px solid #ccc; padding-top:2mm; line-height:1.6; }
+
+  @media print{
+    h2{ background:var(--hdr) !important; color:#fff !important; }
+    .lines div{ height:9mm; }
+    .pair{ page-break-inside:avoid; }
+  }
+</style>
+</head>
+<body data-pagename="读懂故事 · 第 2 章第 1 节" data-tab="guide" data-chapter="c2">
+
+<!-- #frame:head -->
+<div class="sitehead">
+  <div class="sh-in">
+    <div class="printonly">姓名：____________　班级：__________　日期：__________</div>
+    <h1 class="sh-t"><a href="../index.html">《秦始皇——一统中国》整本书阅读</a></h1>
+    <div class="sh-p">读懂故事 · 第 2 章第 1 节</div>
+    <div class="sh-m">名人传系列　·　<b>景崇兰</b> 著　·　<b>简志刚</b> 绘　·　人民文学出版社　·　全书 <b>111 页</b>，共六章</div>
+  </div>
+</div>
+<!-- /frame:head -->
+
+<nav class="sitenav">
+<!-- #frame:nav -->
+<div class="nv-in">
+    <a class="nv-here" href="../index.html">📖 阅读指引</a>
+    <a href="../reading-plan.html">📅 阅读进度表</a>
+    <a href="../vocab/index.html">📚 字词表</a>
+    <a href="../maps.html">🗺 地图</a>
+    <a href="../characters.html">👥 人物关系表</a>
+    <a href="../fact-sheet.html">📊 秦始皇小档案</a>
+    <a href="../timeline.html">🔍 一生时间轴</a>
+    <a href="../how-to-use.html">📘 使用说明</a>
+  </div>
+<!-- /frame:nav -->
+  <div class="nv-sub">
+    <a class="nv-up" href="../index.html#c2">⬆ 回第二章</a>
+    <span class="nv-lbl">配套：</span>
+    <a href="../vocab/chapter2-section1.html?from=guide">本节字词表（91 条）</a>
+    <a href="chapter1-section3.html">← 上一节：战国时代，傲视群雄</a>
+    <a href="chapter2-section2.html">下一节：「赵政」归秦 →</a>
+  </div>
+</nav>
+<main class="wrap sheet">
+<div class="sheetin">
+<div class="printbtn">
+  <button type="button" onclick="window.print()"
+          title="打印设置：A4；关掉「页眉和页脚」；勾选「打印背景图形」。">🖨 打印</button>
+  <span class="pb-tip">记得勾选<b>「打印背景图形」</b></span>
+</div>
+<h2 class="pagetitle" style="background:none;color:inherit;padding:0;font-size:13pt;">
+  第二章第一节　秦王孙异人和吕不韦</h2>
+<p class="sub" style="text-align:center;">第 22–27 页　·　读之前先看【讲背景】，读完再做后面三样</p>
+
+<div class="ask">
+  <div class="q">📖 带着这个问题读：两个国家打累了要讲和，为什么要把儿子送到对方国家去？</div>
+  <div class="t">读的时候留意一个词：<b>人质</b>。</div>
+</div>
+
+<!-- ========== 一、讲背景 ========== -->
+<h2>【讲背景】人质 —— 拿人当保证<span class="w">这一段不用动笔，读完再看书</span></h2>
+
+<p class="prose">这一节一开头，赵国的邯郸城里生下一个男孩，叫<b>赵政</b>。他就是后来的秦始皇。
+  奇怪的是：他是秦国人的血脉，为什么生在赵国？</p>
+
+<p class="prose">因为他爸爸<b>异人</b>是秦国送到赵国的<b>人质</b>。</p>
+
+<p class="prose">先说人质是什么。那时候七个国家常年打仗，打累了就坐下来讲和。
+  可是讲和只是嘴上说说 —— 谁能保证对方不会转过身就动手？
+  于是就有了这个办法：<b>双方各送一个重要的人到对方国家住着</b>。
+  你要是敢打我，我手里的人就没命。</p>
+
+<p class="prose">所以人质不能随便挑一个人。书上说，这些人质「身份相当高贵，通常都是<b>王子王孙</b>」——
+  送过去的必须是对方在意的人，否则这份保证就不值钱。</p>
+
+<p class="prose">问题在于，被送出去的那个人自己怎么想。
+  秦国这边挑中了异人，理由写得很清楚：<b>异人的母亲夏姬早已失宠，所以异人也没有受到父亲安国君的重视</b>（第 23 页）。
+  安国君有二十多个儿子，挑一个不心疼的送出去，是最省事的。</p>
+
+<p class="prose">异人在赵国过的是什么日子呢？书上说赵国「并未善待异人，还派他替赵王养马」，
+  他「日子过得既<b>艰苦又没尊严</b>」，甚至「早有<b>客死赵国</b>的心理准备」（第 23 页）。
+  他自己后来说得更直白：「人质哪有什么身份可言，难保哪一天就被赵王给杀了！」（第 24 页）</p>
+
+<div class="fromnote">
+  📌 这些不是我编的：<b>第 23 页的脚注①</b>就讲了交换人质这件事，只讲了四行。
+  上面这几段是把那四行展开说清楚 —— 你读到那个脚注时，会发现它一下就看懂了。
+</div>
+
+<p class="prose">而这一节最要紧的一点，是那个脚注的<b>最后一句</b>。
+  它没有说交换人质换来了和平，它说：这种举动<b>并不能带来真正的和平，不过是一种假象罢了</b>。</p>
+
+<p class="prose ni">「假象」这两个字，在这一节里就应验了 —— 只隔了三页：</p>
+
+<div class="pair">
+  <div class="old">
+    <div class="t">说的话</div>
+    <div class="d">秦赵两国讲和，互换人质，表示<b>谋求和平的决心</b>。</div>
+    <span class="bk">第 23 页脚注①</span>
+  </div>
+  <div class="new">
+    <div class="t">做的事</div>
+    <div class="d">三年之后，秦昭襄王<b>不顾两国曾经交换人质</b>，派兵攻打赵国，在长平活埋了四十多万名赵军。</div>
+    <span class="bk">第 26 页</span>
+  </div>
+</div>
+
+<p class="prose">对异人来说，这一仗的意思很残酷。书上说他此时最害怕，
+  因为秦国攻打赵国表示他<b>只不过是个可有可无的王孙罢了</b>（第 27 页）——
+  秦国根本没打算为了他收手。他手里那份「保证」，从来就不存在。</p>
+
+<div class="keyidea">
+  <div class="h">💡 记住这一条，后面几章都用得上</div>
+  嬴政就是在这样的地方出生、长大的 —— 父亲是个随时可能被杀的人质，
+  自己叫「赵政」，是因为<b>身在赵国</b>。
+  书上没有写他小时候怎么想，但这一节摆出的事实是：
+  <b>讲好的话可以不算数，手里没有力量就只能等别人决定</b>。<br>
+  后面第四章第一节你会读到，他统一天下以后要在<b>分封</b>和<b>郡县</b>之间做选择
+  （第 67 页），他选了郡县 —— 长官<b>由皇帝直接任命、不世袭</b>（第 68 页）。
+  读到那里请回头想想这一段。
+</div>
+
+<!-- ========== 二、学词语 ========== -->
+<h2>【学词语】填成语<span class="w">先想，想不出来再看下面的解释</span></h2>
+
+<p class="words">客死异乡　·　唯利是图　·　可有可无　·　生灵涂炭</p>
+
+<ol class="fills">
+  <li>异人做好了死在赵国、回不了秦国的准备 —— 这就叫<span class="bl"></span>。</li>
+  <li>异人原本不喜欢商人，因为他认为商人<span class="bl"></span>，一点道德和良知都没有。</li>
+  <li>长平之战活埋了四十多万人，赵国<span class="bl"></span>。</li>
+  <li>秦国照样攻打赵国 —— 这说明异人在秦国眼里只是个<span class="bl"></span>的王孙。</li>
+</ol>
+
+<dl class="mean">
+  <dt>客死异乡<span class="py">kè sǐ yì xiāng</span></dt>
+  <dd>死在别人的国家、别的地方，回不了家</dd>
+  <dt>唯利是图<span class="py">wéi lì shì tú</span></dt>
+  <dd>只想着赚钱得好处，别的都不管</dd>
+  <dt>可有可无<span class="py">kě yǒu kě wú</span></dt>
+  <dd>有也行没有也行，不重要</dd>
+  <dt>生灵涂炭<span class="py">shēng líng tú tàn</span></dt>
+  <dd>百姓像掉进泥浆和炭火里，苦到极点</dd>
+</dl>
+
+<!-- ========== 三、找句子 ========== -->
+<h2>【找句子】哪一句说明交换人质没能换来和平<span class="w">三句都是书上的原话</span></h2>
+
+<p class="prose ni">下面三句都在讲异人当人质这件事。
+  <b>哪一句说明交换人质没能换来和平？</b>在 ○ 里打勾。</p>
+
+<ul class="pick">
+  <li><span class="o"></span>「于是秦赵议和时，异人就被挑选出来，代表秦国被送往赵国当做人质。」<span class="pg">（第 23 页）</span></li>
+  <li><span class="o"></span>「然而赵国并未善待异人，还派他替赵王养马，异人的日子过得既艰苦又没尊严。」<span class="pg">（第 23 页）</span></li>
+  <li><span class="o"></span>「没想到三年之后，秦昭襄王不顾秦赵两国曾经交换人质，派兵攻打赵国，在赵国长平活埋了四十多万名赵军。」<span class="pg">（第 26 页）</span></li>
+</ul>
+
+<!-- ========== 四、说感想 ========== -->
+<h2>【说感想】三个问题，没有标准答案<span class="w">写一两句就行</span></h2>
+
+<ol class="think">
+  <li>安国君有二十多个儿子，挑了最不受重视的异人送去当人质。你怎么看这件事？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<ol class="think" start="2">
+  <li>吕不韦对异人说「人要自重然后才会获得尊重」。你同意吗？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<ol class="think" start="3">
+  <li>两个人说好了一件事，后来有一个人不照着做 —— 你遇到过吗？当时你怎么办的？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<p class="foot">
+  <b>这一页怎么用</b>：先读【讲背景】（不用动笔），再读书上第 22–27 页，
+  读完回来做后面三样。<br>
+  <b>【说感想】可以不写</b>：说给爸爸妈妈听也算 —— 讲出来往往比写下来更清楚。<br>
+  <b>这一节有两个脚注要留意</b>：第 23 页讲人质，第 26 页讲长平之战和周王朝灭亡。
+  见<a href="../vocab/chapter2-section1.html?from=guide">本节字词表</a>。
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+<!-- #frame:foot -->
+<div class="sf-in">
+      页码依据书前目录核对。书中有整页插图（如第 105 页是一整幅画），所以实际要读的字比页数看起来少。<br>
+      <span class="sf-print">打印任意一页：<b>Ctrl+P → A4 → 关掉「页眉和页脚」→ 勾选「打印背景图形」</b></span>
+      <span class="sf-cr">本站是<b>阅读辅助材料</b>，不能代替原书 —— 请购买《秦始皇——一统中国》（景崇兰 著，人民文学出版社）。<br>书中文字版权归作者及出版社所有；本站少量引用并标注页码，供学习讨论之用。本站自编内容版权归本站作者所有 —— 欢迎打印使用和转发网址，请勿转载到其他网站或 App，详见<a href="../how-to-use.html#copyright">使用说明</a>。</span>
+  </div>
+<!-- /frame:foot -->
+</footer>
+
+<script src="../site.js"></script>
+</body>
+</html>

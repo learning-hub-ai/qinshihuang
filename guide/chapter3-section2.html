@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="读懂故事 · 第三章第二节「魏王孤注一掷，楚王骨肉相残」 —— 讲透两个国家怎么把自己弄垮的：魏王把全部本钱押在一座城，楚国自己人杀自己人，配四个成语填空、三句原文选一句、三个没有标准答案的问题。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>读懂故事 · 第三章第二节「魏王孤注一掷，楚王骨肉相残」</title>
+<link rel="stylesheet" href="../site.css">
+<style>
+  h2{ font-size:11pt; margin:6mm 0 2.5mm; padding:1.2mm 2.5mm;
+      background:var(--hdr); color:#fff; page-break-after:avoid; }
+  h2 .w{ float:right; font-size:8.2pt; font-weight:normal; opacity:.9; }
+
+  .ask{ border:1.5px solid var(--hdr); background:#f7f9fc;
+        padding:2.5mm 3mm; margin:0 0 4mm; }
+  .ask .q{ font-size:11.5pt; font-weight:bold; }
+  .ask .t{ font-size:8.8pt; color:#444; margin-top:1mm; }
+
+  .prose{ font-size:10.2pt; line-height:1.95; text-indent:2em;
+          margin:0 0 2.5mm; text-align:justify; }
+  .prose.ni{ text-indent:0; }
+  .prose b{ color:#1a4a7a; }
+  blockquote.said{ margin:0 0 2.5mm 6mm; padding:1.5mm 0 1.5mm 3mm;
+                   border-left:2.5px solid var(--hdr); font-size:10pt;
+                   line-height:1.85; text-align:justify; }
+  blockquote.said b{ color:#1a4a7a; }
+  blockquote.said .who{ font-weight:bold; color:#1a4a7a; }
+  .fromnote{ font-size:8.6pt; color:var(--soft); background:#fafafa;
+             border-left:3px solid #ccc; padding:1.5mm 2.5mm; margin:0 0 3mm; }
+  .keyidea{ background:#fffdf5; border:1.2px solid var(--star);
+            padding:2mm 3mm; margin:3mm 0 0; font-size:9.8pt; }
+  .keyidea .h{ font-weight:bold; margin-bottom:1mm; }
+
+  /* 两国各自的败法 */
+  .pair{ display:flex; gap:3mm; margin:2.5mm 0 1mm; }
+  .pair > div{ flex:1; border:1.3px solid var(--line); padding:2mm 2.5mm; }
+  .pair .old{ background:#eef2f7; }
+  .pair .new{ background:#fdf0ec; }
+  .pair .t{ font-size:11pt; font-weight:bold; margin-bottom:1mm; }
+  .pair .d{ font-size:9.2pt; line-height:1.6; }
+  .pair .bk{ display:block; font-size:8.4pt; color:var(--soft); margin-top:1.5mm; }
+
+  .words{ font-size:10.2pt; color:#1a4a7a; font-weight:bold;
+          margin:0 0 2.5mm; letter-spacing:.5px; }
+  ol.fills{ margin:0 0 3mm; padding-left:6mm; }
+  ol.fills li{ font-size:9.8pt; line-height:2.05; margin-bottom:1.5mm; }
+  .bl{ display:inline-block; min-width:26mm; border-bottom:1.2px solid #999;
+       margin:0 1mm; }
+  dl.mean{ margin:0; font-size:9.2pt;
+           display:grid; grid-template-columns:34mm 1fr; gap:1.4mm 3mm; }
+  /* 拼音排在词语上面（像课本注音）。column-reverse 让 HTML 仍是
+     「词语 + 拼音」的自然顺序，屏幕阅读器读起来才对。 */
+  dl.mean dt{ color:#1a4a7a; font-weight:bold; line-height:1.35;
+              display:flex; flex-direction:column-reverse; align-items:flex-start; }
+  dl.mean dd{ margin:0; line-height:1.55; align-self:end; }
+  dl.mean .py{ font-size:8pt; color:var(--soft);
+               font-weight:normal; letter-spacing:.2px; line-height:1.3; }
+
+  /* 找句子：三选一 */
+  ul.pick{ list-style:none; margin:2mm 0 2.5mm; padding:0; }
+  ul.pick li{ font-size:9.8pt; line-height:1.75; margin-bottom:2.2mm;
+              padding:0 0 0 6.5mm; text-indent:-6.5mm; }
+  ul.pick .o{ display:inline-block; width:4mm; height:4mm; border:1.3px solid #777;
+              border-radius:50%; margin-right:2mm; vertical-align:-.5mm; }
+  ul.pick .pg{ font-size:8.4pt; color:var(--soft); white-space:nowrap; }
+
+  ol.think{ margin:0; padding-left:6mm; }
+  ol.think li{ font-size:10.2pt; margin-bottom:1mm; }
+  .lines{ margin:1mm 0 4mm; }
+  .lines div{ border-bottom:1px solid #ccc; height:8mm; }
+
+  .foot{ font-size:8.4pt; color:var(--soft); margin-top:6mm;
+         border-top:1px solid #ccc; padding-top:2mm; line-height:1.6; }
+
+  @media print{
+    h2{ background:var(--hdr) !important; color:#fff !important; }
+    .lines div{ height:9mm; }
+    .pair{ page-break-inside:avoid; }
+  }
+</style>
+</head>
+<body data-pagename="读懂故事 · 第 3 章第 2 节" data-tab="guide" data-chapter="c3">
+
+<!-- #frame:head -->
+<div class="sitehead">
+  <div class="sh-in">
+    <div class="printonly">姓名：____________　班级：__________　日期：__________</div>
+    <h1 class="sh-t"><a href="../index.html">《秦始皇——一统中国》整本书阅读</a></h1>
+    <div class="sh-p">读懂故事 · 第 3 章第 2 节</div>
+    <div class="sh-m">名人传系列　·　<b>景崇兰</b> 著　·　<b>简志刚</b> 绘　·　人民文学出版社　·　全书 <b>111 页</b>，共六章</div>
+  </div>
+</div>
+<!-- /frame:head -->
+
+<nav class="sitenav">
+<!-- #frame:nav -->
+<div class="nv-in">
+    <a class="nv-here" href="../index.html">📖 阅读指引</a>
+    <a href="../reading-plan.html">📅 阅读进度表</a>
+    <a href="../vocab/index.html">📚 字词表</a>
+    <a href="../maps.html">🗺 地图</a>
+    <a href="../characters.html">👥 人物关系表</a>
+    <a href="../fact-sheet.html">📊 秦始皇小档案</a>
+    <a href="../timeline.html">🔍 一生时间轴</a>
+    <a href="../how-to-use.html">📘 使用说明</a>
+  </div>
+<!-- /frame:nav -->
+  <div class="nv-sub">
+    <a class="nv-up" href="../index.html#c3">⬆ 回第三章</a>
+    <span class="nv-lbl">配套：</span>
+    <a href="../vocab/chapter3-section2.html?from=guide">本节字词表（147 条）</a>
+    <a href="chapter3-section1.html">← 上一节：韩国的间谍，赵国的良将</a>
+    <a href="chapter3-section3.html">下一节：燕荆轲刺秦，齐后胜通秦 →</a>
+  </div>
+</nav>
+<main class="wrap sheet">
+<div class="sheetin">
+<div class="printbtn">
+  <button type="button" onclick="window.print()"
+          title="打印设置：A4；关掉「页眉和页脚」；勾选「打印背景图形」。">🖨 打印</button>
+  <span class="pb-tip">记得勾选<b>「打印背景图形」</b></span>
+</div>
+<h2 class="pagetitle" style="background:none;color:inherit;padding:0;font-size:13pt;">
+  第三章第二节　魏王孤注一掷，楚王骨肉相残</h2>
+<p class="sub" style="text-align:center;">第 47–54 页　·　读之前先看【讲背景】，读完再做后面三样</p>
+
+<div class="ask">
+  <div class="q">📖 带着这个问题读：秦国灭六国，是因为秦国太强，还是因为那六个国家自己出了问题？</div>
+  <div class="t">读的时候留意两个词：<b>孤注一掷</b>、<b>骨肉相残</b>。</div>
+</div>
+
+<!-- ========== 一、讲背景 ========== -->
+<h2>【讲背景】亡国的两种方式 —— 押错和内斗<span class="w">这一段不用动笔，读完再看书</span></h2>
+
+<p class="prose">这一节的标题已经把答案说了一半：<b>魏王孤注一掷，楚王骨肉相残</b>。
+  两个国家亡得不一样，但都不只是被打垮的 —— 它们自己先出了问题。</p>
+
+<p class="prose">先说魏国。<b>孤注一掷</b>的意思是把所有本钱一次全押上去赌，成败就这一下。
+  魏王做的正是这件事：韩赵灭亡之后，他「将所有人力物力都集中到了魏都大梁城，
+  打算<b>死守</b>大梁城，<b>奋力一搏</b>」（第 47 页）。</p>
+
+<p class="prose">听起来很悲壮，但嬴政一句话点出了要害：</p>
+
+<blockquote class="said"><span class="who">嬴政：</span>魏王将自己封闭在隔绝的环境中，岂不是打算做<b>困兽之斗</b>吗？</blockquote>
+
+<p class="prose">「困兽」是被关住的野兽 —— 还在拼，但已经没有退路了。
+  把全国的力量收进一座城，这座城就是全部：守住是活，守不住是全亡，
+  中间没有别的可能。</p>
+
+<p class="prose">而大梁城确实难打。王贲说它「<b>堡垒坚固</b>，岗哨严明」，硬攻没有胜算；
+  城里「物资丰厚，最起码可维持数年之久」，围困也耗不起（第 48 页）。
+  最后他想出的办法是<b>引大水入城</b> —— 大梁城「地势低洼，土壤潮湿」。
+  魏王把本钱押在城墙上，秦国就<b>绕过城墙</b>。</p>
+
+<p class="prose">结局是魏王自己开的门。书上说他眼见「自己都<b>难逃一劫</b>」，
+  于是「便不顾众人的反对，<b>决定开城门投降</b>」——
+  秦国「<b>不费一兵一卒</b>，占领了魏国」（公元前 <b>225</b> 年，第 51 页）。
+  押上全部本钱守的那座城，最后连一场攻城战都没打成。</p>
+
+<p class="prose">再说楚国，那是另一种败法：<b>骨肉相残</b>，自己人杀自己人。
+  这一节里楚国死了一串人 ——</p>
+
+<p class="prose"><b>春申君</b>做了三十多年相国，书上说他是「仁慈而宽宏大量的人」。
+  门客朱英提醒他小心李园，他不听，还说「李园是我提拔进宫的，感激我都来不及了，
+  又怎么会害我呢？」书上紧接着写：「春申君<b>不疑有他</b>，根本没有提防李园。」（第 51 页）
+  几年后他去吊丧的路上，被李园安排的蒙面刺客杀死。</p>
+
+<p class="prose">然后是接连三代：考烈王死，幽王继位十年也死了；
+  弟弟哀王继位「仅两个月」，就被堂弟<b>负刍</b>杀害篡位（第 52 页）。
+  这就是标题里的「楚王骨肉相残」。</p>
+
+<div class="fromnote">
+  📌 「不疑有他」这个词你上一节刚学过 —— 第 42 页嬴政对郑国「不疑有他」，
+  郑国是真的间谍；第 51 页春申君对李园「不疑有他」，李园真的要杀他。
+  同一个词，两次都用在「没有防备」上。
+</div>
+
+<p class="prose">书上没有让这两件事各自孤立。它写道：「骨肉相残的悲剧对嬴政来说<b>并不陌生</b>。
+  成蟜对嬴政来说，始终是<b>挥之不去</b>的阴影。如今楚王负刍杀兄自立的举动，
+  让嬴政想起了当年的成蟜」（第 52 页）—— 上一章弟弟造反那件事，
+  十几年过去了他还没放下。</p>
+
+<div class="pair">
+  <div class="old">
+    <div class="t">魏国：押错了</div>
+    <div class="d">把全国力量收进一座城。秦国引水绕过城墙，魏王<b>开城门投降</b>。</div>
+    <span class="bk">第 47–51 页</span>
+  </div>
+  <div class="new">
+    <div class="t">楚国：自己拆自己</div>
+    <div class="d">相国被门下的人杀，国君被堂弟杀。秦国还没来，人已经少了一半。</div>
+    <span class="bk">第 51–52 页</span>
+  </div>
+</div>
+
+<p class="prose">不过这一节还有一段跟六国无关、但很值得看的事：嬴政自己也犯了个错。
+  他问将军们攻楚要多少兵，老将<b>王翦</b>说「楚国地大兵强，因此需要<b>六十万</b>兵力」。
+  嬴政笑着说：</p>
+
+<blockquote class="said"><span class="who">嬴政：</span>将军您<b>真是老啰</b>，对付楚国那个负刍，<b>十万</b>兵力已足够，何须六十万呢？</blockquote>
+
+<p class="prose">王翦「受到嬴政的戏谑，于是伤心地告老还乡」。
+  嬴政派年轻将军蒙恬、李信带十万人去，结果「楚兵人强马壮，蒙恬等人竟然<b>败下阵来</b>」。
+  这一败「震惊了秦国上下」，于是嬴政「后悔莫及，赶忙<b>亲自驾马</b>前去拜访王翦」道歉（第 53 页）。</p>
+
+<p class="prose">王翦这次要什么条件，嬴政「<b>二话不说</b>，当下就答应了」。
+  出发那天嬴政<b>亲送六十万大军</b>离去。
+  王翦到了楚国却<b>按兵不动</b> —— 楚军怎么挑衅他都不出兵，
+  等楚军以为他害怕、转头东行，他才暗中跟在后面「<b>趁其不备</b>时发动攻击」，
+  大败楚军、俘虏楚王负刍（第 55 页）。
+  六十万这个数，要的就是「耗得起」。</p>
+
+<div class="keyidea">
+  <div class="h">💡 记住这一条，后面几章都用得上</div>
+  这一节最值得记住的不是谁灭了谁，而是<b>嬴政认错了</b> ——
+  他嘲笑老将、打了败仗，然后亲自赶车去把人请回来。
+  上一节你看到赵王疑心李牧、把人杀掉；这一节嬴政用错了人，把人请回来。
+  <b>同样是国君犯错，处理方式不一样，国家的结局也不一样。</b><br>
+  后面第五章第三节你会读到另一次进言：博士<b>淳于越</b>在宴会上劝他恢复分封制，
+  结果换来的是<b>焚书令</b>（第 94–97 页）。同一个人，隔了二十多年，
+  对「有人说我错了」的反应完全不同。读到那里请回头想想这一段。
+</div>
+
+<!-- ========== 二、学词语 ========== -->
+<h2>【学词语】填成语<span class="w">先想，想不出来再看下面的解释</span></h2>
+
+<p class="words">孤注一掷　·　困兽之斗　·　挥之不去　·　甘之如饴</p>
+
+<ol class="fills">
+  <li>魏王把全国人力物力都集中到大梁城，这是<span class="bl"></span>。</li>
+  <li>嬴政说魏王把自己关在隔绝的环境里，是在做<span class="bl"></span>。</li>
+  <li>成蟜造反那件事，对嬴政来说始终是<span class="bl"></span>的阴影。</li>
+  <li>王翦被嬴政嘲笑过，还是愿意为他出征 —— 这就是<span class="bl"></span>。</li>
+</ol>
+
+<dl class="mean">
+  <dt>孤注一掷<span class="py">gū zhù yī zhì</span></dt>
+  <dd>把所有本钱一次全押上去赌，成败就这一下</dd>
+  <dt>困兽之斗<span class="py">kùn shòu zhī dòu</span></dt>
+  <dd>被关住的野兽拼命挣扎，比喻走投无路时的最后反抗</dd>
+  <dt>挥之不去<span class="py">huī zhī bù qù</span></dt>
+  <dd>怎么赶也赶不走（多指心里的阴影）</dd>
+  <dt>甘之如饴<span class="py">gān zhī rú yí</span></dt>
+  <dd>再苦也觉得像糖一样甜，心甘情愿。饴＝麦芽糖</dd>
+</dl>
+
+<!-- ========== 三、找句子 ========== -->
+<h2>【找句子】哪一句让他后来后悔莫及<span class="w">三句都是书上的原话</span></h2>
+
+<p class="prose ni">下面三句都是嬴政说的话。
+  <b>哪一句让他后来后悔莫及？</b>在 ○ 里打勾。</p>
+
+<ul class="pick">
+  <li><span class="o"></span>「魏王将自己封闭在隔绝的环境中，岂不是打算做困兽之斗吗？爱卿有何攻城的妙计啊？」<span class="pg">（第 48 页）</span></li>
+  <li><span class="o"></span>「难道我强秦就没有办法对付一座区区的大梁城吗？寡人岂不成了各国的笑柄？」<span class="pg">（第 48 页）</span></li>
+  <li><span class="o"></span>「将军您真是老啰，对付楚国那个负刍，十万兵力已足够，何须六十万呢？」<span class="pg">（第 53 页）</span></li>
+</ul>
+
+<!-- ========== 四、说感想 ========== -->
+<h2>【说感想】三个问题，没有标准答案<span class="w">写一两句就行</span></h2>
+
+<ol class="think">
+  <li>魏王把全国的力量押在一座城上。如果你是魏王，你会怎么做？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<ol class="think" start="2">
+  <li>春申君说「李园是我提拔进宫的，怎么会害我呢」。对自己帮过的人就可以完全放心吗？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<ol class="think" start="3">
+  <li>嬴政嘲笑了王翦，打了败仗，又亲自驾车去道歉。你觉得他这样做丢脸吗？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<p class="foot">
+  <b>这一页怎么用</b>：先读【讲背景】（不用动笔），再读书上第 47–54 页，
+  读完回来做后面三样。<br>
+  <b>【说感想】可以不写</b>：说给爸爸妈妈听也算 —— 讲出来往往比写下来更清楚。<br>
+  <b>这一节难念的字多</b>：王翦（Jiǎn）、负刍（Chú）、戎马倥偬（róng mǎ kǒng zǒng）。
+  <b>第 50 页是整页插图</b>，画的就是水灌大梁城 —— 秦兵在上面倒水，
+  城里的人举着手。第 54 页也是整页插图。见<a href="../vocab/chapter3-section2.html?from=guide">本节字词表</a>。
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+<!-- #frame:foot -->
+<div class="sf-in">
+      页码依据书前目录核对。书中有整页插图（如第 105 页是一整幅画），所以实际要读的字比页数看起来少。<br>
+      <span class="sf-print">打印任意一页：<b>Ctrl+P → A4 → 关掉「页眉和页脚」→ 勾选「打印背景图形」</b></span>
+      <span class="sf-cr">本站是<b>阅读辅助材料</b>，不能代替原书 —— 请购买《秦始皇——一统中国》（景崇兰 著，人民文学出版社）。<br>书中文字版权归作者及出版社所有；本站少量引用并标注页码，供学习讨论之用。本站自编内容版权归本站作者所有 —— 欢迎打印使用和转发网址，请勿转载到其他网站或 App，详见<a href="../how-to-use.html#copyright">使用说明</a>。</span>
+  </div>
+<!-- /frame:foot -->
+</footer>
+
+<script src="../site.js"></script>
+</body>
+</html>
