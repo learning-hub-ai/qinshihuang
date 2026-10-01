@@ -31,6 +31,16 @@
   .fs{border:1px solid var(--rule); border-top:3px solid var(--hdr); padding:9px 11px;}
   .fs .tag{font-size:11px; font-weight:700; color:#fff; background:var(--hdr);
            display:inline-block; padding:1px 6px; margin-bottom:5px;}
+
+  /* 授权条款：两组各三四条，列成清单比挤成一段好读 */
+  .lic{margin:6px 0 0; padding:6px 10px; border-left:3px solid #ccc;}
+  .lic.ok{background:#f3f8f3; border-left-color:#5c8a63;}
+  .lic.no{background:#faf3f3; border-left-color:#9c5c5c;}
+  .lic .lh{font-weight:700; font-size:12.5px; margin-bottom:3px;}
+  .lic.ok .lh{color:#2f5c37;}
+  .lic.no .lh{color:#7a3b3b;}
+  .lic ul{margin:0; padding-left:18px;}
+  .lic li{font-size:12.5px; line-height:1.7; margin-bottom:1px;}
   .fs .ft{font-size:14px; font-weight:600; margin-bottom:3px;}
   .fs .ft a{color:#1a4a7a; text-decoration:none; border-bottom:1px solid #a9c2dd;}
   .fs .ft a:hover{background:#eaf2fb;}
@@ -202,11 +212,24 @@
         <span class="tag" style="background:#f0f7f0; color:#2f5c37; border-color:#b8d4bb;">自编</span>
         <span>拼音、释义、讲解、示意图、问题、进度表等<b>由本站编写</b>，
         版权归本站作者所有，<b>保留所有权利</b>。<br>
-        <b>欢迎这样用，不必告知：</b>打印给孩子、学生、班级使用（纸质件可自由复制）；
-        在课堂、读书会上使用；为自己使用做少量修改后打印；
-        <b>链接</b>到本站任何页面 —— 欢迎分享网址。<br>
-        <b>请不要：</b>把内容复制到其他网站、App、公众号或任何平台重新发布
-        —— <b>请改为放链接</b>；收费出售或作为付费产品的一部分；去掉出处后重新发布。</span>
+        <div class="lic ok">
+          <div class="lh">✅ 欢迎这样用，不必告知</div>
+          <ul>
+            <li><b>打印</b>给孩子、学生、班级使用，纸质件可自由复制</li>
+            <li>在课堂、读书会上使用</li>
+            <li>为自己使用做少量修改后打印</li>
+            <li><b>链接</b>到本站任何页面 —— 欢迎分享网址</li>
+          </ul>
+        </div>
+        <div class="lic no">
+          <div class="lh">🚫 请不要</div>
+          <ul>
+            <li>把内容复制到其他网站、App、公众号或任何平台重新发布
+              —— <b>请改为放链接</b></li>
+            <li>收费出售，或作为付费产品的一部分</li>
+            <li>去掉出处后重新发布</li>
+          </ul>
+        </div></span>
       </div>
       <div class="r">
         <span class="tag" style="background:#f7f0f7; color:#5c2f5c; border-color:#d4b8d4;">地图</span>

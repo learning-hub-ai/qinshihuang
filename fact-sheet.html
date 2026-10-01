@@ -96,7 +96,7 @@ h2 {
   .axiswrap { margin: 1mm 0 5mm; }
   .axis {
     position: relative;
-    height: 38mm;
+    height: 27mm;
     margin: 0 6mm;      /* 左右留白给首尾标签 */
   }
   /* 三段色带 */
@@ -105,27 +105,35 @@ h2 {
     border: 1.2px solid var(--line);
     box-sizing: border-box;
   }
-  /* 色带里的文字：刻度线已移到色带下方，这里不会再被划掉 */
+  /* 色带里的文字：刻度线都在色带外侧，不会被划掉 */
   .band span {
     position: absolute; left: 0; right: 0; top: 1.4mm;
     text-align: center; font-size: 8pt; font-weight: bold; color: #000;
+    white-space: nowrap;      /* 窄屏下「皇帝期 11 年」曾折行，「年」溢出色带 */
+    overflow: hidden;
   }
   .b1 { background: var(--p1); }
   .b2 { background: var(--p2); }
   .b3 { background: var(--p3); }
 
-  /* 刻度线：全部画在色带「下方」的空白处，
-     这样既不会穿过色带里的分期名，也不会戳到上方的年份标注 */
+  /* 刻度分两套，各自紧贴色带、朝向自己对应的那排文字：
+     粗黑向上 → 上方的转折点岁数；细浅向下 → 下方的十年尺 */
   .tick {
-    position: absolute; top: 20mm;
-    width: 0; height: 2.5mm;
-    border: none; border-left: 1px solid #666;   /* border:none 防止被别的规则加上四边框 */
+    position: absolute;
+    width: 0;
+    transform: translateX(-50%);  /* 线居中于刻度位置，否则 left:100% 的那根落在色带边框外 */
+    border: none;                /* border:none 防止被别的规则加上四边框 */
     padding: 0; background: none;
     box-sizing: content-box;
   }
-  .tick.major { border-left: 2.2px solid #000; height: 4.5mm; }
+  /* 上方粗黑刻度：向上伸，下端接色带上缘（13mm），对应上面五个转折点 */
+  .tick.up { top: 11.2mm; height: 1.8mm; border-left: 2.2px solid #000; }
+  /* 下方细浅刻度：向下伸，上端接色带下缘（20mm），对应下面的十年尺，无空隙 */
+  .tick.dn { top: 20mm;   height: 2mm;   border-left: 1px solid #9a9a9a; }
+  /* 末端那根：左移 1px，否则线落在色带右边框之外，看起来和色带断开 */
+  .tick.end { margin-left: -1px; }
 
-  /* 上方标注（关键事件）：占 0–12mm，色带从 13mm 开始，留 1mm 间隙 */
+  /* 上方标注（关键事件）：占 0–10mm，粗刻度 10.2mm 起，色带 13mm 起 */
   .lab {
     position: absolute; top: 0;
     font-size: 8pt; line-height: 1.2;
@@ -135,7 +143,7 @@ h2 {
   .lab b { font-size: 9.5pt; }
   .lab .yy { color: var(--soft); font-size: 7.5pt; }
 
-  /* 下方年龄尺：放在刻度线之下 */
+  /* 年龄尺基类（当前只有十年尺在用） */
   .agebar {
     position: absolute; top: 25.5mm; left: 0; right: 0;
     font-size: 7.5pt; color: #444;
@@ -144,6 +152,8 @@ h2 {
     position: absolute; transform: translateX(-50%);
     font-style: normal; white-space: nowrap;
   }
+  /* 十年尺：紧跟下方细刻度（细刻度到 22mm），字小色淡，与上方转折点刻度区分开 */
+  .agebar.ruler { top: 22.4mm; color: #8a8a8a; font-size: 7pt; }
   .axcap { font-size: 8.5pt; color: var(--soft); margin: 1mm 6mm 0; }  .stage .yr { font-weight: normal; font-size: 9pt; color: #444; }  /* 大事件：实心大圆点 */
   .ev.big::before {
     width: 4.2mm; height: 4.2mm; left: -5.7mm; top: 0.8mm; border-width: 2.5px;
@@ -200,7 +210,7 @@ h2 {
   <div class="key"><div class="n">11</div><div class="t">年 — 他当皇帝的全部时间<br><span class="note">前 221 → 前 210</span></div></div>
 </div>
 <p class="note" style="margin:-2mm 0 4mm;">
-  先看这四个数字：他花了 26 年才拿到实权、打了 9 年统一天下，
+  先看这四个数字：他 13 岁登基，<b>等了 10 年</b>才拿到实权、打了 9 年统一天下，
   可是当皇帝只当了 11 年 —— 比他当人质和被人架空的日子短得多。
 </p>
 
@@ -209,19 +219,25 @@ h2 {
 <div class="axiswrap">
   <div class="axis">
 
-    <!-- 三段色带：宽度＝真实年数占比 -->
-    <div class="band b1" style="left:0%;    width:59.18%;"><span>夺权期　29 年</span></div>
-    <div class="band b2" style="left:59.18%;width:18.37%;"><span>统一期　9 年</span></div>
-    <div class="band b3" style="left:77.55%;width:22.45%;"><span>皇帝期　11 年</span></div>
+    <!-- 三段色带：连续铺满，宽度＝真实年数占比（0–50 岁，每岁 2%） -->
+    <div class="band b1" style="left:0%;      width:44.90%;"><span>23 年</span></div>
+    <div class="band b2" style="left:44.90%; width:32.65%;"><span>16 年</span></div>
+    <div class="band b3" style="left:77.55%; width:22.45%;"><span>11 年</span></div>
 
-    <!-- 刻度 -->
-    <div class="tick major" style="left:0%;"></div>
-    <div class="tick major" style="left:24.49%;"></div>
-    <div class="tick major" style="left:44.90%;"></div>
-    <div class="tick"     style="left:59.18%;"></div>
-    <div class="tick major" style="left:77.55%;"></div>
-    <div class="tick"     style="left:93.88%;"></div>
-    <div class="tick major" style="left:100%;"></div>
+    <!-- 上方刻度（粗黑）：对应出生、13、23、39、50 岁这五个转折点 -->
+    <div class="tick up" style="left:0%;"></div>
+    <div class="tick up" style="left:24.49%;"></div>
+    <div class="tick up" style="left:44.90%;"></div>
+    <div class="tick up" style="left:77.55%;"></div>
+    <div class="tick up end" style="left:100%;"></div>
+
+    <!-- 下方刻度（细浅）：对应下面的十年尺 -->
+    <div class="tick dn" style="left:0%;"></div>
+    <div class="tick dn" style="left:18.37%;"></div>
+    <div class="tick dn" style="left:38.78%;"></div>
+    <div class="tick dn" style="left:59.18%;"></div>
+    <div class="tick dn" style="left:79.59%;"></div>
+    <div class="tick dn end" style="left:100%;"></div>
 
     <!-- 上方标注 -->
     <div class="lab" style="left:0%;">      <b>出生</b><br><span class="yy">前 259</span></div>
@@ -230,21 +246,25 @@ h2 {
     <div class="lab" style="left:77.55%;">  <b>39 岁</b><br>统一天下<br><span class="yy">前 221</span></div>
     <div class="lab" style="left:100%;">    <b>50 岁</b><br>去世<br><span class="yy">前 210</span></div>
 
-    <!-- 下方年龄尺 -->
-    <div class="agebar">
+    <!-- 十年尺：用来估算任何一件事他大概几岁 -->
+    <div class="agebar ruler">
       <i style="left:0%;">1 岁</i>
-      <i style="left:18.37%;">10</i>
-      <i style="left:38.78%;">20</i>
-      <i style="left:59.18%;">30</i>
-      <i style="left:79.59%;">40</i>
+      <i style="left:18.37%;">10 岁</i>
+      <i style="left:38.78%;">20 岁</i>
+      <i style="left:59.18%;">30 岁</i>
+      <i style="left:79.59%;">40 岁</i>
       <i style="left:100%;">50 岁</i>
     </div>
   </div>
   <p class="axcap">
-    这条线最值得看的地方：<b>蓝色那段几乎占了一大半</b> ——
-    他一生中最长的时间，是在等待和被别人控制。
-    橙色只有短短一小截，那是九年灭六国。
-    紫色也很短，可是遇刺、求仙药、焚书、坑方士全挤在里面。
+    三段分别是<b>夺权期</b>（蓝）、<b>亲政到统一</b>（橙）、<b>皇帝期</b>（紫），
+    色段里的数字是那一段有多少年。<br>
+    最值得看的地方：<b>蓝色那段几乎占了一半</b> ——
+    他活了五十岁，前二十三年都在等待和被别人控制。
+    紫色也只有短短一截，可是遇刺、求仙药、焚书、坑方士全挤在里面。<br>
+    中间橙色那段是他亲政以后、统一之前的十六年：
+    前面几年还在清理旧人（<b>25 岁</b>吕不韦自杀、下逐客令），
+    最后九年才是灭六国。
   </p>
 </div>
 
@@ -279,7 +299,7 @@ h2 {
     <tr class="p2"><td class="c-y">前 222</td><td class="c-a">38 岁</td><td class="c-e">灭<b>燕</b></td><td class="c-p"><span class="none">小档案未记将领</span></td><td class="c-c">3</td></tr>
     <tr class="p2 big"><td class="c-y">前 221</td><td class="c-a">39 岁</td><td class="c-e">灭<b>齐</b>。<b>统一天下</b>，结束群雄割据。创立「皇帝」称号，自称「朕」；废除谥号改用次序；中央集权、行郡县制；称人民为「黔首」；销熔六国兵器铸十二金人；统一文字、货币、度量衡、车轨；迁十二万户富豪到咸阳</td><td class="c-p">后胜<span class="r">（齐国相，通秦 ✗对手）</span><br><b>李斯</b><span class="r">（朝中重臣）</span></td><td class="c-c">3 · 4</td></tr>
 
-    <tr class="ph a3"><td colspan="5"><span class="tag">第三段</span>皇帝期　前 220–210 年　（40 – 50 岁）<span class="hint">　只有 11 年：三次遇刺、到处求仙药、焚书、坑方士</span></td></tr>
+    <tr class="ph a3"><td colspan="5"><span class="tag">第三段</span>皇帝期　前 221–210 年　（39 – 50 岁）<span class="hint">　只有 11 年：三次遇刺、到处求仙药、焚书、坑方士</span></td></tr>
     <tr class="p3"><td class="c-y">前 220</td><td class="c-a">40 岁</td><td class="c-e">开始修建驰道</td><td class="c-p"><span class="none">—</span></td><td class="c-c">4</td></tr>
     <tr class="p3"><td class="c-y">前 219</td><td class="c-a">41 岁</td><td class="c-e">东巡，登泰山封禅，刻石。派徐市率数千名童子童女前往三神山<b>求仙</b></td><td class="c-p">鲁地读书人<span class="r">（建议他封禅）</span>、徐市<span class="r">（方士，出海找仙药）</span></td><td class="c-c">5</td></tr>
     <tr class="p3"><td class="c-y">前 218</td><td class="c-a">42 岁</td><td class="c-e">于博浪沙<b>遇袭</b></td><td class="c-p"><span class="none">刺客（书未写名字）✗</span></td><td class="c-c">5</td></tr>

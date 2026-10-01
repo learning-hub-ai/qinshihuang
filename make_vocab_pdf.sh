@@ -3,9 +3,10 @@
 #
 # 用法
 # ----
-#   ./make_vocab_pdf.sh              # 两份都做
-#   ./make_vocab_pdf.sh detail       # 只做详细版（17 节＋附录，带意思和组词）
-#   ./make_vocab_pdf.sh compact      # 只做精简版（all.html，1908 条，只有拼音和页码）
+#   ./make_vocab_pdf.sh                        # 两份都做
+#   ./make_vocab_pdf.sh detail                 # 只做详细版（17 节＋附录，带意思和组词）
+#   ./make_vocab_pdf.sh compact                # 只做精简版（all.html，1908 条，只有拼音和页码）
+#   ./make_vocab_pdf.sh detail --no-footer     # 不印页脚
 #
 # 产出在 print/ 下：
 #   字词表-全书-详细版.pdf    目录 ＋ 17 节 ＋ 附录，每节从新的一页开始
@@ -19,13 +20,35 @@
 # ⚠ 背景色必须印出来 —— ★重点是浅黄底、「只要会念」是浅灰底，
 #   底色本身带信息。Chrome headless 默认会印背景，脚本里不另加开关；
 #   若将来换工具，记得开 print-background。
+#
+# ⚠ --no-footer 去掉页面里那块 <footer class="sitefoot">
+#   （浏览器自己的页眉页脚一直用 --no-pdf-header-footer 关着）。
+#   site.css 写明「版权与『请购买原书』那一行 —— 屏幕和纸上都要出现」，
+#   所以这是个有意识的取舍。这里去掉它仍然合规，因为：
+#     · 仓库里这 18 份表**已经不含原书引文** —— 116 处「书上：」原句在
+#       2026-09-29 就删掉了，只留在 source/vocab-with-quotes/（不进 git）；
+#     · 每一份表的正文末尾都有自己的「词条来源」说明（18/18 页都有），
+#       不依赖页脚；
+#     · 每一页页头印着「景崇兰 著 · 简志刚 绘 · 人民文学出版社」——
+#       著作权法第二十四条要的「指明作者姓名、作品名称」在页头已满足；
+#     · 每个词条仍带页码，孩子照样要翻回原书。
+#   源文件一个字都不改，只在生成 PDF 时套一层打印样式。
 
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 OUT="$ROOT/print"
 TMP="$OUT/tmp"
-WHAT="${1:-all}"
+WHAT="all"
+NOFOOTER=0
+for arg in "$@"; do
+  case "$arg" in
+    detail|compact|all) WHAT="$arg" ;;
+    --no-footer)        NOFOOTER=1 ;;
+    *) echo "不认识的参数：$arg" >&2
+       echo "用法：$0 [detail|compact|all] [--no-footer]" >&2; exit 2 ;;
+  esac
+done
 
 # 详细版的页面顺序：目录在最前，然后六章十七节，最后附录年表
 PAGES=(
@@ -42,10 +65,21 @@ PAGES=(
 mkdir -p "$TMP"
 
 topdf() {   # topdf <相对路径> <输出 pdf>
-  local src="$ROOT/$1" dst="$2"
+  local src="$ROOT/$1" dst="$2" render="$ROOT/$1"
   [[ -f "$src" ]] || { echo "缺文件：$1" >&2; return 1; }
+
+  # 去页脚：临时副本必须放在**同一个目录**里（vocab/ 下），
+  # 否则 ../site.css、../vocab.css、../site.js 这些相对路径会失效，
+  # 表格会失去全部样式。原文件不动。
+  if (( NOFOOTER )); then
+    render="$ROOT/$(dirname "$1")/.tmp-nofooter-$(basename "$1")"
+    sed 's#</head>#<style>@media print{.sitefoot{display:none!important;}}</style>\n</head>#' \
+        "$src" > "$render"
+  fi
+
   timeout 180 google-chrome --headless --disable-gpu --no-sandbox \
-      --no-pdf-header-footer --print-to-pdf="$dst" "file://$src" >/dev/null 2>&1
+      --no-pdf-header-footer --print-to-pdf="$dst" "file://$render" >/dev/null 2>&1
+  (( NOFOOTER )) && rm -f "$render"
   [[ -s "$dst" ]] || { echo "生成失败：$1" >&2; return 1; }
 }
 

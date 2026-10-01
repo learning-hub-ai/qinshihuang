@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="读懂故事 · 第四章第三节「大兴土木工程」 —— 讲透万里长城：它不是新建的而是把三国旧长城连起来，修它的是囚犯，而起因是一本书上的四个字「亡秦者胡」—— 李斯猜成了匈奴。配四个成语填空、三句原文选一句、三个没有标准答案的问题。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>读懂故事 · 第四章第三节「大兴土木工程」</title>
+<link rel="stylesheet" href="../site.css">
+<style>
+  h2{ font-size:11pt; margin:6mm 0 2.5mm; padding:1.2mm 2.5mm;
+      background:var(--hdr); color:#fff; page-break-after:avoid; }
+  h2 .w{ float:right; font-size:8.2pt; font-weight:normal; opacity:.9; }
+
+  .ask{ border:1.5px solid var(--hdr); background:#f7f9fc;
+        padding:2.5mm 3mm; margin:0 0 4mm; }
+  .ask .q{ font-size:11.5pt; font-weight:bold; }
+  .ask .t{ font-size:8.8pt; color:#444; margin-top:1mm; }
+
+  .prose{ font-size:10.2pt; line-height:1.95; text-indent:2em;
+          margin:0 0 2.5mm; text-align:justify; }
+  .prose.ni{ text-indent:0; }
+  .prose b{ color:#1a4a7a; }
+  blockquote.said{ margin:0 0 2.5mm 6mm; padding:1.5mm 0 1.5mm 3mm;
+                   border-left:2.5px solid var(--hdr); font-size:10pt;
+                   line-height:1.85; text-align:justify; }
+  blockquote.said b{ color:#1a4a7a; }
+  blockquote.said .who{ font-weight:bold; color:#1a4a7a; }
+  .fromnote{ font-size:8.6pt; color:var(--soft); background:#fafafa;
+             border-left:3px solid #ccc; padding:1.5mm 2.5mm; margin:0 0 3mm; }
+  .keyidea{ background:#fffdf5; border:1.2px solid var(--star);
+            padding:2mm 3mm; margin:3mm 0 0; font-size:9.8pt; }
+  .keyidea .h{ font-weight:bold; margin-bottom:1mm; }
+
+  /* 延伸阅读（外部网站）：只在屏幕上出现，打印时整块隐藏 */
+  .wiki{ background:#f6f8fa; border:1px dashed #9bb4cc;
+         padding:2mm 3mm; margin:3mm 0 0; font-size:9.2pt; line-height:1.65; }
+  .wiki .h{ font-weight:bold; color:#1a4a7a; margin-bottom:1mm; }
+  .wiki ul{ margin:1.5mm 0 0; padding-left:6mm; }
+  .wiki li{ margin-bottom:1.5mm; }
+  .wiki a{ color:#1a4a7a; }
+  .wiki .note{ font-size:8.6pt; color:var(--soft); }
+  @media print{ .wiki{ display:none; } }
+
+  /* 三件大工程：各自的起因 */
+  .works{ margin:2.5mm 0 1mm; border:1.3px solid var(--line); }
+  .works .row{ display:flex; border-bottom:1px solid var(--line); }
+  .works .row:last-child{ border-bottom:none; }
+  .works .w1{ flex:0 0 24mm; background:#eef2f7; padding:1.8mm 2.5mm;
+              font-size:9.4pt; font-weight:bold; color:#1a4a7a;
+              border-right:1px solid var(--line); }
+  .works .w1 .bk{ display:block; font-size:8.2pt; font-weight:normal;
+                  color:var(--soft); margin-top:.6mm; }
+  .works .w2{ flex:1; padding:1.8mm 2.5mm; font-size:9.2pt; line-height:1.65; }
+  .works .w2 b{ color:#1a4a7a; }
+
+  /* 秦长城 vs 明长城 */
+  .pair{ display:flex; gap:3mm; margin:2.5mm 0 1mm; }
+  .pair > div{ flex:1; border:1.3px solid var(--line); padding:2mm 2.5mm; }
+  .pair .old{ background:#eef2f7; }
+  .pair .new{ background:#fdf0ec; }
+  .pair .t{ font-size:10.5pt; font-weight:bold; margin-bottom:1mm; color:#1a4a7a; }
+  .pair .d{ font-size:9.2pt; line-height:1.6; }
+  .pair .bk{ display:block; font-size:8.4pt; color:var(--soft); margin-top:1.5mm; }
+
+  .words{ font-size:10.2pt; color:#1a4a7a; font-weight:bold;
+          margin:0 0 2.5mm; letter-spacing:.5px; }
+  ol.fills{ margin:0 0 3mm; padding-left:6mm; }
+  ol.fills li{ font-size:9.8pt; line-height:2.05; margin-bottom:1.5mm; }
+  .bl{ display:inline-block; min-width:26mm; border-bottom:1.2px solid #999;
+       margin:0 1mm; }
+  dl.mean{ margin:0; font-size:9.2pt;
+           display:grid; grid-template-columns:34mm 1fr; gap:1.4mm 3mm; }
+  /* 拼音排在词语上面（像课本注音）。column-reverse 让 HTML 仍是
+     「词语 + 拼音」的自然顺序，屏幕阅读器读起来才对。 */
+  dl.mean dt{ color:#1a4a7a; font-weight:bold; line-height:1.35;
+              display:flex; flex-direction:column-reverse; align-items:flex-start; }
+  dl.mean dd{ margin:0; line-height:1.55; align-self:end; }
+  dl.mean .py{ font-size:8pt; color:var(--soft);
+               font-weight:normal; letter-spacing:.2px; line-height:1.3; }
+
+  /* 找句子：三选一 */
+  ul.pick{ list-style:none; margin:2mm 0 2.5mm; padding:0; }
+  ul.pick li{ font-size:9.8pt; line-height:1.75; margin-bottom:2.2mm;
+              padding:0 0 0 6.5mm; text-indent:-6.5mm; }
+  ul.pick .o{ display:inline-block; width:4mm; height:4mm; border:1.3px solid #777;
+              border-radius:50%; margin-right:2mm; vertical-align:-.5mm; }
+  ul.pick .pg{ font-size:8.4pt; color:var(--soft); white-space:nowrap; }
+
+  ol.think{ margin:0; padding-left:6mm; }
+  ol.think li{ font-size:10.2pt; margin-bottom:1mm; }
+  .lines{ margin:1mm 0 4mm; }
+  .lines div{ border-bottom:1px solid #ccc; height:8mm; }
+
+  .foot{ font-size:8.4pt; color:var(--soft); margin-top:6mm;
+         border-top:1px solid #ccc; padding-top:2mm; line-height:1.6; }
+
+  @media print{
+    h2{ background:var(--hdr) !important; color:#fff !important; }
+    .lines div{ height:9mm; }
+    .works,.pair{ page-break-inside:avoid; }
+  }
+</style>
+</head>
+<body data-pagename="读懂故事 · 第 4 章第 3 节" data-tab="guide" data-chapter="c4">
+
+<!-- #frame:head -->
+<div class="sitehead">
+  <div class="sh-in">
+    <div class="printonly">姓名：____________　班级：__________　日期：__________</div>
+    <h1 class="sh-t"><a href="../index.html">《秦始皇——一统中国》整本书阅读</a></h1>
+    <div class="sh-p">读懂故事 · 第 4 章第 3 节</div>
+    <div class="sh-m">名人传系列　·　<b>景崇兰</b> 著　·　<b>简志刚</b> 绘　·　人民文学出版社　·　全书 <b>111 页</b>，共六章</div>
+  </div>
+</div>
+<!-- /frame:head -->
+
+<nav class="sitenav">
+<!-- #frame:nav -->
+<div class="nv-in">
+    <a class="nv-here" href="../index.html">📖 阅读指引</a>
+    <a href="../reading-plan.html">📅 阅读进度表</a>
+    <a href="../vocab/index.html">📚 字词表</a>
+    <a href="../maps.html">🗺 地图</a>
+    <a href="../characters.html">👥 人物关系表</a>
+    <a href="../fact-sheet.html">📊 秦始皇小档案</a>
+    <a href="../timeline.html">🔍 一生时间轴</a>
+    <a href="../how-to-use.html">📘 使用说明</a>
+  </div>
+<!-- /frame:nav -->
+  <div class="nv-sub">
+    <a class="nv-up" href="../index.html#c4">⬆ 回第四章</a>
+    <span class="nv-lbl">配套：</span>
+    <a href="../vocab/chapter4-section3.html?from=guide">本节字词表（185 条）</a>
+    <a href="chapter4-section2.html">← 上一节：统一文化和经济制度</a>
+  </div>
+</nav>
+<main class="wrap sheet">
+<div class="sheetin">
+<div class="printbtn">
+  <button type="button" onclick="window.print()"
+          title="打印设置：A4；关掉「页眉和页脚」；勾选「打印背景图形」。">🖨 打印</button>
+  <span class="pb-tip">记得勾选<b>「打印背景图形」</b></span>
+</div>
+
+<h2 class="pagetitle" style="background:none;color:inherit;padding:0;font-size:13pt;">
+  第四章第三节　大兴土木工程</h2>
+<p class="sub" style="text-align:center;">第 74–82 页　·　读之前先看【讲背景】，读完再做后面三样</p>
+
+<div class="ask">
+  <div class="q">📖 带着这个问题读：万里长城是秦始皇造出来的吗？他为什么突然要修它？</div>
+  <div class="t">读的时候留意四个字：<b>亡秦者胡</b>。</div>
+</div>
+
+<h2>【讲背景】万里长城 —— 为了一本书上的四个字<span class="w">这一段不用动笔，读完再看书</span></h2>
+
+<p class="prose">你大概见过长城的照片，也许还听人说过「万里长城是秦始皇修的」。
+  这一节就讲他为什么修、怎么修的。有三件事跟你想的可能不一样 ——
+  而第一件是：<b>他修长城，起因是一本书上的四个字</b>。</p>
+
+<p class="prose">事情是这样。秦始皇派了一个燕国人<b>卢生</b>去找仙丹，
+  卢生回来了，仙丹没找到，却带回一本书，说是神仙写的。书上写着四个字：</p>
+
+<blockquote class="said">
+  <b>亡秦者胡</b> —— 意思是：<b>灭掉秦朝的会是「胡」</b>。
+  <span class="pg">（第 78 页）</span>
+</blockquote>
+
+<p class="prose">书上说这句话「<b>非同小可</b>，吓坏了众人」。
+  丞相李斯赶紧上奏，他的解读是：</p>
+
+<blockquote class="said">
+  <span class="who">李斯</span>：此书所说的「胡」，<b>想必就是威胁边境的匈奴</b>。
+  匈奴一直是中原各国的<b>心腹大患</b>，如今既然威胁到咱们大秦，
+  臣请陛下把握时机，赶快派兵攻打匈奴，<b>以绝后患</b>。
+  <span class="pg">（第 78 页）</span>
+</blockquote>
+
+<p class="prose">李斯这样猜是有道理的：匈奴本来就叫「<b>胡人</b>」，秦朝才改称匈奴（第 78 页）。
+  于是三十万大军北上，蒙恬把匈奴军队打跑了（第 79 页）。
+  按说事情该结束了 —— 可是<b>长城正是在打赢之后才动工的</b>。
+  仗打完了还要修墙，这中间有一层原因，书上用一句话交代了。</p>
+
+<p class="prose">这就是第二件跟你想的不一样的事：<b>长城不是秦始皇发明的</b>。</p>
+
+<div class="pair">
+  <div class="old">
+    <div class="t">秦长城</div>
+    <div class="d">战国时<b>燕、赵、秦三国早就各自筑有长城</b>，用来抵御匈奴。
+      蒙恬做的事是「把旧有的秦国长城和赵、燕两国的长城<b>连接起来</b>」——
+      西起临洮，东至辽东，绵延万里。
+      <span class="bk">第 78–79 页</span></div>
+  </div>
+  <div class="new">
+    <div class="t">明长城</div>
+    <div class="d">你在照片上看到、去旅游能爬的那段长城，
+      <b>不是秦长城</b>，是后来<b>明代</b>修的 ——
+      东起鸭绿江，西至嘉峪关，全长 7300 多公里。
+      <span class="bk">第 79 页脚注①</span></div>
+  </div>
+</div>
+
+<p class="prose">第三件事是修长城的人：不是士兵，也不是雇来的工人，
+  而是<b>囚犯和有罪的官吏</b>（第 79 页）。修驰道用的也是囚犯 ——
+  赵高当初的建议就是「<b>派囚犯</b>去建造几条通往各国的大马路」（第 77 页）。</p>
+
+<p class="prose">这一节其实一共讲了<b>三件</b>大工程，而且书把每一件的起因都交代了。
+  你读的时候可以对照着看：</p>
+
+<div class="works">
+  <div class="row">
+    <div class="w1">驰道<span class="bk">第 77 页</span></div>
+    <div class="w2">统一天下满一年，他却「<b>每日埋首于公文之中</b>」，
+      连「天下」是什么样子都还不知道。赵高劝他出去看看，又建议派囚犯修路。
+      驰道约五十步宽，以咸阳为起点，<b>总里程约九千公里</b>。</div>
+  </div>
+  <div class="row">
+    <div class="w1">长城<span class="bk">第 78–79 页</span></div>
+    <div class="w2">卢生带回的书上写着「<b>亡秦者胡</b>」，李斯猜「胡」是匈奴。
+      打退匈奴之后他仍然不安，于是把三国旧长城<b>连起来</b>。</div>
+  </div>
+  <div class="row">
+    <div class="w1">阿房宫<span class="bk">第 79–82 页</span></div>
+    <div class="w2">巡游时看遍六国「<b>金碧辉煌</b>」的王宫，回头再看咸阳宫，
+      「咸阳宫的俭朴和庄重，此刻变成了<b>简陋和单调</b>」。
+      赵高说他不该「屈就于这座小小的咸阳宫」，于是要建能容纳万人的阿房宫。</div>
+  </div>
+</div>
+
+<p class="prose">三件工程，起因都是<b>先有一个念头，再有一句劝</b>。
+  其中两次劝他的是同一个人 —— <b>赵高</b>。
+  书上介绍赵高的时候只用了一句话，但那句话很重要：
+  他是秦始皇「最宠爱的宦官」，而「他的<b>职责就是让秦始皇开心</b>」（第 75 页）。</p>
+
+<div class="fromnote">
+  📌 第 79 页的脚注①只有三行，却推翻了一件很多人以为的事：
+  「秦朝之后，中国历代都有增修长城的记录。<b>现在我们观光游览时所看到的长城，是明代修筑的明长城</b>，
+  东起鸭绿江，西至嘉峪关，全长 7300 多公里。」——
+  下次有人说「这是秦始皇修的长城」，你可以告诉他这一条。
+</div>
+
+<div class="keyidea">
+  <div class="h">💡 记住这一条，读到最后一章你会吓一跳</div>
+  「<b>亡秦者胡</b>」这四个字，李斯猜成了北方的<b>匈奴</b> ——
+  所以有了三十万大军、有了万里长城。<br>
+  可是你翻到第 82 页会看到一个名字：秦始皇的小儿子叫<b>胡亥</b>。
+  第六章你会读到，秦始皇死后，赵高和李斯<b>篡改了诏书</b>，
+  把继承人改成了胡亥（第 108 页）—— 秦朝就亡在他手里。<br>
+  那四个字说的「胡」，也许从来就不在北方。
+  <b>长城修在了错的方向上。</b>
+</div>
+
+<div class="wiki">
+  <div class="h">🔎 想再查下去？（要上网，打印出来的纸上没有）</div>
+  这两件工程今天都还能查到考古的结果，而且<b>结果跟书上的故事不完全一样</b>：
+  <ul>
+    <li><a href="https://zh.wikipedia.org/zh-cn/%E9%98%BF%E6%88%BF%E5%AE%AB">维基百科「阿房宫」</a>
+      —— 最值得看的一条：考古挖出来的阿房宫<b>从来没有建成</b>，
+      只打好地基、立了三面墙就停工了；而且<b>没有被火烧过的痕迹</b>。
+      所以「项羽烧了阿房宫」这个有名的说法，很可能是错的。</li>
+    <li><a href="https://zh.wikipedia.org/zh-cn/%E7%A7%A6%E9%95%B7%E5%9F%8E">维基百科「秦长城」</a>
+      —— 和书上说的一样：约前 214 年、蒙恬、<b>连接</b>秦赵燕三国旧长城、西起临洮东至辽东。
+      它还多告诉你一件事：秦长城现在<b>只剩下大约三分之一</b>保存得比较好。</li>
+  </ul>
+  <p class="note" style="margin:2mm 0 0;">
+    ⚠ 这两页是写给大人看的，开头就有「夯土基址」「全国重点文物保护单位」这种词，
+    比本页难得多。<b>看不懂没关系</b> —— 只要找到上面那两件事就够了：
+    <b>阿房宫没建成</b>、<b>秦长城只剩三分之一</b>。
+  </p>
+</div>
+
+<h2>【学词语】填成语<span class="w">先想，想不出来再看下面的解释</span></h2>
+
+<p class="words">心腹大患　·　金碧辉煌　·　劳民伤财　·　大兴土木</p>
+
+<ol class="fills">
+  <li>驰道、长城、阿房宫三件一起上，书上把这一节叫做<span class="bl"></span>。</li>
+  <li>李斯说匈奴一直是中原各国的<span class="bl"></span>。</li>
+  <li>他巡游时看遍六国<span class="bl"></span>的王宫，回头觉得咸阳宫简陋。</li>
+  <li>第 82 页说，这些工程又花钱又累坏百姓，<span class="bl"></span>，引起了不少民怨。</li>
+</ol>
+
+<dl class="mean">
+  <dt>心腹大患<span class="py">xīn fù dà huàn</span></dt>
+  <dd>藏在心里最深处的大祸害。</dd>
+  <dt>金碧辉煌<span class="py">jīn bì huī huáng</span></dt>
+  <dd>金光闪闪、装饰得非常华丽。</dd>
+  <dt>劳民伤财<span class="py">láo mín shāng cái</span></dt>
+  <dd>让百姓辛苦，又白花掉很多钱。</dd>
+  <dt>大兴土木<span class="py">dà xīng tǔ mù</span></dt>
+  <dd>大规模地盖房子、修工程。</dd>
+</dl>
+
+<h2>【找句子】哪一句说明匈奴已经打跑了，他还是不放心<span class="w">三句都是书上的原话</span></h2>
+
+<p class="prose ni">下面三句都在讲长城 —— 讲它本来就有、讲它是怎么连起来的、讲它为什么会开工。
+  <b>哪一句说明匈奴已经打跑了，他还是不放心？</b>在 ○ 里打勾。</p>
+
+<ul class="pick">
+  <li><span class="o"></span>「战国时期，燕、赵、秦三国在边境都筑有长城，以抵御匈奴的侵犯。秦始皇统一天下之后，因为忙于内政，无暇顾及国防，没想到如今匈奴竟然成了大秦的劲敌，威力不可小觑。」<span class="pg">（第 78 页）</span></li>
+  <li><span class="o"></span>「然而即使击退了匈奴，秦始皇还是感到不安，所以他要蒙恬带着囚犯和有罪的官吏，到河套去修筑长城。」<span class="pg">（第 79 页）</span></li>
+  <li><span class="o"></span>「蒙恬把旧有的秦国长城和赵、燕两国的长城连接起来，西起临洮，东至辽东，绵延万里，因此有『万里长城』之称。」<span class="pg">（第 79 页）</span></li>
+</ul>
+
+<h2>【说感想】三个问题，没有标准答案<span class="w">写一两句就行</span></h2>
+
+<ol class="think">
+  <li>为了书上四个字就派三十万大军、修万里长城。你觉得这样做值得吗？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<ol class="think" start="2">
+  <li>驰道、长城、阿房宫这三件，如果只能修一件，你会修哪一件？为什么？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<ol class="think" start="3">
+  <li>赵高的职责是「让秦始皇开心」。如果你身边有个人专门说你爱听的话，你觉得是好事吗？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<p class="foot">
+  <b>这一页怎么用</b>：先读【讲背景】（不用动笔），再读书上第 74–82 页，
+  读完回来做后面三样。<br>
+  <b>【说感想】可以不写</b>：说给爸爸妈妈听也算 —— 讲出来往往比写下来更清楚。<br>
+  <b>第 76 页和第 81 页都是整页插图</b>：第 76 页是秦始皇望着窗外发愁、赵高在身后笑着；
+  第 81 页是长城蜿蜒在山间，他站在城上。所以这一节的字比九页看起来少。
+  难念的字：临洮（Lín <b>táo</b>）、蒙恬（Méng <b>tián</b>）、不可小觑（<b>qù</b>）、匈奴（Xiōng nú）。
+  见<a href="../vocab/chapter4-section3.html?from=guide">本节字词表</a>。
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+<!-- #frame:foot -->
+<div class="sf-in">
+      页码依据书前目录核对。书中有整页插图（如第 105 页是一整幅画），所以实际要读的字比页数看起来少。<br>
+      <span class="sf-print">打印任意一页：<b>Ctrl+P → A4 → 关掉「页眉和页脚」→ 勾选「打印背景图形」</b></span>
+      <span class="sf-cr">本站是<b>阅读辅助材料</b>，不能代替原书 —— 请购买《秦始皇——一统中国》（景崇兰 著，人民文学出版社）。<br>书中文字版权归作者及出版社所有；本站少量引用并标注页码，供学习讨论之用。本站自编内容版权归本站作者所有 —— 欢迎打印使用和转发网址，请勿转载到其他网站或 App，详见<a href="../how-to-use.html#copyright">使用说明</a>。</span>
+  </div>
+<!-- /frame:foot -->
+</footer>
+
+<script src="../site.js"></script>
+</body>
+</html>
