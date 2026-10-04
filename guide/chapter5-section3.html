@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="读懂故事 · 第五章第三节「焚禁书，坑方士」 —— 讲透「焚书令」到底烧了什么、留下了什么、罚的是谁：书上第 98 页的脚注亲口告诉你，官府的博士照样读书、藏书依然丰富。配四个成语填空、三句原文选一句、三个没有标准答案的问题。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>读懂故事 · 第五章第三节「焚禁书，坑方士」</title>
+<link rel="stylesheet" href="../site.css">
+<style>
+  h2{ font-size:11pt; margin:6mm 0 2.5mm; padding:1.2mm 2.5mm;
+      background:var(--hdr); color:#fff; page-break-after:avoid;
+      overflow:hidden; }
+  h2 .w{ float:right; font-size:8.2pt; font-weight:normal; opacity:.9; }
+
+  .ask{ border:1.5px solid var(--hdr); background:#f7f9fc;
+        padding:2.5mm 3mm; margin:0 0 4mm; }
+  .ask .q{ font-size:11.5pt; font-weight:bold; }
+  .ask .t{ font-size:8.8pt; color:#444; margin-top:1mm; }
+
+  .prose{ font-size:10.2pt; line-height:1.95; text-indent:2em;
+          margin:0 0 2.5mm; text-align:justify; }
+  .prose.ni{ text-indent:0; }
+  .prose b{ color:#1a4a7a; }
+  .fromnote{ font-size:8.6pt; color:var(--soft); background:#fafafa;
+             border-left:3px solid #ccc; padding:1.5mm 2.5mm; margin:0 0 3mm; }
+  .keyidea{ background:#fffdf5; border:1.2px solid var(--star);
+            padding:2mm 3mm; margin:3mm 0 0; font-size:9.8pt; }
+  .keyidea .h{ font-weight:bold; margin-bottom:1mm; }
+
+  /* 焚书令：烧什么、留什么 */
+  .burn{ margin:2.5mm 0 1mm; border:1.3px solid var(--line); }
+  .burn .row{ display:flex; border-bottom:1px solid var(--line); }
+  .burn .row:last-child{ border-bottom:none; }
+  .burn .hd{ background:#eef2f7; font-weight:bold; color:#1a4a7a; }
+  .burn .a,.burn .b{ padding:1.8mm 2.5mm; font-size:9.2pt; line-height:1.65; }
+  .burn .a{ flex:1; border-right:1px solid var(--line); }
+  .burn .b{ flex:1; }
+  .burn .a b,.burn .b b{ color:#1a4a7a; }
+  .burn .pg{ font-size:8.2pt; color:var(--soft); white-space:nowrap; }
+
+  .words{ font-size:10.2pt; color:#1a4a7a; font-weight:bold;
+          margin:0 0 2.5mm; letter-spacing:.5px; }
+  ol.fills{ margin:0 0 3mm; padding-left:6mm; }
+  ol.fills li{ font-size:9.8pt; line-height:2.05; margin-bottom:1.5mm; }
+  .bl{ display:inline-block; min-width:26mm; border-bottom:1.2px solid #999;
+       margin:0 1mm; }
+  dl.mean{ margin:0; font-size:9.2pt;
+           display:grid; grid-template-columns:34mm 1fr; gap:1.4mm 3mm; }
+  dl.mean dt{ color:#1a4a7a; font-weight:bold; line-height:1.35;
+              display:flex; flex-direction:column-reverse; align-items:flex-start; }
+  dl.mean dd{ margin:0; line-height:1.55; align-self:end; }
+  dl.mean .py{ font-size:8pt; color:var(--soft);
+               font-weight:normal; letter-spacing:.2px; line-height:1.3; }
+
+  ul.pick{ list-style:none; margin:2mm 0 2.5mm; padding:0; }
+  ul.pick li{ font-size:9.8pt; line-height:1.75; margin-bottom:2.2mm;
+              padding:0 0 0 6.5mm; text-indent:-6.5mm; }
+  ul.pick .o{ display:inline-block; width:4mm; height:4mm; border:1.3px solid #777;
+              border-radius:50%; margin-right:2mm; vertical-align:-.5mm; }
+  ul.pick .pg{ font-size:8.4pt; color:var(--soft); white-space:nowrap; }
+
+  ol.think{ margin:0; padding-left:6mm; }
+  ol.think li{ font-size:10.2pt; margin-bottom:1mm; }
+  .lines{ margin:1mm 0 4mm; }
+  .lines div{ border-bottom:1px solid #ccc; height:8mm; }
+
+  .foot{ font-size:8.4pt; color:var(--soft); margin-top:6mm;
+         border-top:1px solid #ccc; padding-top:2mm; line-height:1.6; }
+
+  @media print{
+    h2{ background:var(--hdr) !important; color:#fff !important; }
+    .burn .hd{ background:#eef2f7 !important; }
+    .lines div{ height:9mm; }
+    .burn{ page-break-inside:avoid; }
+  }
+  @media (max-width:560px){
+    /* 窄屏下标题会折行，float 的提示语会被标题框切掉 —— 改成单独一行 */
+    h2 .w{ float:none; display:block; margin-top:.8mm; opacity:.85; }
+    /* 窄屏下两栏叠成一列，表头就离开了它说明的格子 ——
+       改成隐藏表头，每格自己带标签，左右对照才不会散掉 */
+    .burn .row{ flex-direction:column; }
+    .burn .row.hd{ display:none; }
+    .burn .a{ border-right:none; border-bottom:1px solid var(--line); }
+    .burn .a::before{ content:"要烧、要罚：";
+                      display:block; font-weight:bold; color:#8a3a3a;
+                      font-size:8.6pt; margin-bottom:.6mm; }
+    .burn .b::before{ content:"没有动的：";
+                      display:block; font-weight:bold; color:#1a4a7a;
+                      font-size:8.6pt; margin-bottom:.6mm; }
+  }
+</style>
+</head>
+<body data-pagename="读懂故事 · 第 5 章第 3 节" data-tab="guide" data-chapter="c5">
+
+<!-- #frame:head -->
+<div class="sitehead">
+  <div class="sh-in">
+    <div class="printonly">姓名：____________　班级：__________　日期：__________</div>
+    <h1 class="sh-t"><a href="../index.html">《秦始皇——一统中国》整本书阅读</a></h1>
+    <div class="sh-p">读懂故事 · 第 5 章第 3 节</div>
+    <div class="sh-m">名人传系列　·　<b>景崇兰</b> 著　·　<b>简志刚</b> 绘　·　人民文学出版社　·　全书 <b>111 页</b>，共六章</div>
+  </div>
+</div>
+<!-- /frame:head -->
+
+<nav class="sitenav">
+<!-- #frame:nav -->
+<div class="nv-in">
+    <a class="nv-here" href="../index.html">📖 阅读指引</a>
+    <a href="../reading-plan.html">📅 阅读进度表</a>
+    <a href="../vocab/index.html">📚 字词表</a>
+    <a href="../maps.html">🗺 地图</a>
+    <a href="../characters.html">👥 人物关系表</a>
+    <a href="../fact-sheet.html">📊 秦始皇小档案</a>
+    <a href="../timeline.html">🔍 一生时间轴</a>
+    <a href="../how-to-use.html">📘 使用说明</a>
+  </div>
+<!-- /frame:nav -->
+  <div class="nv-sub">
+    <a class="nv-up" href="../index.html#c5">⬆ 回第五章</a>
+    <span class="nv-lbl">配套：</span>
+    <a href="../vocab/chapter5-section3.html?from=guide">本节字词表（118 条）</a>
+    <a href="chapter5-section2.html">← 上一节：刺客偷袭和长生不死</a>
+  </div>
+</nav>
+<main class="wrap sheet">
+<div class="sheetin">
+<div class="printbtn">
+  <button type="button" onclick="window.print()"
+          title="打印设置：A4；关掉「页眉和页脚」；勾选「打印背景图形」。">🖨 打印</button>
+  <span class="pb-tip">记得勾选<b>「打印背景图形」</b></span>
+</div>
+
+<h2 class="pagetitle" style="background:none;color:inherit;padding:0;font-size:13pt;">
+  第五章第三节　焚禁书，坑方士</h2>
+<p class="sub" style="text-align:center;">第 94–100 页　·　读之前先看【讲背景】，读完再做后面三样</p>
+
+<div class="ask">
+  <div class="q">📖 带着这个问题读：那道命令，到底要烧哪些书？</div>
+  <div class="t">读的时候留意第 97 页那三样<b>不用烧</b>的。</div>
+</div>
+
+<h2>【讲背景】「焚书令」是一道有范围的命令<span class="w">这一段不用动笔，读完再看书</span></h2>
+
+<p class="prose">你大概听过<b>「焚书坑儒」</b>这四个字 —— 烧书、活埋读书人。
+  这一节就是这件事的出处。可是你读的这本书，
+  把那道命令的<b>条文</b>一条一条写了出来。读完你会发现：
+  它比那四个字说的要<b>具体得多</b>，也<b>有范围</b>。</p>
+
+<p class="prose">事情是从一场生日宴会上吵起来的。那天是秦始皇<b>四十七岁</b>的生日，
+  席间「气氛和乐融融」，一位齐国博士<b>淳于越</b>站起来进言。
+  他说的还是第 67 页那个老问题 —— <b>分封</b>：
+  古代君王会把土地分给自己的子弟，这些子弟就成了帮手；
+  可是秦朝的宗室子弟「却像是普通的老百姓一样」，
+  万一出现像<b>田常、六卿</b>那样的臣子，陛下身边没有帮手，怎么办？</p>
+
+<p class="prose">丞相<b>李斯</b>反驳他，理由是<b>时代变了</b>：
+  「从前的君王都是用不同的方法治理国家」，不是为了标新立异，
+  「而是因为时代在改变啊！」接着李斯话锋一转，
+  说老百姓在家里私藏图书的风气越来越盛，
+  朝廷一发布命令，他们就「拿出古书里的道理来反对」，
+  闲暇时还聚在一起批评朝政。于是他提出了那道建议。
+  秦始皇同意了，<b>焚书令</b>就这样颁布。</p>
+
+<p class="prose">下面这张表，左边是这道命令<b>要动的</b>，右边是它<b>没动的</b> ——
+  两边都是书上第 97、98 页写明的。</p>
+
+<div class="burn">
+  <div class="row hd">
+    <div class="a">这道命令要烧、要罚的</div>
+    <div class="b">这道命令没有动的</div>
+  </div>
+  <div class="row">
+    <div class="a">他国的<b>史书</b>；不属于博士研读的书籍<b>也一律焚毁</b>。老百姓私自收藏古书的，<b>要求他们交出来</b>。<span class="pg">第 97 页</span></div>
+    <div class="b"><b>医药、占卜、种树</b>这三种书籍<b>不用烧毁</b>。<span class="pg">第 97 页</span></div>
+  </div>
+  <div class="row">
+    <div class="a">敢<b>互相讨论古书内容</b>的人一律处死；敢拿古书里的词语<b>批评朝政</b>的则<b>罪及全家</b>。<span class="pg">第 97 页</span></div>
+    <div class="b">官府里的<b>博士</b>，「还是可以学习到<b>各类知识</b>」。<span class="pg">第 98 页</span></div>
+  </div>
+  <div class="row">
+    <div class="a">想学法律的人<b>必须以官吏为老师</b>，不能私自拜师学习。<span class="pg">第 97–98 页</span></div>
+    <div class="b">「官府的藏书也依然<b>相当丰富</b>」。<span class="pg">第 98 页</span></div>
+  </div>
+</div>
+
+<p class="prose">书上把这道命令的<b>对象</b>也写清楚了：「焚书令的对象是<b>老百姓</b>」，
+  用意在于<b>不让百姓读到可能产生叛乱思想的书</b>，
+  并警告那些拿古书上的道理来批评政府的人（第 98 页）。</p>
+
+<div class="fromnote">
+  📌 这些不是我编的：第 98 页有一个脚注，专门用来<b>证明</b>上面右栏那两条。
+  它说汉高祖时制订宫廷礼仪的博士<b>叔孙通</b>、汉文帝的丞相<b>张苍</b>，
+  都曾担任过秦国的<b>御史</b>——「由此可知官府并未受到焚书令的影响」。
+  第 96 页另有三个脚注，分别解释<b>淳于越的意思</b>（宗室子弟有贵族身份却没有私人土地）、
+  <b>田常</b>（春秋时齐国大臣，杀了国君，齐国政权落入田氏一族，后来田氏篡位为齐王）、
+  <b>六卿</b>（第 1 章提过的晋国六家，最后韩、赵、魏三家瓜分了晋国）。
+</div>
+
+<p class="prose">那<b>「坑儒」</b>又是怎么来的？焚书之后，上一节那两个方士出事了。
+  <b>卢生和侯生</b>窃窃私语，说皇帝「天性刚愎自用」、「不可一世」，
+  说朝廷里虽然有<b>七十位博士</b>，「但只不过是<b>装饰品</b>罢了」。
+  书上点明这番话听来「义正辞严」，其实是因为他们<b>求不到仙药</b>、
+  怕日后被揭穿要被处死 —— 然后两人在三更半夜相约逃走了。
+  秦始皇气得拍桌大骂，派御史审问咸阳城里的方士，
+  查出<b>四百多人</b>犯了毁谤罪，也查到<b>一些儒生</b>犯了「<b>以古非今</b>」的死罪，
+  「秦始皇为了<b>杀鸡儆猴</b>，所以将这些人活埋，使天下人再也不敢毁谤皇帝」（第 99–100 页）。</p>
+
+<p class="prose">所以<b>「坑」就是挖坑活埋</b>，被埋的是<b>方士</b>加上<b>一些儒生</b> ——
+  后人把这件事和前面的焚书合起来叫「焚书坑儒」，由来就在这里。</p>
+
+<div class="keyidea">
+  <div class="h">💡 记住这一条，第六章就用得上</div>
+  这件事他<b>拿到了</b>什么，书上写得很直接：「使天下人<b>再也不敢毁谤皇帝</b>」（第 100 页）。<br>
+  紧接着有人站出来反对，是他的<b>长子扶苏</b> —— 书上说扶苏「个性仁慈善良，觉得很不忍心」。
+  秦始皇「正在气头上，哪里听得进这些话」。
+  第 100 页那个脚注交代了后来：秦始皇很生气，
+  「便要他和<b>蒙恬</b>一起去<b>监督修建万里长城</b>的工程」。<br>
+  <b>请记住扶苏这个名字和他被派去的地方</b> —— 第六章出事的时候，他不在父亲身边。<br>
+  这一节最后一句也要记住：这些方士让秦始皇很<b>失望</b>，
+  <b>却没让他对长生不死绝望</b>（第 100 页）。
+</div>
+
+<h2>【学词语】填成语<span class="w">先想，想不出来再看下面的解释</span></h2>
+
+<p class="words">三更半夜　·　和乐融融　·　窃窃私语　·　荒诞无稽</p>
+
+<ol class="fills">
+  <li>宴会开始，秦始皇和群臣举杯对饮，气氛<span class="bl"></span>。</li>
+  <li>有一天，方士卢生和侯生<span class="bl"></span>，说了皇帝许多坏话。</li>
+  <li>求不到仙药，他们就找了许多<span class="bl"></span>的理由来搪塞皇帝。</li>
+  <li>结果他们两人竟然在<span class="bl"></span>的时候相约逃走了。</li>
+</ol>
+
+<dl class="mean">
+  <dt>三更半夜<span class="py">sān gēng bàn yè</span></dt>
+  <dd>深夜、半夜里。古代一夜分五更，三更就是半夜。</dd>
+  <dt>和乐融融<span class="py">hé lè róng róng</span></dt>
+  <dd>又和睦又快乐的气氛。</dd>
+  <dt>窃窃私语<span class="py">qiè qiè sī yǔ</span></dt>
+  <dd>背着人小声说话。</dd>
+  <dt>荒诞无稽<span class="py">huāng dàn wú jī</span></dt>
+  <dd>荒唐得没有一点根据。</dd>
+</dl>
+
+<h2>【找句子】哪一句是在说「老百姓还没真心归顺，现在不能太狠」<span class="w">三句都是书上的原话</span></h2>
+
+<p class="prose ni">这一节有三个人在皇帝面前说了长长的一段话：
+  博士<b>淳于越</b>、丞相<b>李斯</b>、长子<b>扶苏</b>。
+  <b>哪一句是在说「老百姓还没真心归顺，现在不能太狠」？</b>在 ○ 里打勾。</p>
+
+<ul class="pick">
+  <li><span class="o"></span>「陛下您贵为天下之主，然而秦朝的宗室子弟却像是普通的老百姓一样，到时候如果出现了像田常、六卿这一类的臣子，您的身边又没有辅佐的人，这时候该怎么办呢？」<span class="pg">（第 96 页）</span></li>
+  <li><span class="o"></span>「百姓在家中私自收藏图书的风气越来越盛，每当政府颁布命令时，他们就会拿出古书里的道理来反对……老百姓有私自收藏古书的，就要求他们交出来。」<span class="pg">（第 97 页）</span></li>
+  <li><span class="o"></span>「父王，天下刚刚平定，老百姓尚未完全归附。您却用重法来惩罚这些人，儿臣担心人心不服呵！」<span class="pg">（第 100 页）</span></li>
+</ul>
+
+<h2>【说感想】三个问题，没有标准答案<span class="w">写一两句就行</span></h2>
+
+<ol class="think">
+  <li>焚书令里留下了三种不用烧的书：<b>医药、占卜、种树</b>（第 97 页）。你觉得为什么留下的是这三种？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<ol class="think" start="2">
+  <li>扶苏说「人心不服」，秦始皇没有听（第 100 页）。你觉得扶苏说得有道理吗？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<ol class="think" start="3">
+  <li>如果有人要你把最喜欢的一本书交出来，以后都不许看，你会怎么想？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<p class="foot">
+  <b>这一页怎么用</b>：先读【讲背景】（不用动笔），再读书上第 94–100 页，
+  读完回来做后面三样。<br>
+  <b>【说感想】可以不写</b>：说给爸爸妈妈听也算 —— 讲出来往往比写下来更清楚。<br>
+  <b>第 95 页是整页插图</b>：生日宴会上，淳于越站在阶下向坐在上面的秦始皇进言。
+  第 100 页只有半页字，这一章就到这里结束。
+  难念的名字三个：<b>淳于越</b>（Chún yú Yuè）、<b>扶苏</b>（Fú Sū）、<b>蒙恬</b>（Méng Tián）。
+  还有四个难字：<b>愎</b>（bì，不读 fù）、<b>儆</b>（jǐng）、<b>稽</b>（jī）、<b>谏</b>（jiàn）。
+  见<a href="../vocab/chapter5-section3.html?from=guide">本节字词表</a>。
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+<!-- #frame:foot -->
+<div class="sf-in">
+      页码依据书前目录核对。书中有整页插图（如第 105 页是一整幅画），所以实际要读的字比页数看起来少。<br>
+      <span class="sf-print">打印任意一页：<b>Ctrl+P → A4 → 关掉「页眉和页脚」→ 勾选「打印背景图形」</b></span>
+      <span class="sf-cr">本站是<b>阅读辅助材料</b>，不能代替原书 —— 请购买《秦始皇——一统中国》（景崇兰 著，人民文学出版社）。<br>书中文字版权归作者及出版社所有；本站少量引用并标注页码，供学习讨论之用。本站自编内容版权归本站作者所有 —— 欢迎打印使用和转发网址，请勿转载到其他网站或 App，详见<a href="../how-to-use.html#copyright">使用说明</a>。</span>
+  </div>
+<!-- /frame:foot -->
+</footer>
+
+<script src="../site.js"></script>
+</body>
+</html>

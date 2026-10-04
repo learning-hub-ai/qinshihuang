@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="../site.css">
 <style>
   h2{ font-size:11pt; margin:6mm 0 2.5mm; padding:1.2mm 2.5mm;
-      background:var(--hdr); color:#fff; page-break-after:avoid; }
+      background:var(--hdr); color:#fff; page-break-after:avoid;
+      overflow:hidden; }
   h2 .w{ float:right; font-size:8.2pt; font-weight:normal; opacity:.9; }
 
   .ask{ border:1.5px solid var(--hdr); background:#f7f9fc;
@@ -82,6 +83,10 @@
     h2{ background:var(--hdr) !important; color:#fff !important; }
     .lines div{ height:9mm; }
     .why{ page-break-inside:avoid; }
+  }
+  @media (max-width:560px){
+    /* 窄屏下标题会折行，float 的提示语会被标题框切掉 —— 改成单独一行 */
+    h2 .w{ float:none; display:block; margin-top:.8mm; opacity:.85; }
   }
 </style>
 </head>

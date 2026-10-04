@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="../site.css">
 <style>
   h2{ font-size:11pt; margin:6mm 0 2.5mm; padding:1.2mm 2.5mm;
-      background:var(--hdr); color:#fff; page-break-after:avoid; }
+      background:var(--hdr); color:#fff; page-break-after:avoid;
+      overflow:hidden; }
   h2 .w{ float:right; font-size:8.2pt; font-weight:normal; opacity:.9; }
 
   .ask{ border:1.5px solid var(--hdr); background:#f7f9fc;
@@ -99,6 +100,10 @@
     .lines div{ height:9mm; }
     .works,.pair{ page-break-inside:avoid; }
   }
+  @media (max-width:560px){
+    /* 窄屏下标题会折行，float 的提示语会被标题框切掉 —— 改成单独一行 */
+    h2 .w{ float:none; display:block; margin-top:.8mm; opacity:.85; }
+  }
 </style>
 </head>
 <body data-pagename="读懂故事 · 第 4 章第 3 节" data-tab="guide" data-chapter="c4">
@@ -132,6 +137,7 @@
     <span class="nv-lbl">配套：</span>
     <a href="../vocab/chapter4-section3.html?from=guide">本节字词表（185 条）</a>
     <a href="chapter4-section2.html">← 上一节：统一文化和经济制度</a>
+    <a href="chapter5-section1.html">下一节：大行封禅，祈求平安 →</a>
   </div>
 </nav>
 <main class="wrap sheet">
