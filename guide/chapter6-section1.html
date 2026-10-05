@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="读懂故事 · 第六章第一节「最后一次巡游」 —— 讲透书上第 103 页自己点出的那四个字「恶性循环」：他怕死，所以脾气坏；脾气坏，所以没人敢劝；没人敢劝，所以更没人提醒他的身体。配四个成语填空、三句原文选一句、三个没有标准答案的问题。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>读懂故事 · 第六章第一节「最后一次巡游」</title>
+<link rel="stylesheet" href="../site.css">
+<style>
+  h2{ font-size:11pt; margin:6mm 0 2.5mm; padding:1.2mm 2.5mm;
+      background:var(--hdr); color:#fff; page-break-after:avoid;
+      overflow:hidden; }
+  h2 .w{ float:right; font-size:8.2pt; font-weight:normal; opacity:.9; }
+
+  .ask{ border:1.5px solid var(--hdr); background:#f7f9fc;
+        padding:2.5mm 3mm; margin:0 0 4mm; }
+  .ask .q{ font-size:11.5pt; font-weight:bold; }
+  .ask .t{ font-size:8.8pt; color:#444; margin-top:1mm; }
+
+  .prose{ font-size:10.2pt; line-height:1.95; text-indent:2em;
+          margin:0 0 2.5mm; text-align:justify; }
+  .prose.ni{ text-indent:0; }
+  .prose b{ color:#1a4a7a; }
+  .fromnote{ font-size:8.6pt; color:var(--soft); background:#fafafa;
+             border-left:3px solid #ccc; padding:1.5mm 2.5mm; margin:0 0 3mm; }
+  .keyidea{ background:#fffdf5; border:1.2px solid var(--star);
+            padding:2mm 3mm; margin:3mm 0 0; font-size:9.8pt; }
+  .keyidea .h{ font-weight:bold; margin-bottom:1mm; }
+
+  /* 恶性循环：一环扣一环，转回原点 */
+  .loop{ margin:3mm 0 1mm; }
+  .loop .st{ display:flex; align-items:flex-start; gap:2.5mm;
+             border:1.3px solid var(--line); border-left:3px solid #8a3a3a;
+             background:#fdfafa; padding:1.8mm 2.5mm; margin-bottom:0; }
+  .loop .n{ flex:0 0 5.5mm; height:5.5mm; border-radius:50%;
+            background:#8a3a3a; color:#fff; font-size:8.6pt; font-weight:bold;
+            text-align:center; line-height:5.5mm; }
+  .loop .tx{ flex:1; font-size:9.4pt; line-height:1.7; }
+  .loop .tx b{ color:#1a4a7a; }
+  .loop .pg{ font-size:8.2pt; color:var(--soft); white-space:nowrap; }
+  .loop .ar{ text-align:center; font-size:9pt; color:#8a3a3a;
+             line-height:1.2; margin:.6mm 0; }
+  .loop .bk{ margin-top:1.2mm; border:1.3px dashed #8a3a3a; background:#fff;
+             padding:1.6mm 2.5mm; font-size:9.2pt; line-height:1.7;
+             text-align:center; }
+  .loop .bk b{ color:#8a3a3a; }
+
+  .words{ font-size:10.2pt; color:#1a4a7a; font-weight:bold;
+          margin:0 0 2.5mm; letter-spacing:.5px; }
+  ol.fills{ margin:0 0 3mm; padding-left:6mm; }
+  ol.fills li{ font-size:9.8pt; line-height:2.05; margin-bottom:1.5mm; }
+  .bl{ display:inline-block; min-width:26mm; border-bottom:1.2px solid #999;
+       margin:0 1mm; }
+  dl.mean{ margin:0; font-size:9.2pt;
+           display:grid; grid-template-columns:34mm 1fr; gap:1.4mm 3mm; }
+  dl.mean dt{ color:#1a4a7a; font-weight:bold; line-height:1.35;
+              display:flex; flex-direction:column-reverse; align-items:flex-start; }
+  dl.mean dd{ margin:0; line-height:1.55; align-self:end; }
+  dl.mean .py{ font-size:8pt; color:var(--soft);
+               font-weight:normal; letter-spacing:.2px; line-height:1.3; }
+
+  ul.pick{ list-style:none; margin:2mm 0 2.5mm; padding:0; }
+  ul.pick li{ font-size:9.8pt; line-height:1.75; margin-bottom:2.2mm;
+              padding:0 0 0 6.5mm; text-indent:-6.5mm; }
+  ul.pick .o{ display:inline-block; width:4mm; height:4mm; border:1.3px solid #777;
+              border-radius:50%; margin-right:2mm; vertical-align:-.5mm; }
+  ul.pick .pg{ font-size:8.4pt; color:var(--soft); white-space:nowrap; }
+
+  ol.think{ margin:0; padding-left:6mm; }
+  ol.think li{ font-size:10.2pt; margin-bottom:1mm; }
+  .lines{ margin:1mm 0 4mm; }
+  .lines div{ border-bottom:1px solid #ccc; height:8mm; }
+
+  .foot{ font-size:8.4pt; color:var(--soft); margin-top:6mm;
+         border-top:1px solid #ccc; padding-top:2mm; line-height:1.6; }
+
+  @media print{
+    h2{ background:var(--hdr) !important; color:#fff !important; }
+    .loop .st{ background:#fdfafa !important; }
+    .loop .n{ background:#8a3a3a !important; color:#fff !important; }
+    .lines div{ height:9mm; }
+    .loop{ page-break-inside:avoid; }
+  }
+  @media (max-width:560px){
+    /* 窄屏下标题会折行，float 的提示语会被标题框切掉 —— 改成单独一行 */
+    h2 .w{ float:none; display:block; margin-top:.8mm; opacity:.85; }
+    /* 圆圈编号和文字在窄屏仍要并排 —— 这里是「第几步」的意思，
+       叠成上下两行就看不出顺序了，所以只缩小圆圈，不改方向 */
+    .loop .st{ gap:2mm; padding:1.5mm 2mm; }
+    .loop .n{ flex:0 0 5mm; height:5mm; line-height:5mm; font-size:8.2pt; }
+    .loop .tx{ font-size:9pt; }
+  }
+</style>
+</head>
+<body data-pagename="读懂故事 · 第 6 章第 1 节" data-tab="guide" data-chapter="c6">
+
+<!-- #frame:head -->
+<div class="sitehead">
+  <div class="sh-in">
+    <div class="printonly">姓名：____________　班级：__________　日期：__________</div>
+    <h1 class="sh-t"><a href="../index.html">《秦始皇——一统中国》整本书阅读</a></h1>
+    <div class="sh-p">读懂故事 · 第 6 章第 1 节</div>
+    <div class="sh-m">名人传系列　·　<b>景崇兰</b> 著　·　<b>简志刚</b> 绘　·　人民文学出版社　·　全书 <b>111 页</b>，共六章</div>
+  </div>
+</div>
+<!-- /frame:head -->
+
+<nav class="sitenav">
+<!-- #frame:nav -->
+<div class="nv-in">
+    <a class="nv-here" href="../index.html">📖 阅读指引</a>
+    <a href="../reading-plan.html">📅 阅读进度表</a>
+    <a href="../vocab/index.html">📚 字词表</a>
+    <a href="../maps.html">🗺 地图</a>
+    <a href="../characters.html">👥 人物关系表</a>
+    <a href="../fact-sheet.html">📊 秦始皇小档案</a>
+    <a href="../timeline.html">🔍 一生时间轴</a>
+    <a href="../how-to-use.html">📘 使用说明</a>
+  </div>
+<!-- /frame:nav -->
+  <div class="nv-sub">
+    <a class="nv-up" href="../index.html#c6">⬆ 回第六章</a>
+    <span class="nv-lbl">配套：</span>
+    <a href="../vocab/chapter6-section1.html?from=guide">本节字词表（26 条）</a>
+    <a href="chapter5-section3.html">← 上一节：焚禁书，坑方士</a>
+    <a href="chapter6-section2.html">下一节：改掉的那一份诏书 →</a>
+  </div>
+</nav>
+<main class="wrap sheet">
+<div class="sheetin">
+<div class="printbtn">
+  <button type="button" onclick="window.print()"
+          title="打印设置：A4；关掉「页眉和页脚」；勾选「打印背景图形」。">🖨 打印</button>
+  <span class="pb-tip">记得勾选<b>「打印背景图形」</b></span>
+</div>
+
+<h2 class="pagetitle" style="background:none;color:inherit;padding:0;font-size:13pt;">
+  第六章第一节　最后一次巡游</h2>
+<p class="sub" style="text-align:center;">第 102–104 页　·　读之前先看【讲背景】，读完再做后面三样</p>
+
+<div class="ask">
+  <div class="q">📖 带着这个问题读：臣子明明看出他身体不行了，为什么没有一个人拦得住他？</div>
+  <div class="t">读的时候留意一个词：<b>恶性循环</b>。</div>
+</div>
+
+<h2>【讲背景】恶性循环 —— 一件坏事怎么会自己转起来？<span class="w">这部分我讲给你听</span></h2>
+
+<p class="prose">这一节开头，秦始皇<b>四十八岁</b>（第 102 页）。上一章第 94 页他还是四十七岁，
+  所以这一章紧接着上一章，中间没隔多久。而他只活到五十岁 —— 也就是说，
+  你现在读的，是他人生最后两年。</p>
+
+<p class="prose">书上先写他的身体：早朝的时候「总是精神恍惚，心神不宁」，
+  而且自从焚书和坑儒之后，他发现「臣子们看他的眼神中多了许多恐惧」（第 102 页）。
+  注意这一句 —— 上一节那道命令的后果，现在回来找他了。</p>
+
+<p class="prose">接着书上写了一段很要紧的话，我把它拆开给你看。
+  他越想长生不死，心里就「越无助、越封闭」，情绪不好，没有耐心，
+  甚至「不愿意信赖别人」。臣子好几次想提醒他注意身体，
+  可是「如此美意却总是换来皇帝的愤怒」，久而久之，「再也没人愿意接近他」（第 102–103 页）。</p>
+
+<p class="prose">读到这里书上自己给这件事起了个名字 —— <b>恶性循环</b>。
+  这四个字值得停一下。平常的坏事是一次性的：摔一跤，疼一阵，好了。
+  恶性循环不是这样，它会<b>自己转起来</b>：第一件坏事造成第二件，
+  第二件又把第一件变得更坏，一圈一圈，越转越紧。书上这一段正好转了一整圈：</p>
+
+<div class="loop">
+  <div class="st"><div class="n">1</div><div class="tx">他怕死，所以<b>情绪不好、没有耐心</b>，甚至不愿意信赖别人<span class="pg">（第 102 页）</span></div></div>
+  <div class="ar">↓</div>
+  <div class="st"><div class="n">2</div><div class="tx">臣子好心提醒他注意身体，<b>换来的却是愤怒</b><span class="pg">（第 102–103 页）</span></div></div>
+  <div class="ar">↓</div>
+  <div class="st"><div class="n">3</div><div class="tx">久而久之，<b>再也没人愿意接近他</b>，他和朝臣「越来越疏远」<span class="pg">（第 103 页）</span></div></div>
+  <div class="bk">↻ 转回第 1 步：身边没有人，他只剩自己一个人怕 ——
+    于是更<b>封闭</b>，更不信人。书上说这种循环「看来似乎没有解决的办法」<span class="pg">（第 103 页）</span></div>
+</div>
+
+<p class="prose">所以回到开头那个问题：不是没有人想拦。书上写得很清楚，
+  臣子「三番两次」地提醒过（第 102 页）。问题是提醒这件事本身已经被这个圈关在外面了 ——
+  谁提醒谁倒霉，于是到最后没有人再开口。他在浙江的江边差点摔倒、
+  在会稽山下山时「差点儿踩了空」（第 103 页），
+  李斯想劝他就近歇一歇，他却坚持要北上去泰山（第 104 页）。</p>
+
+<p class="prose">书上说，他坚持北上是要「去看看从前的刻石」（第 104 页）。
+  那块刻石你见过 —— 就是第五章第一节里，他在泰山办封禅时留下的那一块。
+  这一次他没走到，在<b>平原津</b>病倒了（第 104 页）。</p>
+
+<div class="fromnote">
+  📌 这些不是我编的：<b>「恶性循环」四个字是书上自己写的</b>（第 103 页），
+  不是我的说法。书上只用了一句话带过，上面那个圈是把这一句拆成三步排出来，
+  好让你看见它怎么转回原点。这一节另外两个脚注都很短：
+  第 103 页说<b>浙江就是钱塘江</b>，以壮观的潮汐闻名世界；
+  第 104 页说<b>平原津</b>在今山东省平原县附近。
+</div>
+
+<div class="keyidea">
+  <div class="h">💡 记住这一条，下一节就用得上</div>
+  他昏迷了「好几天」（第 104 页）。一个不信任任何人的皇帝，
+  忽然谁也管不了事了 —— 而这几天里，他身边只有三个人：
+  <b>李斯、赵高、胡亥</b>（第 103 页）。
+  下一节出事，出在哪里、靠什么出的，到时候你回头看这三个名字。
+</div>
+
+<h2>【学词语】填成语<span class="w">先想，想不出来再看下面的解释</span></h2>
+
+<p class="words">手足无措　·　不可一世　·　惊险万分　·　三番两次</p>
+
+<ol class="fills">
+  <li>臣子<span class="bl"></span>地想提醒他注意身体，换来的却总是皇帝的愤怒。</li>
+  <li>车队从江水边一条狭窄的道路快速通过，过程<span class="bl"></span>。</li>
+  <li>秦始皇这一病，大臣们个个是<span class="bl"></span>，他们怎么也没料到，
+    <span class="bl"></span>的皇帝，居然就这么倒了下去。</li>
+</ol>
+
+<dl class="mean">
+  <dt>手足无措 <span class="py">shǒu zú wú cuò</span></dt>
+  <dd>慌得手脚都不知该往哪里放，完全不知道怎么办。</dd>
+  <dt>不可一世 <span class="py">bù kě yī shì</span></dt>
+  <dd>自以为当世没有人比得上，非常骄傲。</dd>
+  <dt>惊险万分 <span class="py">jīng xiǎn wàn fēn</span></dt>
+  <dd>危险得让人心跳 —— 第 92 页兰池遇刺时也用过这个词。</dd>
+  <dt>三番两次 <span class="py">sān fān liǎng cì</span></dt>
+  <dd>一次又一次，反复好几回。</dd>
+</dl>
+
+<h2>【找句子】哪一句说的是他为什么不肯停下来休息？<span class="w">三句都是书上的原话</span></h2>
+
+<p class="prose ni">这一节有三句写他心里怎么想，书上都写了下来。
+  <b>哪一句说的是他为什么不肯停下来休息？</b>在 ○ 里打勾。</p>
+
+<ul class="pick">
+  <li><span class="o"></span>「他忽视了健康，完全投入在工作之中，因为他认为，<b>这才是一个君王应该做的事</b>。」<span class="pg">（第 102 页）</span></li>
+  <li><span class="o"></span>「日渐走下坡的身体状况让他预感到死神即将来临，但他仍然期待能长生不死，因为他想要继续统治这个国家。」<span class="pg">（第 102 页）</span></li>
+  <li><span class="o"></span>「这一次，秦始皇觉得死亡并不可怕，反而是一种解脱。」<span class="pg">（第 104 页）</span></li>
+</ul>
+
+<h2>【说感想】<span class="w">这三个问题没有标准答案</span></h2>
+
+<ol class="think">
+  <li>他在会稽山差点儿踩了空，李斯劝他就近找个地方歇息，
+    他却坚持要北上去看从前的刻石（第 103–104 页）。
+    你觉得他为什么非要去看那块刻石？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<ol class="think" start="2">
+  <li>书上说，这种恶性循环「看来似乎没有解决的办法」（第 103 页）。
+    你觉得真的没有办法吗？如果你是他身边的臣子，你会怎么试？</li>
+</ol>
+<div class="lines"><div></div><div></div></div>
+
+<ol class="think" start="3">
+  <li>有没有人提醒过你一件事，当时你听着很烦，后来才发现他是对的？</li>
+</ol>
+<div class="lines"><div></div><div></div><div></div></div>
+
+<p class="foot">
+  <b>这一页怎么用</b>：先读【讲背景】（不用动笔），再读书上第 102–104 页，
+  读完回来做后面三样。<br>
+  <b>【说感想】可以不写</b>：说给爸爸妈妈听也算 —— 讲出来往往比写下来更清楚。<br>
+  <b>第 105 页是整页插图</b>：所以这一节读到第 104 页就停，第 105 页只有画，
+  下一节从第 106 页接着往下。
+  难念的地名两个：<b>会稽山</b>（Kuài jī Shān，会在这里读 Kuài）、
+  <b>平原津</b>（Píng yuán Jīn，津就是渡口）。
+  还有三个难字：<b>搀</b>（chān）、<b>呓</b>（yì，就是说梦话）、<b>稽</b>（jī）。
+  见<a href="../vocab/chapter6-section1.html?from=guide">本节字词表</a>。
+</p>
+
+</div>
+</main>
+
+<footer class="sitefoot">
+<!-- #frame:foot -->
+<div class="sf-in">
+      页码依据书前目录核对。书中有整页插图（如第 105 页是一整幅画），所以实际要读的字比页数看起来少。<br>
+      <span class="sf-print">打印任意一页：<b>Ctrl+P → A4 → 关掉「页眉和页脚」→ 勾选「打印背景图形」</b></span>
+      <span class="sf-cr">本站是<b>阅读辅助材料</b>，不能代替原书 —— 请购买《秦始皇——一统中国》（景崇兰 著，人民文学出版社）。<br>书中文字版权归作者及出版社所有；本站少量引用并标注页码，供学习讨论之用。本站自编内容版权归本站作者所有 —— 欢迎打印使用和转发网址，请勿转载到其他网站或 App，详见<a href="../how-to-use.html#copyright">使用说明</a>。</span>
+  </div>
+<!-- /frame:foot -->
+</footer>
+
+<script src="../site.js"></script>
+</body>
+</html>
